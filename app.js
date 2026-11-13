@@ -4,6 +4,22 @@ const LEVEL_KEY = "dailyJapanese:level";
 const VIDEO_KEY = "dailyJapanese:video";
 const QUIZ_KEY_PREFIX = "dailyJapanese:quiz:";
 
+const DAILY_KANJI_COUNT = 5;
+const DAILY_KANA_COUNT = 5;
+const DAILY_GRAMMAR_COUNT = 2;
+const MAX_VIDEO_SECONDS = 40 * 60;
+
+/* Seluruh modul harian berganti tepat pukul 00:00 WIB (UTC+7, tanpa DST). */
+const WIB_OFFSET_MS = 7 * 60 * 60 * 1000;
+const DAY_MS = 24 * 60 * 60 * 1000;
+const REFRESH_DELAY_MS = 3000; // reset di 00:00:03 WIB
+
+// Titik awal hitungan siklus rotasi (1 Januari 2024 WIB).
+const ROTATION_EPOCH_DAY = Math.floor(Date.UTC(2024, 0, 1) / DAY_MS);
+// Saat siklus berganti, materi dari 6 hari terakhir tidak boleh muncul lagi
+// (jika pool cukup besar), jadi 7 hari berturut-turut tetap unik.
+const ROTATION_LOOKBACK_DAYS = 6;
+
 const els = {
   state: document.getElementById("state"),
   stateText: document.getElementById("stateText"),
@@ -63,33 +79,77 @@ const state = {
 
 let midnightTimer = null;
 
-/* ---------- Capri, the floating mascot ---------- */
+/* =========================================================
+   Waktu WIB (UTC+7)
+   ========================================================= */
+
+/**
+ * Menggeser waktu +7 jam. Nilai hasilnya HANYA dibaca lewat getter UTC
+ * (getUTCFullYear, toISOString, dst.), jadi hasilnya sama di zona waktu
+ * perangkat mana pun.
+ */
+const getWIBDate = (date = new Date()) => new Date(date.getTime() + WIB_OFFSET_MS);
+
+// "YYYY-MM-DD" menurut kalender WIB.
+const toISODate = (wib) => wib.toISOString().slice(0, 10);
+
+// Hari ke-N dalam tahun (1–366) menurut WIB.
+const dayOfYear = (wib) => {
+  const today = Date.UTC(wib.getUTCFullYear(), wib.getUTCMonth(), wib.getUTCDate());
+  const start = Date.UTC(wib.getUTCFullYear(), 0, 0);
+  return Math.round((today - start) / DAY_MS);
+};
+
+// Nomor hari berurutan sejak 1970-01-01 WIB. Naik 1 tepat setiap 00:00 WIB.
+const getDayNumber = (wib) => Math.floor(wib.getTime() / DAY_MS);
+
+const msUntilNextWIBMidnight = () => {
+  const now = Date.now();
+  const nextMidnight = (Math.floor((now + WIB_OFFSET_MS) / DAY_MS) + 1) * DAY_MS - WIB_OFFSET_MS;
+  return nextMidnight - now;
+};
+
+const dateFormatter = new Intl.DateTimeFormat("id-ID", {
+  timeZone: "Asia/Jakarta",
+  weekday: "long",
+  day: "numeric",
+  month: "long",
+  year: "numeric",
+});
+
+/* =========================================================
+   Capri, the floating mascot
+   ========================================================= */
 
 const CAPRI_ASSET = "assets/capri.svg";
 const CAPRI_HIDE_MS = 9000;
 
 const CAPRI_MOODS = {
-  idle: "CAPRI://ONLINE",
-  happy: "CAPRI://すごい!",
-  oops: "CAPRI://大丈夫",
-  think: "CAPRI://TIPS",
+  idle: "CAPRI://NEURAL_LINK",
+  happy: "CAPRI://SUGOI!",
+  oops: "CAPRI://CHOOM~",
+  think: "CAPRI://CYBERDECK_TIPS",
 };
 
+const CAPRI_GREETING =
+  "Konnichiwa choom~! Capri udah siapin 5 kanji tajam buat hari ini. Yuk pertajam Neural Link kamu!";
+
 const CAPRI_TIPS = [
-  "おはよう! Hari ini ada 5 kanji baru. Ketuk kartunya untuk melihat cara baca dan contoh kalimat.",
-  "一歩ずつ (ippo zutsu): selangkah demi selangkah. Belajar 10 menit tiap hari lebih kuat daripada maraton sebulan sekali.",
-  "継続は力なり (keizoku wa chikara nari): ketekunan adalah kekuatan. Datang lagi besok, ya!",
-  "Tips Capri: pakai です/ます untuk orang yang baru dikenal, bentuk kasual untuk teman dekat.",
-  "Ucapkan contoh kalimatnya dengan suara keras. Otak lebih cepat ingat kalau mulut ikut bekerja.",
-  "Perhatikan radikal kanji. Banyak kanji tersusun dari bagian kecil yang sudah kamu kenal.",
-  "Salah itu data, bukan kegagalan. Catat kana yang keliru, lalu ulangi kuis besok.",
-  "がんばって! Selesaikan 5 soal kuis hari ini untuk mengisi SYNC_RATE sampai 100%.",
+  "Ketuk kartu kanji buat buka data: cara baca, arti, dan contoh kalimat. Download ke otak, choom~!",
+  "一歩ずつ (ippo zutsu): selangkah demi selangkah. 10 menit tiap hari lebih ampuh daripada maraton sebulan sekali. がんばって!",
+  "Tiap 00:00 WIB Capri upload misi baru: kanji, bunpou, video, dan kuis ganti semua. Jangan sampai ketinggalan, choom!",
+  "Tips Cyberdeck: pakai です/ます buat orang yang baru dikenal, bentuk kasual buat choom dekat.",
+  "Ucapkan contoh kalimatnya keras-keras. Mulut ikut jalan, Neural Link makin cepat nyambung. NOVA!",
+  "Perhatiin radikal kanji. Banyak kanji tersusun dari bagian kecil yang udah kamu kenal. SUGOI, kan?",
+  "Salah itu cuma error kecil di Neural Link, bukan kegagalan. Catat kana yang keliru, lalu coba lagi besok.",
+  "がんばって! Selesaikan 5 soal kuis hari ini buat ngisi SYNC_RATE sampai 100%!",
 ];
 
 const CAPRI_CORRECT = [
-  "正解 (seikai)! Jawabanmu benar, sinyal tersinkron.",
-  "すごい! Kana-mu makin lancar.",
-  "いいね (ii ne)! Lanjut ke soal berikutnya.",
+  "SUGOI! Sinyal tersinkron, choom~!",
+  "正解 (seikai)! Neural Link kamu makin tajam!",
+  "NOVA! Jawaban kamu presisi banget!",
+  "いいね (ii ne)! SYNC_RATE naik nih!",
 ];
 
 const pickFrom = (list) => list[Math.floor(Math.random() * list.length)];
@@ -128,32 +188,13 @@ const capriNextTip = () => {
 };
 
 const capriGreet = () => {
-  capriTipIndex = dayOfYear(new Date()) % CAPRI_TIPS.length;
-  capriSay(CAPRI_TIPS[capriTipIndex], "idle", true);
+  capriTipIndex = dayOfYear(getWIBDate()) % CAPRI_TIPS.length;
+  capriSay(CAPRI_GREETING, "idle", true);
 };
 
-const dateFormatter = new Intl.DateTimeFormat("id-ID", {
-  weekday: "long",
-  day: "numeric",
-  month: "long",
-  year: "numeric",
-});
-
-const toISODate = (date) => {
-  const year = date.getFullYear();
-  const month = String(date.getMonth() + 1).padStart(2, "0");
-  const day = String(date.getDate()).padStart(2, "0");
-  return `${year}-${month}-${day}`;
-};
-
-const dayOfYear = (date) => {
-  const start = new Date(date.getFullYear(), 0, 0);
-  const diff =
-    date -
-    start +
-    (start.getTimezoneOffset() - date.getTimezoneOffset()) * 60000;
-  return Math.floor(diff / 86400000);
-};
+/* =========================================================
+   Helpers
+   ========================================================= */
 
 const readPref = (key) => {
   try {
@@ -238,50 +279,195 @@ const checkKanaAnswer = (item, value) => {
   return accepted.includes(normalized);
 };
 
+const parseDuration = (value) => {
+  if (typeof value !== "string" || !value) return null;
+  const parts = value.split(":").map(Number);
+  if (parts.some((part) => !Number.isFinite(part))) return null;
+  return parts.reduce((total, part) => total * 60 + part, 0);
+};
+
+/* =========================================================
+   Rotasi harian tanpa pengulangan berturut-turut
+   ---------------------------------------------------------
+   Pool diacak (Mulberry32) sekali per "siklus", lalu dibagi
+   menjadi beberapa slot berisi `size` item. Satu slot = satu
+   hari, jadi dalam satu siklus tidak ada item yang muncul dua
+   kali. Saat siklus berganti, item dari beberapa slot terakhir
+   siklus sebelumnya dipindah ke belakang urutan baru, sehingga
+   awal siklus baru tetap berbeda dari hari-hari sebelumnya.
+   Syarat jaminan beda dari kemarin: pool minimal 2 × size.
+   ========================================================= */
+
+const rotationCache = new Map();
+
+const getCycleOrder = (pool, size, seedPrefix, targetCycle) => {
+  const perCycle = Math.floor(pool.length / size);
+  // Jumlah slot yang "dikunci" di batas siklus; maksimal setengah siklus
+  // agar selalu ada cukup item segar untuk mengisi awal siklus baru.
+  const lockedSlots = Math.max(1, Math.min(ROTATION_LOOKBACK_DAYS, Math.floor(perCycle / 2)));
+  const cacheKey = `${seedPrefix}|${pool.length}|${size}`;
+  let entry = rotationCache.get(cacheKey);
+  if (!entry || entry.cycle > targetCycle) entry = { cycle: -1, order: null };
+
+  let { cycle, order } = entry;
+  while (cycle < targetCycle) {
+    cycle += 1;
+    const raw = seededShuffle(pool, `${seedPrefix}-cycle-${cycle}`);
+    if (order) {
+      const recent = new Set(order.slice((perCycle - lockedSlots) * size, perCycle * size));
+      order = raw.filter((item) => !recent.has(item)).concat(raw.filter((item) => recent.has(item)));
+    } else {
+      order = raw;
+    }
+  }
+
+  rotationCache.set(cacheKey, { cycle, order });
+  return order;
+};
+
+const getRotationSet = (pool, size, seedPrefix, wib) => {
+  if (!pool.length) return [];
+  const dayKey = toISODate(wib);
+
+  // Pool terlalu kecil untuk menjamin beda total: acak per tanggal saja.
+  if (pool.length < size * 2) {
+    return seededShuffle(pool, `${seedPrefix}-${dayKey}`).slice(0, size);
+  }
+
+  const perCycle = Math.floor(pool.length / size);
+  const dayIndex = Math.max(0, getDayNumber(wib) - ROTATION_EPOCH_DAY);
+  const cycle = Math.floor(dayIndex / perCycle);
+  const slot = dayIndex % perCycle;
+  const order = getCycleOrder(pool, size, seedPrefix, cycle);
+
+  // Urutan tampil di dalam satu hari juga diacak per tanggal.
+  return seededShuffle(order.slice(slot * size, slot * size + size), `${seedPrefix}-${dayKey}`);
+};
+
+/* =========================================================
+   Pemilihan materi harian (berganti 00:00 WIB)
+   ========================================================= */
+
 const getLevels = (data) =>
   LEVEL_ORDER.filter((level) => Array.isArray(data.kanji?.[level]) && data.kanji[level].length > 0);
+
+// 5 kanji harian, 100% berbeda dari kemarin (pool >= 10 per level).
+const getDailyKanji = (level, wib) =>
+  getRotationSet(state.data?.kanji?.[level] || [], DAILY_KANJI_COUNT, `kanji-${level}`, wib);
+
+// 2 bunpou harian, 100% berbeda dari kemarin (pool >= 4 per level).
+const getDailyGrammar = (level, wib) =>
+  getRotationSet(state.data?.grammar?.[level] || [], DAILY_GRAMMAR_COUNT, `grammar-${level}`, wib);
+
+// Kuis kana: 5 soal per hari (4 Hiragana + 1 Katakana), semuanya beda dari kemarin.
+const getDailyKana = (wib) => {
+  const pool = state.data?.kana || [];
+  if (pool.length <= DAILY_KANA_COUNT) return [...pool];
+
+  const hiragana = pool.filter((item) => item.type !== "Katakana");
+  const katakana = pool.filter((item) => item.type === "Katakana");
+
+  let picked;
+  if (hiragana.length && katakana.length) {
+    const kataCount = 1;
+    picked = [
+      ...getRotationSet(hiragana, DAILY_KANA_COUNT - kataCount, "kana-hiragana", wib),
+      ...getRotationSet(katakana, kataCount, "kana-katakana", wib),
+    ];
+  } else {
+    picked = getRotationSet(pool, DAILY_KANA_COUNT, "kana", wib);
+  }
+
+  return seededShuffle(picked, `kana-order-${toISODate(wib)}`);
+};
+
+// Quote: berurutan per nomor hari WIB, jadi N quote = N hari tanpa pengulangan.
+const getDailyQuote = (wib) => {
+  const days = state.data?.days || [];
+  return days.length ? days[getDayNumber(wib) % days.length] : null;
+};
+
+/**
+ * Mode video di data.json boleh berbentuk:
+ *   { label, description, items: [ {videoId, title, channel, duration, ...} ] }
+ *   [ {...}, {...} ]               (array video)
+ *   { embedUrl, title, ... }       (format lama: satu video)
+ */
+const getVideoMode = (key) => {
+  const raw = state.data?.videos?.[key];
+  if (!raw) return { label: key, description: "", items: [] };
+
+  let items;
+  if (Array.isArray(raw)) items = raw;
+  else if (Array.isArray(raw.items)) items = raw.items;
+  else items = [raw];
+
+  items = items
+    .filter((video) => video && (video.videoId || video.embedUrl))
+    .filter((video) => {
+      const seconds = parseDuration(video.duration);
+      return seconds === null || seconds < MAX_VIDEO_SECONDS;
+    });
+
+  return {
+    label: raw.label || items[0]?.label || key,
+    description: raw.description || items[0]?.description || "",
+    items,
+  };
+};
 
 const getVideoKeys = (data) => {
   const available = Object.keys(data.videos || {});
   const ordered = VIDEO_ORDER.filter((key) => available.includes(key));
-  return ordered.concat(available.filter((key) => !VIDEO_ORDER.includes(key)));
+  return ordered
+    .concat(available.filter((key) => !VIDEO_ORDER.includes(key)))
+    .filter((key) => getVideoMode(key).items.length > 0);
 };
 
-const getDailyKana = (date) => {
-  const pool = state.data?.kana || [];
-  if (pool.length <= 5) return [...pool];
-
-  const seed = `kana-${date.getFullYear()}-${dayOfYear(date)}`;
-  const picked = seededShuffle(pool, seed).slice(0, 5);
-
-  if (!picked.some((item) => item.type === "Katakana")) {
-    const katakana = pool.filter((item) => item.type === "Katakana");
-    if (katakana.length) picked[picked.length - 1] = seededShuffle(katakana, `${seed}-k`)[0];
-  }
-
-  if (!picked.some((item) => item.type === "Hiragana")) {
-    const hiragana = pool.filter((item) => item.type === "Hiragana");
-    if (hiragana.length) picked[picked.length - 1] = seededShuffle(hiragana, `${seed}-h`)[0];
-  }
-
-  return seededShuffle(picked, `${seed}-order`);
+const resolveVideo = (key, video, mode) => {
+  const id = video.videoId;
+  return {
+    ...video,
+    label: mode.label,
+    description: mode.description,
+    embedUrl: video.embedUrl || `https://www.youtube.com/embed/${id}`,
+    watchUrl:
+      video.watchUrl ||
+      (key === "short" ? `https://www.youtube.com/shorts/${id}` : `https://www.youtube.com/watch?v=${id}`),
+  };
 };
 
-const getDailyGrammar = (level, date) => {
-  const list = state.data?.grammar?.[level] || [];
-  if (list.length <= 2) return [...list];
-  const start = dayOfYear(date) % list.length;
-  return [list[start], list[(start + 1) % list.length]];
+// Pasangan video harian (Short + Comprehensive), masing-masing berbeda dari kemarin.
+const getDailyVideo = (wib) => {
+  const pair = {};
+  getVideoKeys(state.data).forEach((key) => {
+    const mode = getVideoMode(key);
+    const [video] = getRotationSet(mode.items, 1, `video-${key}`, wib);
+    if (video) pair[key] = resolveVideo(key, video, mode);
+  });
+  return pair;
 };
+
+/* =========================================================
+   Penyimpanan kuis
+   ========================================================= */
 
 const getQuizKey = (dateKey) => `${QUIZ_KEY_PREFIX}${dateKey}`;
 
-const loadQuizProgress = (dateKey, count) => {
+const loadQuizProgress = (dateKey, questions) => {
   try {
     const raw = localStorage.getItem(getQuizKey(dateKey));
     if (!raw) return null;
     const parsed = JSON.parse(raw);
-    if (!Array.isArray(parsed.results) || parsed.results.length !== count) return null;
+    if (!Array.isArray(parsed.results) || parsed.results.length !== questions.length) return null;
+    // Progres hanya dipakai jika daftar soalnya sama persis. Data lama tanpa
+    // daftar soal, atau soal yang berubah karena data.json diperbarui, diabaikan.
+    if (
+      !Array.isArray(parsed.kana) ||
+      parsed.kana.join("|") !== questions.map((item) => item.kana).join("|")
+    ) {
+      return null;
+    }
     const results = parsed.results.map((value) =>
       value === true ? true : value === false ? false : null
     );
@@ -303,6 +489,7 @@ const saveQuizProgress = (dateKey) => {
       getQuizKey(dateKey),
       JSON.stringify({
         date: dateKey,
+        kana: state.quizQuestions.map((item) => item.kana),
         results: state.quizResults,
         values: state.quizValues,
       })
@@ -312,10 +499,14 @@ const saveQuizProgress = (dateKey) => {
   }
 };
 
+/* =========================================================
+   Render
+   ========================================================= */
+
 const renderDate = () => {
   const now = new Date();
-  els.today.dateTime = toISODate(now);
-  els.today.textContent = dateFormatter.format(now);
+  els.today.dateTime = toISODate(getWIBDate(now));
+  els.today.textContent = `${dateFormatter.format(now)} WIB`;
 };
 
 const syncVideoModes = () => {
@@ -331,7 +522,7 @@ const syncLevelTabs = () => {
 };
 
 const renderVideo = (force = false) => {
-  const info = state.data.videos?.[state.video];
+  const info = getDailyVideo(getWIBDate())[state.video];
   if (!info) return;
 
   els.videoHeading.textContent = `${info.label || "Video"} hari ini`;
@@ -355,6 +546,7 @@ const renderVideo = (force = false) => {
   els.videoFrame.classList.toggle("is-short", isShort);
   els.videoFrame.classList.toggle("is-wide", !isShort);
 
+  // Iframe dimuat ulang setiap kali video harian (atau mode) berganti.
   const key = `${state.video}::${info.embedUrl}`;
   if (!force && els.video.dataset.key === key) return;
 
@@ -446,7 +638,7 @@ const createFlashcard = (item, index, focusIndex) => {
     );
     if (flipped) {
       capriSay(
-        `${item.kanji || "—"} = ${item.meaning || "—"}. Kun'yomi: ${item.kunyomi || "—"} · On'yomi: ${item.onyomi || "—"}. Coba baca contoh kalimatnya!`,
+        `Data masuk, choom~! ${item.kanji || "—"} = ${item.meaning || "—"}. Kun'yomi: ${item.kunyomi || "—"} · On'yomi: ${item.onyomi || "—"}. Coba baca contoh kalimatnya, SUGOI!`,
         "think"
       );
     }
@@ -456,7 +648,7 @@ const createFlashcard = (item, index, focusIndex) => {
 };
 
 const renderKanji = () => {
-  const list = state.data.kanji?.[state.level] || [];
+  const list = getDailyKanji(state.level, getWIBDate());
   els.kanjiList.replaceChildren();
   els.kanjiCount.textContent = String(list.length);
   els.levelLabel.textContent = state.level || "—";
@@ -468,9 +660,9 @@ const renderKanji = () => {
     return;
   }
 
-  const focusIndex = dayOfYear(new Date()) % list.length;
+  // Set kanji sudah diacak per hari, jadi kartu pertama selalu menjadi fokus.
   list.forEach((item, index) => {
-    els.kanjiList.append(createFlashcard(item, index, focusIndex));
+    els.kanjiList.append(createFlashcard(item, index, 0));
   });
 };
 
@@ -506,7 +698,7 @@ const createExampleBlock = (label, sub, data, variant) => {
 };
 
 const renderGrammar = () => {
-  const daily = getDailyGrammar(state.level, new Date());
+  const daily = getDailyGrammar(state.level, getWIBDate());
   els.grammarLevel.textContent = state.level || "—";
   els.grammarList.replaceChildren();
 
@@ -603,7 +795,7 @@ const updateQuizScore = () => {
   els.quizMessage.textContent = "Belum ada jawaban.";
 };
 
-// Result block shown after an answer: status, romaji, and the Indonesian meaning.
+// Hasil jawaban: status, romaji, dan ARTI kata dalam Bahasa Indonesia.
 const renderQuizFeedback = (feedback, item, correct) => {
   feedback.classList.remove("is-correct", "is-wrong");
   feedback.classList.add(correct ? "is-correct" : "is-wrong");
@@ -630,10 +822,10 @@ const renderQuizFeedback = (feedback, item, correct) => {
 };
 
 const renderQuiz = () => {
-  const now = new Date();
-  const dateKey = toISODate(now);
-  const questions = getDailyKana(now);
-  const saved = loadQuizProgress(dateKey, questions.length);
+  const wib = getWIBDate();
+  const dateKey = toISODate(wib);
+  const questions = getDailyKana(wib);
+  const saved = loadQuizProgress(dateKey, questions);
 
   state.quizQuestions = questions;
   state.quizResults = saved ? saved.results : new Array(questions.length).fill(null);
@@ -690,7 +882,7 @@ const renderQuiz = () => {
 
       const value = input.value.trim();
       if (!value) {
-        feedback.classList.remove("is-correct", "is-wrong");
+        feedback.classList.remove("is-correct");
         feedback.classList.add("is-wrong");
         feedback.textContent = "Tulis jawaban dulu.";
         input.focus();
@@ -713,22 +905,30 @@ const renderQuiz = () => {
 
       const total = state.quizQuestions.length;
       const answeredCount = state.quizResults.filter((v) => v !== null).length;
+      const meaningText = item.meaning || "—";
+
       if (answeredCount === total) {
         const score = state.quizResults.filter((v) => v === true).length;
-        capriSay(
-          score === total
-            ? `パーフェクト! ${score}/${total} benar. SYNC_RATE 100%, kamu luar biasa!`
-            : `Kuis selesai: ${score}/${total} benar. Kana yang salah kita ulangi besok, がんばって!`,
-          score === total ? "happy" : "think"
-        );
+        const percent = Math.round((score / total) * 100);
+        if (score === total) {
+          capriSay(
+            "Wahhh SUGOUII~! SYNC_RATE kamu 100%! Capri bangga banget sama kamu, choom! 💖",
+            "happy"
+          );
+        } else {
+          capriSay(
+            `Daijoubu yo~! Salah itu cuma error kecil di Neural Link. SYNC_RATE kamu ${percent}% (${score}/${total}). Kita coba lagi besok ya, semangat! ✨`,
+            "oops"
+          );
+        }
       } else if (correct) {
         capriSay(
-          `${pickFrom(CAPRI_CORRECT)} ${item.kana} = ${item.romaji} = "${item.meaning || "—"}".`,
+          `${pickFrom(CAPRI_CORRECT)} ${item.kana} = ${item.romaji} = "${meaningText}".`,
           "happy"
         );
       } else {
         capriSay(
-          `大丈夫 (daijoubu)! ${item.kana} dibaca "${item.romaji}", artinya "${item.meaning || "—"}". Ucapkan pelan-pelan.`,
+          `Daijoubu yo~! Salah itu cuma error kecil di Neural Link. ${item.kana} dibaca "${item.romaji}", artinya "${meaningText}". がんばって!`,
           "oops"
         );
       }
@@ -742,9 +942,8 @@ const renderQuiz = () => {
 };
 
 const renderQuote = () => {
-  const days = state.data.days;
-  const entry = days[dayOfYear(new Date()) % days.length];
-  const quote = entry.quote || {};
+  const entry = getDailyQuote(getWIBDate());
+  const quote = entry?.quote || {};
 
   setText(els.quoteKanji, quote.kanji);
   setText(els.quoteFurigana, quote.furigana);
@@ -781,22 +980,27 @@ const renderAll = () => {
   renderQuote();
 };
 
+// Dipanggil saat tanggal WIB berganti: seluruh modul harian dirender ulang.
 const refreshContent = () => {
   if (!state.data) return;
-  state.dayKey = toISODate(new Date());
+  state.dayKey = toISODate(getWIBDate());
   renderDate();
+  renderVideo();
   renderKanji();
   renderGrammar();
   renderQuiz();
   renderQuote();
+  capriSay(
+    "Misi baru udah ke-upload, choom~! Kanji, bunpou, video, dan kuis hari ini fresh semua. Yuk sync lagi! NOVA!",
+    "idle"
+  );
 };
 
 const scheduleMidnightRefresh = () => {
   if (midnightTimer) window.clearTimeout(midnightTimer);
 
-  const now = new Date();
-  const next = new Date(now.getFullYear(), now.getMonth(), now.getDate() + 1, 0, 0, 3);
-  const delay = Math.max(1000, next.getTime() - now.getTime());
+  // 00:00:03 WIB, agar tanggal WIB pasti sudah berganti.
+  const delay = Math.max(1000, msUntilNextWIBMidnight() + REFRESH_DELAY_MS);
 
   midnightTimer = window.setTimeout(() => {
     refreshContent();
@@ -808,8 +1012,7 @@ const buildVideoModes = (keys) => {
   els.videoModes.replaceChildren();
 
   keys.forEach((key) => {
-    const info = state.data.videos[key];
-    const button = createEl("button", "seg-btn", info.label || key);
+    const button = createEl("button", "seg-btn", getVideoMode(key).label);
     button.type = "button";
     button.dataset.mode = key;
     button.setAttribute("aria-pressed", String(state.video === key));
@@ -839,7 +1042,7 @@ const buildLevelTabs = (levels) => {
       syncLevelTabs();
       renderKanji();
       renderGrammar();
-      capriSay(`Level ${level} aktif! Kanji dan bunpou sudah diperbarui untukmu.`, "happy");
+      capriSay(`Level ${level} aktif, choom~! Kanji dan bunpou udah di-upload ke Neural Link kamu. SUGOI!`, "happy");
     });
     els.levelTabs.append(button);
   });
@@ -878,13 +1081,16 @@ const init = async () => {
       throw new Error("Data video tidak ditemukan.");
     }
 
+    // Data baru = objek baru; cache rotasi lama tidak berlaku lagi.
+    rotationCache.clear();
+    state.data = data;
+
     const levels = getLevels(data);
     const videoKeys = getVideoKeys(data);
     if (!levels.length) throw new Error("Data kanji tidak ditemukan.");
     if (!videoKeys.length) throw new Error("Data video tidak ditemukan.");
 
-    state.data = data;
-    state.dayKey = toISODate(new Date());
+    state.dayKey = toISODate(getWIBDate());
 
     const savedLevel = readPref(LEVEL_KEY);
     const savedVideo = readPref(VIDEO_KEY);
@@ -901,6 +1107,7 @@ const init = async () => {
     capriGreet();
   } catch (error) {
     console.error("Gagal memuat data harian:", error);
+    state.data = null;
     showErrorState();
   }
 };
@@ -910,12 +1117,12 @@ const bindEvents = () => {
 
   els.quizReset.addEventListener("click", () => {
     try {
-      localStorage.removeItem(getQuizKey(toISODate(new Date())));
+      localStorage.removeItem(getQuizKey(toISODate(getWIBDate())));
     } catch {
       return;
     }
     renderQuiz();
-    capriSay("Kuis direset. Ayo coba lagi dari soal pertama!", "idle");
+    capriSay("Kuis di-reset, choom~! Ayo sync ulang dari soal pertama. がんばって!", "idle");
   });
 
   els.capriToggle.addEventListener("click", () => {
@@ -935,9 +1142,10 @@ const bindEvents = () => {
     els.video.classList.remove("is-loading");
   });
 
+  // Tab yang tertidur bisa melewatkan timer; cek ulang saat tab kembali aktif.
   document.addEventListener("visibilitychange", () => {
     if (document.visibilityState !== "visible") return;
-    if (toISODate(new Date()) !== state.dayKey) {
+    if (toISODate(getWIBDate()) !== state.dayKey) {
       refreshContent();
       scheduleMidnightRefresh();
     }

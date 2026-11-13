@@ -2,25 +2,358 @@
   "videos": {
     "short": {
       "label": "Shorts",
-      "description": "Kilat 1 menit",
-      "title": "Stop Waiting! Hold vs Wait (JLPT N5)",
-      "channel": "Kane & Shige's Kanji Dojo",
-      "duration": "0:09",
-      "level": "N5",
-      "embedUrl": "https://www.youtube.com/embed/xr7QIHOhVu8",
-      "watchUrl": "https://www.youtube.com/watch?v=xr7QIHOhVu8"
+      "description": "Video kilat",
+      "items": [
+        {
+          "videoId": "xr7QIHOhVu8",
+          "title": "Stop Waiting! ⏳ Hold vs Wait",
+          "channel": "Kane & Shige's Kanji Dojo",
+          "level": "N5"
+        },
+        {
+          "videoId": "3KepczwVZFo",
+          "title": "Kanji Secret: One Dot Changes Everything! 👑 Jewel vs King",
+          "channel": "Kane & Shige's Kanji Dojo",
+          "level": "N5"
+        },
+        {
+          "videoId": "EkYyZm6pBHk",
+          "title": "What's Inside the Gate? 🚪 Question vs Interval",
+          "channel": "Kane & Shige's Kanji Dojo",
+          "level": "N5"
+        },
+        {
+          "videoId": "M_a-HQGGY94",
+          "title": "Kanji Mystery: Missing One Line? 👁️ Bird vs Crow",
+          "channel": "Kane & Shige's Kanji Dojo",
+          "level": "N5"
+        },
+        {
+          "videoId": "bJPPFMUTpSM",
+          "title": "Japanese is BROKEN! 🤯 Kanji vs Katakana",
+          "channel": "Kane & Shige's Kanji Dojo",
+          "level": "N5"
+        },
+        {
+          "videoId": "YjGB_jyU8Lc",
+          "title": "Spot the Difference! 🔍 Cow vs Noon",
+          "channel": "Kane & Shige's Kanji Dojo",
+          "level": "N5"
+        },
+        {
+          "videoId": "BfVGSC1QyX4",
+          "title": "Don't Mix Them Up! 🛑 Not Yet vs End",
+          "channel": "Kane & Shige's Kanji Dojo",
+          "level": "N5"
+        },
+        {
+          "videoId": "JEjG4iFwdT4",
+          "title": "Why Japanese Point to Noses? 🤔 White vs Self",
+          "channel": "Kane & Shige's Kanji Dojo",
+          "level": "N5"
+        },
+        {
+          "videoId": "NfrCqjUpb-Y",
+          "title": "STOP Confusing These! 🛑 Right vs Left",
+          "channel": "Kane & Shige's Kanji Dojo",
+          "level": "N5"
+        },
+        {
+          "videoId": "tMKf6m0Tp30",
+          "title": "Kanji is Mind-Blowing! 🤯 Big vs Sky",
+          "channel": "Kane & Shige's Kanji Dojo",
+          "level": "N5"
+        },
+        {
+          "videoId": "BU3UcbUJ4n4",
+          "title": "SAMURAI vs MUD? ⚔️ 99% GET CONFUSED! 🇯🇵",
+          "channel": "Kane & Shige's Kanji Dojo",
+          "level": "N5"
+        },
+        {
+          "videoId": "u4JLz2azDM4",
+          "title": "TREE evolved into BOOK?! 🌳📖 99% SURPRISED!",
+          "channel": "Kane & Shige's Kanji Dojo",
+          "level": "N5"
+        },
+        {
+          "videoId": "PMpY5mJT89o",
+          "title": "DON'T BLINK! 👁️ Sun becomes Eye?! 🇯🇵",
+          "channel": "Kane & Shige's Kanji Dojo",
+          "level": "N5"
+        },
+        {
+          "videoId": "_pra7up82v4",
+          "title": "99% FAIL! 😱 Person vs Enter?",
+          "channel": "Kane & Shige's Kanji Dojo",
+          "level": "N5"
+        },
+        {
+          "videoId": "1b6aYHusBHA",
+          "title": "ICE vs WATER",
+          "channel": "Kane & Shige's Kanji Dojo",
+          "level": "N5"
+        },
+        {
+          "videoId": "igP3YHfLL7k",
+          "title": "Same?! 💪 vs 🔤",
+          "channel": "Kane & Shige's Kanji Dojo",
+          "level": "N5"
+        },
+        {
+          "videoId": "hi0UP27XOKo",
+          "title": "OPEN IT! 🚪❓",
+          "channel": "Kane & Shige's Kanji Dojo",
+          "level": "N5"
+        }
+      ]
     },
     "comprehensive": {
       "label": "Comprehensive",
       "description": "Kelas lengkap < 40 menit",
-      "title": "How to Write and Read All Hiragana | 30 Minutes",
-      "channel": "Learn Japanese Channel",
-      "duration": "29:45",
-      "level": "N5",
-      "embedUrl": "https://www.youtube.com/embed/z4qh8BVrb3w",
-      "watchUrl": "https://www.youtube.com/watch?v=z4qh8BVrb3w",
-      "playlistUrl": "https://www.youtube.com/playlist?list=PLA_RcUI8km1ME3ewzc4pcJ-cA-cw0-nKa",
-      "playlistLabel": "Playlist Kanji N5"
+      "items": [
+        {
+          "videoId": "RKWrWRFyfYo",
+          "title": "Japanese Kanji 101 (and How I’d Learn Kanji Starting Over)",
+          "channel": "ToKini Andy",
+          "duration": "18:34",
+          "level": "N5",
+          "playlistUrl": "https://www.youtube.com/playlist?list=PLA_RcUI8km1ME3ewzc4pcJ-cA-cw0-nKa",
+          "playlistLabel": "Playlist Kanji N5"
+        },
+        {
+          "videoId": "ybk5DK1M128",
+          "title": "6 Rules for Writing Japanese Kanji CORRECTLY",
+          "channel": "ToKini Andy",
+          "duration": "7:34",
+          "level": "N5",
+          "playlistUrl": "https://www.youtube.com/playlist?list=PLA_RcUI8km1ME3ewzc4pcJ-cA-cw0-nKa",
+          "playlistLabel": "Playlist Kanji N5"
+        },
+        {
+          "videoId": "DRbVBwzc6Ww",
+          "title": "The Anatomy of a Japanese Kanji",
+          "channel": "ToKini Andy",
+          "duration": "5:55",
+          "level": "N5",
+          "playlistUrl": "https://www.youtube.com/playlist?list=PLA_RcUI8km1ME3ewzc4pcJ-cA-cw0-nKa",
+          "playlistLabel": "Playlist Kanji N5"
+        },
+        {
+          "videoId": "Tix-GMEhTug",
+          "title": "【N5】Japanese Kanji 一、二、三、口、四 Meanings and Writings",
+          "channel": "ToKini Andy",
+          "duration": "12:13",
+          "level": "N5",
+          "playlistUrl": "https://www.youtube.com/playlist?list=PLA_RcUI8km1ME3ewzc4pcJ-cA-cw0-nKa",
+          "playlistLabel": "Playlist Kanji N5"
+        },
+        {
+          "videoId": "O1DAeHQsHVo",
+          "title": "【N5】Japanese Kanji 五、六、七、八、九 Meanings and Writings",
+          "channel": "ToKini Andy",
+          "duration": "14:47",
+          "level": "N5",
+          "playlistUrl": "https://www.youtube.com/playlist?list=PLA_RcUI8km1ME3ewzc4pcJ-cA-cw0-nKa",
+          "playlistLabel": "Playlist Kanji N5"
+        },
+        {
+          "videoId": "gg3u_embBb8",
+          "title": "【N5】Japanese Kanji 十、日、月、白、百 Meanings and Writings",
+          "channel": "ToKini Andy",
+          "duration": "9:59",
+          "level": "N5",
+          "playlistUrl": "https://www.youtube.com/playlist?list=PLA_RcUI8km1ME3ewzc4pcJ-cA-cw0-nKa",
+          "playlistLabel": "Playlist Kanji N5"
+        },
+        {
+          "videoId": "SQkpEAKCne0",
+          "title": "【N5】Japanese Kanji 千、万、円、上、下 Meanings and Writings",
+          "channel": "ToKini Andy",
+          "duration": "10:13",
+          "level": "N5",
+          "playlistUrl": "https://www.youtube.com/playlist?list=PLA_RcUI8km1ME3ewzc4pcJ-cA-cw0-nKa",
+          "playlistLabel": "Playlist Kanji N5"
+        },
+        {
+          "videoId": "UEEh4PICP7A",
+          "title": "Japanese Kanji N5: 人、火、土、水、木 Meanings and Writings",
+          "channel": "ToKini Andy",
+          "duration": "12:56",
+          "level": "N5",
+          "playlistUrl": "https://www.youtube.com/playlist?list=PLA_RcUI8km1ME3ewzc4pcJ-cA-cw0-nKa",
+          "playlistLabel": "Playlist Kanji N5"
+        },
+        {
+          "videoId": "RqofvUqX1uU",
+          "title": "【N5】Japanese Kanji 王、玉、国、金、休 Meanings and Writings",
+          "channel": "ToKini Andy",
+          "duration": "12:51",
+          "level": "N5",
+          "playlistUrl": "https://www.youtube.com/playlist?list=PLA_RcUI8km1ME3ewzc4pcJ-cA-cw0-nKa",
+          "playlistLabel": "Playlist Kanji N5"
+        },
+        {
+          "videoId": "vNRjyH_SCMs",
+          "title": "【N5】Japanese Kanji 目、見、耳、止、足、正 Meanings and Writings",
+          "channel": "ToKini Andy",
+          "duration": "12:26",
+          "level": "N5",
+          "playlistUrl": "https://www.youtube.com/playlist?list=PLA_RcUI8km1ME3ewzc4pcJ-cA-cw0-nKa",
+          "playlistLabel": "Playlist Kanji N5"
+        },
+        {
+          "videoId": "ERGfmpOVl4Q",
+          "title": "【N5】Japanese Kanji 車、手、子、字、学 Meanings and Writings",
+          "channel": "ToKini Andy",
+          "duration": "14:42",
+          "level": "N5",
+          "playlistUrl": "https://www.youtube.com/playlist?list=PLA_RcUI8km1ME3ewzc4pcJ-cA-cw0-nKa",
+          "playlistLabel": "Playlist Kanji N5"
+        },
+        {
+          "videoId": "ddhiMiuom-s",
+          "title": "【N5】Japanese Kanji 田、力、男、女、友 Meanings and Writings",
+          "channel": "ToKini Andy",
+          "duration": "14:08",
+          "level": "N5",
+          "playlistUrl": "https://www.youtube.com/playlist?list=PLA_RcUI8km1ME3ewzc4pcJ-cA-cw0-nKa",
+          "playlistLabel": "Playlist Kanji N5"
+        },
+        {
+          "videoId": "uDpcgYO1PA8",
+          "title": "【N5】Japanese Kanji 父、母、毎、分、今 Meanings and Writings",
+          "channel": "ToKini Andy",
+          "duration": "13:07",
+          "level": "N5",
+          "playlistUrl": "https://www.youtube.com/playlist?list=PLA_RcUI8km1ME3ewzc4pcJ-cA-cw0-nKa",
+          "playlistLabel": "Playlist Kanji N5"
+        },
+        {
+          "videoId": "cLT39m_b7QU",
+          "title": "【N5】Japanese Kanji 午、年、寺、時、小 Meanings and Writings",
+          "channel": "ToKini Andy",
+          "duration": "13:43",
+          "level": "N5",
+          "playlistUrl": "https://www.youtube.com/playlist?list=PLA_RcUI8km1ME3ewzc4pcJ-cA-cw0-nKa",
+          "playlistLabel": "Playlist Kanji N5"
+        },
+        {
+          "videoId": "ROmDhyzuctA",
+          "title": "【N5】Japanese Kanji 大、犬、半、前、来 Meanings and Writings",
+          "channel": "ToKini Andy",
+          "duration": "10:58",
+          "level": "N5",
+          "playlistUrl": "https://www.youtube.com/playlist?list=PLA_RcUI8km1ME3ewzc4pcJ-cA-cw0-nKa",
+          "playlistLabel": "Playlist Kanji N5"
+        },
+        {
+          "videoId": "-GRJmAQypfY",
+          "title": "【N5】Japanese Kanji 川、山、出、入、天 Meanings and Writings",
+          "channel": "ToKini Andy",
+          "duration": "12:11",
+          "level": "N5",
+          "playlistUrl": "https://www.youtube.com/playlist?list=PLA_RcUI8km1ME3ewzc4pcJ-cA-cw0-nKa",
+          "playlistLabel": "Playlist Kanji N5"
+        },
+        {
+          "videoId": "o6ryX1vQghQ",
+          "title": "【N5】Japanese Kanji 夕、名、化、花、竹 Meanings and Writings",
+          "channel": "ToKini Andy",
+          "duration": "12:25",
+          "level": "N5",
+          "playlistUrl": "https://www.youtube.com/playlist?list=PLA_RcUI8km1ME3ewzc4pcJ-cA-cw0-nKa",
+          "playlistLabel": "Playlist Kanji N5"
+        },
+        {
+          "videoId": "kDhRRIaIIuM",
+          "title": "【N5】Japanese Kanji 早、草、林、森、交、校 Meanings and Writings",
+          "channel": "ToKini Andy",
+          "duration": "11:43",
+          "level": "N5",
+          "playlistUrl": "https://www.youtube.com/playlist?list=PLA_RcUI8km1ME3ewzc4pcJ-cA-cw0-nKa",
+          "playlistLabel": "Playlist Kanji N5"
+        },
+        {
+          "videoId": "1E2QkjePsl4",
+          "title": "【N5】Japanese Kanji 言、語、話、売、読 Meanings and Writings",
+          "channel": "ToKini Andy",
+          "duration": "12:22",
+          "level": "N5",
+          "playlistUrl": "https://www.youtube.com/playlist?list=PLA_RcUI8km1ME3ewzc4pcJ-cA-cw0-nKa",
+          "playlistLabel": "Playlist Kanji N5"
+        },
+        {
+          "videoId": "pvxpWX2jMMY",
+          "title": "【N5】Japanese Kanji 本、文、書、右、左 Meanings and Writings",
+          "channel": "ToKini Andy",
+          "duration": "18:05",
+          "level": "N5",
+          "playlistUrl": "https://www.youtube.com/playlist?list=PLA_RcUI8km1ME3ewzc4pcJ-cA-cw0-nKa",
+          "playlistLabel": "Playlist Kanji N5"
+        },
+        {
+          "videoId": "NLRzPR2uTDM",
+          "title": "【N5】Japanese Kanji 立、音、門、間、聞 Meanings and Writings",
+          "channel": "ToKini Andy",
+          "duration": "14:02",
+          "level": "N5",
+          "playlistUrl": "https://www.youtube.com/playlist?list=PLA_RcUI8km1ME3ewzc4pcJ-cA-cw0-nKa",
+          "playlistLabel": "Playlist Kanji N5"
+        },
+        {
+          "videoId": "iYP2fCy-8o0",
+          "title": "【N5】Japanese Kanji 生、青、赤、先、石 Meanings and Writings",
+          "channel": "ToKini Andy",
+          "duration": "15:53",
+          "level": "N5",
+          "playlistUrl": "https://www.youtube.com/playlist?list=PLA_RcUI8km1ME3ewzc4pcJ-cA-cw0-nKa",
+          "playlistLabel": "Playlist Kanji N5"
+        },
+        {
+          "videoId": "Ca_QTzvpesA",
+          "title": "【N5】Japanese Kanji 糸、後、気、空、高 Meanings and Writings",
+          "channel": "ToKini Andy",
+          "duration": "22:08",
+          "level": "N5",
+          "playlistUrl": "https://www.youtube.com/playlist?list=PLA_RcUI8km1ME3ewzc4pcJ-cA-cw0-nKa",
+          "playlistLabel": "Playlist Kanji N5"
+        },
+        {
+          "videoId": "3IFSHFq8m6w",
+          "title": "【N5】Japanese Kanji 何、町、村、中、虫 Meanings and Writings",
+          "channel": "ToKini Andy",
+          "duration": "15:45",
+          "level": "N5",
+          "playlistUrl": "https://www.youtube.com/playlist?list=PLA_RcUI8km1ME3ewzc4pcJ-cA-cw0-nKa",
+          "playlistLabel": "Playlist Kanji N5"
+        },
+        {
+          "videoId": "JqSNT-UOEYc",
+          "title": "【N5】Japanese Kanji 行、良、食、雨、電 Meanings and Writings",
+          "channel": "ToKini Andy",
+          "duration": "13:24",
+          "level": "N5",
+          "playlistUrl": "https://www.youtube.com/playlist?list=PLA_RcUI8km1ME3ewzc4pcJ-cA-cw0-nKa",
+          "playlistLabel": "Playlist Kanji N5"
+        },
+        {
+          "videoId": "SkbwQwt0dHU",
+          "title": "【N5】Japanese Kanji 外、北、南、西、東、長 Meanings and Writings",
+          "channel": "ToKini Andy",
+          "duration": "16:39",
+          "level": "N5",
+          "playlistUrl": "https://www.youtube.com/playlist?list=PLA_RcUI8km1ME3ewzc4pcJ-cA-cw0-nKa",
+          "playlistLabel": "Playlist Kanji N5"
+        },
+        {
+          "videoId": "z4qh8BVrb3w",
+          "title": "How to Write and Read All Hiragana | 30 minutes | Learn Japanese",
+          "channel": "Learn Japanese Channel",
+          "duration": "29:45",
+          "level": "N5"
+        }
+      ]
     }
   },
   "kanji": {
@@ -84,6 +417,126 @@
           "reading": "このかわはとてもきれいです。",
           "meaning": "Sungai ini sangat indah dan bersih."
         }
+      },
+      {
+        "kanji": "水",
+        "kunyomi": "みず",
+        "onyomi": "スイ",
+        "meaning": "Air",
+        "pattern_hint": "水 menggambarkan aliran air: garis tengah sebagai arus utama dengan cipratan di kedua sisinya.",
+        "example": {
+          "japanese": "毎朝、水を飲みます。",
+          "reading": "まいあさ、みずをのみます。",
+          "meaning": "Setiap pagi saya minum air."
+        }
+      },
+      {
+        "kanji": "火",
+        "kunyomi": "ひ",
+        "onyomi": "カ",
+        "meaning": "Api",
+        "pattern_hint": "火 adalah gambar nyala api: dua percikan di samping dan lidah api di tengah.",
+        "example": {
+          "japanese": "火に気をつけてください。",
+          "reading": "ひにきをつけてください。",
+          "meaning": "Tolong hati-hati dengan api."
+        }
+      },
+      {
+        "kanji": "木",
+        "kunyomi": "き",
+        "onyomi": "モク / ボク",
+        "meaning": "Pohon, kayu",
+        "pattern_hint": "木 adalah pohon: garis datar untuk dahan, garis tegak untuk batang, dan dua garis miring untuk akar.",
+        "example": {
+          "japanese": "庭に大きい木があります。",
+          "reading": "にわにおおきいきがあります。",
+          "meaning": "Di halaman ada pohon besar."
+        }
+      },
+      {
+        "kanji": "金",
+        "kunyomi": "かね",
+        "onyomi": "キン / コン",
+        "meaning": "Emas, uang",
+        "pattern_hint": "金 seperti atap (人) yang menaungi tanah (土) berisi butiran logam berharga.",
+        "example": {
+          "japanese": "お金がありません。",
+          "reading": "おかねがありません。",
+          "meaning": "Saya tidak punya uang."
+        }
+      },
+      {
+        "kanji": "土",
+        "kunyomi": "つち",
+        "onyomi": "ド / ト",
+        "meaning": "Tanah",
+        "pattern_hint": "土 adalah tunas kecil yang tumbuh dari permukaan tanah (garis bawah yang panjang).",
+        "example": {
+          "japanese": "土曜日に公園へ行きます。",
+          "reading": "どようびにこうえんへいきます。",
+          "meaning": "Hari Sabtu saya pergi ke taman."
+        }
+      },
+      {
+        "kanji": "学",
+        "kunyomi": "まな.ぶ",
+        "onyomi": "ガク",
+        "meaning": "Belajar",
+        "pattern_hint": "学: atap (冖) di atas anak (子) = anak yang belajar di bawah atap sekolah.",
+        "example": {
+          "japanese": "大学で日本語を学びます。",
+          "reading": "だいがくでにほんごをまなびます。",
+          "meaning": "Saya belajar bahasa Jepang di universitas."
+        }
+      },
+      {
+        "kanji": "生",
+        "kunyomi": "い.きる / う.まれる / なま",
+        "onyomi": "セイ / ショウ",
+        "meaning": "Hidup, lahir; mentah",
+        "pattern_hint": "生 adalah tunas yang tumbuh dari tanah (土), lambang kehidupan baru.",
+        "example": {
+          "japanese": "私は東京で生まれました。",
+          "reading": "わたしはとうきょうでうまれました。",
+          "meaning": "Saya lahir di Tokyo."
+        }
+      },
+      {
+        "kanji": "先",
+        "kunyomi": "さき",
+        "onyomi": "セン",
+        "meaning": "Duluan, depan, ujung",
+        "pattern_hint": "先: kaki (儿) yang melangkah paling depan, lebih dulu dari yang lain.",
+        "example": {
+          "japanese": "先に帰ってください。",
+          "reading": "さきにかえってください。",
+          "meaning": "Silakan pulang duluan."
+        }
+      },
+      {
+        "kanji": "大",
+        "kunyomi": "おお.きい",
+        "onyomi": "ダイ / タイ",
+        "meaning": "Besar",
+        "pattern_hint": "大 adalah orang yang merentangkan kedua tangan lebar-lebar untuk menunjukkan sesuatu yang besar.",
+        "example": {
+          "japanese": "この犬は大きいです。",
+          "reading": "このいぬはおおきいです。",
+          "meaning": "Anjing ini besar."
+        }
+      },
+      {
+        "kanji": "小",
+        "kunyomi": "ちい.さい / こ / お",
+        "onyomi": "ショウ",
+        "meaning": "Kecil",
+        "pattern_hint": "小: satu garis tegak diapit dua titik kecil = sesuatu yang dibelah menjadi bagian kecil.",
+        "example": {
+          "japanese": "小さい猫がいます。",
+          "reading": "ちいさいねこがいます。",
+          "meaning": "Ada kucing kecil."
+        }
       }
     ],
     "N4": [
@@ -143,8 +596,128 @@
         "pattern_hint": "木 + 木 + 木 = tiga pohon sekaligus, lebih lebat daripada 林.",
         "example": {
           "japanese": "森の中で鳥が鳴いています。",
-          "reading": "もりのなかでとりがなっています。",
+          "reading": "もりのなかでとりがないています。",
           "meaning": "Burung berkicau di dalam hutan."
+        }
+      },
+      {
+        "kanji": "春",
+        "kunyomi": "はる",
+        "onyomi": "シュン",
+        "meaning": "Musim semi",
+        "pattern_hint": "Bagian atas 春 seperti tanaman yang bertunas, ditambah 日 (matahari) di bawahnya = musim tanaman tumbuh di bawah matahari hangat.",
+        "example": {
+          "japanese": "春になると桜が咲きます。",
+          "reading": "はるになるとさくらがさきます。",
+          "meaning": "Saat musim semi tiba, bunga sakura mekar."
+        }
+      },
+      {
+        "kanji": "夏",
+        "kunyomi": "なつ",
+        "onyomi": "カ / ゲ",
+        "meaning": "Musim panas",
+        "pattern_hint": "夏: bagian atas mirip 頁 (kepala) dan di bawahnya 夂 (kaki melangkah) = orang yang berjalan di bawah terik musim panas.",
+        "example": {
+          "japanese": "夏休みに海へ行きました。",
+          "reading": "なつやすみにうみへいきました。",
+          "meaning": "Saat liburan musim panas saya pergi ke laut."
+        }
+      },
+      {
+        "kanji": "秋",
+        "kunyomi": "あき",
+        "onyomi": "シュウ",
+        "meaning": "Musim gugur",
+        "pattern_hint": "禾 (padi) + 火 (api) = padi yang menguning seperti terbakar, tanda panen di musim gugur.",
+        "example": {
+          "japanese": "秋は涼しくて気持ちがいいです。",
+          "reading": "あきはすずしくてきもちがいいです。",
+          "meaning": "Musim gugur sejuk dan nyaman."
+        }
+      },
+      {
+        "kanji": "冬",
+        "kunyomi": "ふゆ",
+        "onyomi": "トウ",
+        "meaning": "Musim dingin",
+        "pattern_hint": "夂 (kaki melangkah) + dua titik es (冫) = berjalan di atas es pada musim dingin.",
+        "example": {
+          "japanese": "冬は雪がたくさん降ります。",
+          "reading": "ふゆはゆきがたくさんふります。",
+          "meaning": "Di musim dingin salju turun banyak."
+        }
+      },
+      {
+        "kanji": "朝",
+        "kunyomi": "あさ",
+        "onyomi": "チョウ",
+        "meaning": "Pagi",
+        "pattern_hint": "Bagian kiri adalah matahari (日) yang terbit di antara rerumputan, ditambah 月 (bulan) yang masih terlihat = pagi hari.",
+        "example": {
+          "japanese": "朝ごはんを食べましたか。",
+          "reading": "あさごはんをたべましたか。",
+          "meaning": "Apakah kamu sudah sarapan?"
+        }
+      },
+      {
+        "kanji": "夜",
+        "kunyomi": "よる / よ",
+        "onyomi": "ヤ",
+        "meaning": "Malam",
+        "pattern_hint": "亠 (atap) + 亻 (orang) + 夕 (senja) = orang yang berteduh di rumah setelah senja: malam.",
+        "example": {
+          "japanese": "夜は早く寝ます。",
+          "reading": "よるははやくねます。",
+          "meaning": "Malam hari saya tidur cepat."
+        }
+      },
+      {
+        "kanji": "走",
+        "kunyomi": "はし.る",
+        "onyomi": "ソウ",
+        "meaning": "Berlari",
+        "pattern_hint": "土 (tanah) di atas + kaki yang melangkah lebar di bawah = berlari di atas tanah.",
+        "example": {
+          "japanese": "毎朝公園を走ります。",
+          "reading": "まいあさこうえんをはしります。",
+          "meaning": "Setiap pagi saya lari di taman."
+        }
+      },
+      {
+        "kanji": "歩",
+        "kunyomi": "ある.く / あゆ.む",
+        "onyomi": "ホ / ブ",
+        "meaning": "Berjalan",
+        "pattern_hint": "止 (kaki) di atas + jejak kaki di bawah = langkah kaki satu demi satu.",
+        "example": {
+          "japanese": "駅まで歩いて行きます。",
+          "reading": "えきまであるいていきます。",
+          "meaning": "Saya pergi ke stasiun dengan berjalan kaki."
+        }
+      },
+      {
+        "kanji": "弟",
+        "kunyomi": "おとうと",
+        "onyomi": "テイ / ダイ / デ",
+        "meaning": "Adik laki-laki",
+        "pattern_hint": "弟 seperti tali yang melilit tongkat secara berurutan, melambangkan urutan saudara: yang lebih muda.",
+        "example": {
+          "japanese": "弟は高校生です。",
+          "reading": "おとうとはこうこうせいです。",
+          "meaning": "Adik laki-laki saya siswa SMA."
+        }
+      },
+      {
+        "kanji": "料",
+        "kunyomi": "—",
+        "onyomi": "リョウ",
+        "meaning": "Bahan, biaya",
+        "pattern_hint": "米 (beras) + 斗 (takaran) = menakar beras: bahan atau biaya.",
+        "example": {
+          "japanese": "料理を作るのが好きです。",
+          "reading": "りょうりをつくるのがすきです。",
+          "meaning": "Saya suka memasak."
         }
       }
     ],
@@ -208,6 +781,126 @@
           "reading": "らいきのけいかくをたてましょう。",
           "meaning": "Mari susun rencana untuk periode berikutnya."
         }
+      },
+      {
+        "kanji": "違",
+        "kunyomi": "ちが.う",
+        "onyomi": "イ",
+        "meaning": "Berbeda, salah",
+        "pattern_hint": "辶 (berjalan) + 韋 (arah berlawanan) = berjalan ke arah yang berbeda.",
+        "example": {
+          "japanese": "その答えは違います。",
+          "reading": "そのこたえはちがいます。",
+          "meaning": "Jawaban itu salah."
+        }
+      },
+      {
+        "kanji": "痛",
+        "kunyomi": "いた.い",
+        "onyomi": "ツウ",
+        "meaning": "Sakit",
+        "pattern_hint": "疒 (radikal penyakit) + 甬 = rasa sakit yang menjalar di tubuh.",
+        "example": {
+          "japanese": "頭が痛いです。",
+          "reading": "あたまがいたいです。",
+          "meaning": "Kepala saya sakit."
+        }
+      },
+      {
+        "kanji": "信",
+        "kunyomi": "—",
+        "onyomi": "シン",
+        "meaning": "Percaya",
+        "pattern_hint": "亻 (orang) + 言 (kata) = orang yang memegang kata-katanya, dapat dipercaya.",
+        "example": {
+          "japanese": "私は彼を信じています。",
+          "reading": "わたしはかれをしんじています。",
+          "meaning": "Saya percaya padanya."
+        }
+      },
+      {
+        "kanji": "恋",
+        "kunyomi": "こい / こ.う",
+        "onyomi": "レン",
+        "meaning": "Cinta (romantis)",
+        "pattern_hint": "亦 (juga) + 心 (hati) = hati yang terus terpaut pada seseorang.",
+        "example": {
+          "japanese": "彼女に恋をしました。",
+          "reading": "かのじょにこいをしました。",
+          "meaning": "Saya jatuh cinta padanya."
+        }
+      },
+      {
+        "kanji": "頼",
+        "kunyomi": "たの.む / たよ.る",
+        "onyomi": "ライ",
+        "meaning": "Meminta tolong, mengandalkan",
+        "pattern_hint": "束 (ikatan) + 頁 (kepala) = kepala yang terikat erat pada seseorang untuk diandalkan.",
+        "example": {
+          "japanese": "友達に手伝いを頼みました。",
+          "reading": "ともだちにてつだいをたのみました。",
+          "meaning": "Saya meminta bantuan teman."
+        }
+      },
+      {
+        "kanji": "守",
+        "kunyomi": "まも.る",
+        "onyomi": "シュ / ス",
+        "meaning": "Melindungi, menjaga",
+        "pattern_hint": "宀 (atap) + 寸 (tangan) = tangan yang menjaga rumah.",
+        "example": {
+          "japanese": "約束を守ってください。",
+          "reading": "やくそくをまもってください。",
+          "meaning": "Tolong tepati janji."
+        }
+      },
+      {
+        "kanji": "疲",
+        "kunyomi": "つか.れる",
+        "onyomi": "ヒ",
+        "meaning": "Lelah",
+        "pattern_hint": "疒 (penyakit) + 皮 (kulit) = tubuh yang terkuras sampai ke kulit: lelah.",
+        "example": {
+          "japanese": "今日はとても疲れました。",
+          "reading": "きょうはとてもつかれました。",
+          "meaning": "Hari ini saya sangat lelah."
+        }
+      },
+      {
+        "kanji": "笑",
+        "kunyomi": "わら.う / え.む",
+        "onyomi": "ショウ",
+        "meaning": "Tertawa, tersenyum",
+        "pattern_hint": "⺮ (bambu) + 夭 (orang meliuk) = orang yang tertawa sampai badannya bergoyang seperti bambu tertiup angin.",
+        "example": {
+          "japanese": "子供たちが楽しそうに笑っています。",
+          "reading": "こどもたちがたのしそうにわらっています。",
+          "meaning": "Anak-anak tertawa dengan gembira."
+        }
+      },
+      {
+        "kanji": "泣",
+        "kunyomi": "な.く",
+        "onyomi": "キュウ",
+        "meaning": "Menangis",
+        "pattern_hint": "氵 (air) + 立 (berdiri) = air mata yang jatuh dari orang yang berdiri.",
+        "example": {
+          "japanese": "映画を見て泣きました。",
+          "reading": "えいがをみてなきました。",
+          "meaning": "Saya menangis menonton film."
+        }
+      },
+      {
+        "kanji": "絶",
+        "kunyomi": "た.える / た.つ",
+        "onyomi": "ゼツ",
+        "meaning": "Putus; mutlak",
+        "pattern_hint": "糸 (benang) + 色 = benang yang dipotong hingga putus.",
+        "example": {
+          "japanese": "絶対にあきらめません。",
+          "reading": "ぜったいにあきらめません。",
+          "meaning": "Saya pasti tidak akan menyerah."
+        }
       }
     ],
     "N2": [
@@ -269,6 +962,126 @@
           "japanese": "この布は自然の染料で染めました。",
           "reading": "このぬのはしぜんのせんりょうでそめました。",
           "meaning": "Kain ini diwarnai dengan pewarna alami."
+        }
+      },
+      {
+        "kanji": "汗",
+        "kunyomi": "あせ",
+        "onyomi": "カン",
+        "meaning": "Keringat",
+        "pattern_hint": "氵 (air) + 干 (kering) = air yang keluar lalu mengering di kulit.",
+        "example": {
+          "japanese": "運動して汗をかきました。",
+          "reading": "うんどうしてあせをかきました。",
+          "meaning": "Saya berkeringat setelah olahraga."
+        }
+      },
+      {
+        "kanji": "柔",
+        "kunyomi": "やわ.らか / やわ.らかい",
+        "onyomi": "ジュウ / ニュウ",
+        "meaning": "Lembut",
+        "pattern_hint": "矛 (tombak) + 木 (kayu) = kayu yang lentur untuk gagang tombak: lembut dan fleksibel.",
+        "example": {
+          "japanese": "このパンはとても柔らかいです。",
+          "reading": "このパンはとてもやわらかいです。",
+          "meaning": "Roti ini sangat lembut."
+        }
+      },
+      {
+        "kanji": "輸",
+        "kunyomi": "—",
+        "onyomi": "ユ",
+        "meaning": "Mengangkut, ekspor-impor",
+        "pattern_hint": "車 (kendaraan) + 俞 (memindahkan) = kendaraan yang memindahkan barang.",
+        "example": {
+          "japanese": "日本は多くの車を輸出しています。",
+          "reading": "にほんはおおくのくるまをゆしゅつしています。",
+          "meaning": "Jepang mengekspor banyak mobil."
+        }
+      },
+      {
+        "kanji": "縮",
+        "kunyomi": "ちぢ.む / ちぢ.める",
+        "onyomi": "シュク",
+        "meaning": "Menyusut, mengerut",
+        "pattern_hint": "糸 (benang) + 宿 (diam) = benang yang mengerut dan menyusut.",
+        "example": {
+          "japanese": "セーターを洗ったら縮んでしまいました。",
+          "reading": "セーターをあらったらちぢんでしまいました。",
+          "meaning": "Sweternya menyusut setelah dicuci."
+        }
+      },
+      {
+        "kanji": "枯",
+        "kunyomi": "か.れる / か.らす",
+        "onyomi": "コ",
+        "meaning": "Layu, kering",
+        "pattern_hint": "木 (pohon) + 古 (tua) = pohon yang sudah tua dan layu.",
+        "example": {
+          "japanese": "水をやらなかったので花が枯れました。",
+          "reading": "みずをやらなかったのではながかれました。",
+          "meaning": "Bunganya layu karena tidak disiram."
+        }
+      },
+      {
+        "kanji": "掘",
+        "kunyomi": "ほ.る",
+        "onyomi": "クツ",
+        "meaning": "Menggali",
+        "pattern_hint": "扌 (tangan) + 屈 (membungkuk) = tangan yang membungkuk menggali tanah.",
+        "example": {
+          "japanese": "庭に穴を掘りました。",
+          "reading": "にわにあなをほりました。",
+          "meaning": "Saya menggali lubang di halaman."
+        }
+      },
+      {
+        "kanji": "握",
+        "kunyomi": "にぎ.る",
+        "onyomi": "アク",
+        "meaning": "Menggenggam",
+        "pattern_hint": "扌 (tangan) + 屋 (rumah) = tangan yang menutup rapat seperti rumah: menggenggam.",
+        "example": {
+          "japanese": "子供の手を握りました。",
+          "reading": "こどものてをにぎりました。",
+          "meaning": "Saya menggenggam tangan anak itu."
+        }
+      },
+      {
+        "kanji": "跡",
+        "kunyomi": "あと",
+        "onyomi": "セキ",
+        "meaning": "Jejak, bekas",
+        "pattern_hint": "⻊ (kaki) + 亦 = jejak yang ditinggalkan kaki.",
+        "example": {
+          "japanese": "雪の上に動物の足跡があります。",
+          "reading": "ゆきのうえにどうぶつのあしあとがあります。",
+          "meaning": "Di atas salju ada jejak kaki hewan."
+        }
+      },
+      {
+        "kanji": "祈",
+        "kunyomi": "いの.る",
+        "onyomi": "キ",
+        "meaning": "Berdoa",
+        "pattern_hint": "礻 (altar) + 斤 = memohon dengan sungguh-sungguh di altar.",
+        "example": {
+          "japanese": "家族の健康を祈っています。",
+          "reading": "かぞくのけんこうをいのっています。",
+          "meaning": "Saya berdoa untuk kesehatan keluarga."
+        }
+      },
+      {
+        "kanji": "誌",
+        "kunyomi": "—",
+        "onyomi": "シ",
+        "meaning": "Catatan, majalah",
+        "pattern_hint": "言 (kata) + 志 (niat) = kata-kata yang dicatat: majalah atau jurnal.",
+        "example": {
+          "japanese": "毎月ファッション雑誌を買います。",
+          "reading": "まいつきファッションざっしをかいます。",
+          "meaning": "Setiap bulan saya membeli majalah fesyen."
         }
       }
     ],
@@ -332,6 +1145,126 @@
           "reading": "よごれたシャツをみずですすぎました。",
           "meaning": "Saya membilas kemeja kotor dengan air."
         }
+      },
+      {
+        "kanji": "憧",
+        "kunyomi": "あこが.れる",
+        "onyomi": "ショウ / ドウ",
+        "meaning": "Mengagumi, mendambakan",
+        "pattern_hint": "忄 (hati) + 童 (anak) = hati yang mendamba seperti anak kecil.",
+        "example": {
+          "japanese": "子供のころからパイロットに憧れていました。",
+          "reading": "こどものころからパイロットにあこがれていました。",
+          "meaning": "Sejak kecil saya mendambakan menjadi pilot."
+        }
+      },
+      {
+        "kanji": "謙",
+        "kunyomi": "—",
+        "onyomi": "ケン",
+        "meaning": "Rendah hati",
+        "pattern_hint": "言 (kata) + 兼 (merangkap) = kata-kata yang menahan diri: rendah hati.",
+        "example": {
+          "japanese": "彼はいつも謙虚な態度です。",
+          "reading": "かれはいつもけんきょなたいどです。",
+          "meaning": "Dia selalu bersikap rendah hati."
+        }
+      },
+      {
+        "kanji": "擁",
+        "kunyomi": "—",
+        "onyomi": "ヨウ",
+        "meaning": "Merangkul, membela",
+        "pattern_hint": "扌 (tangan) + 雍 (harmoni) = tangan yang merangkul dan melindungi.",
+        "example": {
+          "japanese": "彼は友人を擁護しました。",
+          "reading": "かれはゆうじんをようごしました。",
+          "meaning": "Dia membela temannya."
+        }
+      },
+      {
+        "kanji": "遂",
+        "kunyomi": "と.げる",
+        "onyomi": "スイ",
+        "meaning": "Mencapai, menuntaskan",
+        "pattern_hint": "辶 (berjalan) + 㒸 = terus berjalan sampai tujuan tercapai.",
+        "example": {
+          "japanese": "彼はついに目的を遂げました。",
+          "reading": "かれはついにもくてきをとげました。",
+          "meaning": "Dia akhirnya mencapai tujuannya."
+        }
+      },
+      {
+        "kanji": "拒",
+        "kunyomi": "こば.む",
+        "onyomi": "キョ",
+        "meaning": "Menolak",
+        "pattern_hint": "扌 (tangan) + 巨 (besar) = tangan besar yang menghalangi: menolak.",
+        "example": {
+          "japanese": "彼は取材を拒みました。",
+          "reading": "かれはしゅざいをこばみました。",
+          "meaning": "Dia menolak wawancara."
+        }
+      },
+      {
+        "kanji": "譲",
+        "kunyomi": "ゆず.る",
+        "onyomi": "ジョウ",
+        "meaning": "Menyerahkan, mengalah",
+        "pattern_hint": "言 (kata) + 襄 = kata-kata yang mempersilakan orang lain lebih dulu.",
+        "example": {
+          "japanese": "電車でお年寄りに席を譲りました。",
+          "reading": "でんしゃでおとしよりにせきをゆずりました。",
+          "meaning": "Di kereta saya memberikan kursi kepada orang tua."
+        }
+      },
+      {
+        "kanji": "誓",
+        "kunyomi": "ちか.う",
+        "onyomi": "セイ",
+        "meaning": "Bersumpah, berjanji",
+        "pattern_hint": "折 (mematahkan) + 言 (kata) = kata yang diucapkan dengan tegas: sumpah.",
+        "example": {
+          "japanese": "二度と遅刻しないと誓いました。",
+          "reading": "にどとちこくしないとちかいました。",
+          "meaning": "Saya bersumpah tidak akan terlambat lagi."
+        }
+      },
+      {
+        "kanji": "惜",
+        "kunyomi": "お.しい / お.しむ",
+        "onyomi": "セキ",
+        "meaning": "Sayang (merasa kehilangan)",
+        "pattern_hint": "忄 (hati) + 昔 (masa lalu) = hati yang tidak rela melepas sesuatu.",
+        "example": {
+          "japanese": "時間を惜しんで勉強しました。",
+          "reading": "じかんをおしんでべんきょうしました。",
+          "meaning": "Saya belajar tanpa menyia-nyiakan waktu."
+        }
+      },
+      {
+        "kanji": "潜",
+        "kunyomi": "ひそ.む / もぐ.る",
+        "onyomi": "セン",
+        "meaning": "Bersembunyi, menyelam",
+        "pattern_hint": "氵 (air) + 替 = masuk ke dalam air: menyelam atau bersembunyi.",
+        "example": {
+          "japanese": "海に潜って魚を見ました。",
+          "reading": "うみにもぐってさかなをみました。",
+          "meaning": "Saya menyelam di laut dan melihat ikan."
+        }
+      },
+      {
+        "kanji": "霊",
+        "kunyomi": "たま",
+        "onyomi": "レイ / リョウ",
+        "meaning": "Roh, jiwa",
+        "pattern_hint": "雨 (hujan) di atas = doa memanggil hujan dari langit, dikaitkan dengan kekuatan roh.",
+        "example": {
+          "japanese": "この山には霊が宿ると言われています。",
+          "reading": "このやまにはれいがやどるといわれています。",
+          "meaning": "Konon gunung ini didiami roh."
+        }
       }
     ]
   },
@@ -384,6 +1317,54 @@
           "reading": "にほんへいきたい。",
           "meaning": "Aku ingin pergi ke Jepang."
         }
+      },
+      {
+        "id": "n5-4",
+        "title": "〜ませんか",
+        "pattern": "Kata kerja (bentuk -masu tanpa ます) + ませんか",
+        "explanation": "Mengajak seseorang dengan sopan. Artinya: maukah ... bersama?",
+        "formal": {
+          "japanese": "一緒に映画を見ませんか。",
+          "reading": "いっしょにえいがをみませんか。",
+          "meaning": "Maukah menonton film bersama?"
+        },
+        "casual": {
+          "japanese": "一緒に映画を見ない？",
+          "reading": "いっしょにえいがをみない？",
+          "meaning": "Mau nonton film bareng?"
+        }
+      },
+      {
+        "id": "n5-5",
+        "title": "〜から (alasan)",
+        "pattern": "Kalimat + から",
+        "explanation": "Menyatakan alasan atau sebab. Artinya: karena.",
+        "formal": {
+          "japanese": "雨が降っていますから、家にいます。",
+          "reading": "あめがふっていますから、いえにいます。",
+          "meaning": "Karena hujan, saya di rumah."
+        },
+        "casual": {
+          "japanese": "雨が降ってるから、家にいる。",
+          "reading": "あめがふってるから、いえにいる。",
+          "meaning": "Karena hujan, aku di rumah."
+        }
+      },
+      {
+        "id": "n5-6",
+        "title": "〜が好きです",
+        "pattern": "Kata benda + が好きです",
+        "explanation": "Menyatakan suka terhadap sesuatu. Partikel が menandai hal yang disukai.",
+        "formal": {
+          "japanese": "私は寿司が好きです。",
+          "reading": "わたしはすしがすきです。",
+          "meaning": "Saya suka sushi."
+        },
+        "casual": {
+          "japanese": "私は寿司が好き。",
+          "reading": "わたしはすしがすき。",
+          "meaning": "Aku suka sushi."
+        }
       }
     ],
     "N4": [
@@ -433,6 +1414,54 @@
           "japanese": "毎日勉強しなければならない。",
           "reading": "まいにちべんきょうしなければならない。",
           "meaning": "Aku harus belajar setiap hari."
+        }
+      },
+      {
+        "id": "n4-4",
+        "title": "〜てもいいです",
+        "pattern": "Kata kerja bentuk て + もいいです",
+        "explanation": "Meminta atau memberi izin. Artinya: boleh ...",
+        "formal": {
+          "japanese": "ここで写真を撮ってもいいですか。",
+          "reading": "ここでしゃしんをとってもいいですか。",
+          "meaning": "Bolehkah saya mengambil foto di sini?"
+        },
+        "casual": {
+          "japanese": "ここで写真を撮ってもいい？",
+          "reading": "ここでしゃしんをとってもいい？",
+          "meaning": "Boleh foto di sini?"
+        }
+      },
+      {
+        "id": "n4-5",
+        "title": "〜たら",
+        "pattern": "Kata kerja bentuk lampau (ta) + ら",
+        "explanation": "Menyatakan pengandaian atau urutan kejadian. Artinya: kalau / setelah ... maka ...",
+        "formal": {
+          "japanese": "駅に着いたら、電話してください。",
+          "reading": "えきについたら、でんわしてください。",
+          "meaning": "Kalau sudah sampai di stasiun, tolong telepon."
+        },
+        "casual": {
+          "japanese": "駅に着いたら、電話して。",
+          "reading": "えきについたら、でんわして。",
+          "meaning": "Kalau udah sampai stasiun, telepon ya."
+        }
+      },
+      {
+        "id": "n4-6",
+        "title": "〜つもりです",
+        "pattern": "Kata kerja bentuk kamus + つもりです",
+        "explanation": "Menyatakan niat atau rencana yang sudah diputuskan.",
+        "formal": {
+          "japanese": "来年、日本に留学するつもりです。",
+          "reading": "らいねん、にほんにりゅうがくするつもりです。",
+          "meaning": "Tahun depan saya berencana kuliah di Jepang."
+        },
+        "casual": {
+          "japanese": "来年、日本に留学するつもり。",
+          "reading": "らいねん、にほんにりゅうがくするつもり。",
+          "meaning": "Tahun depan aku berencana kuliah di Jepang."
         }
       }
     ],
@@ -484,6 +1513,54 @@
           "reading": "おんがくをききながらべんきょうする。",
           "meaning": "Aku belajar sambil mendengarkan musik."
         }
+      },
+      {
+        "id": "n3-4",
+        "title": "〜ばかり",
+        "pattern": "Kata benda + ばかり / Kata kerja bentuk て + ばかり",
+        "explanation": "Menyatakan hanya melakukan atau hanya ada satu hal saja, sering bernada kritik.",
+        "formal": {
+          "japanese": "弟はゲームばかりしています。",
+          "reading": "おとうとはゲームばかりしています。",
+          "meaning": "Adik saya cuma main game terus."
+        },
+        "casual": {
+          "japanese": "弟はゲームばかりしてる。",
+          "reading": "おとうとはゲームばかりしてる。",
+          "meaning": "Adikku main game melulu."
+        }
+      },
+      {
+        "id": "n3-5",
+        "title": "〜はずだ",
+        "pattern": "Kalimat biasa + はずだ",
+        "explanation": "Menyatakan dugaan kuat berdasarkan alasan logis. Artinya: seharusnya.",
+        "formal": {
+          "japanese": "荷物は明日届くはずです。",
+          "reading": "にもつはあしたとどくはずです。",
+          "meaning": "Paketnya seharusnya sampai besok."
+        },
+        "casual": {
+          "japanese": "荷物は明日届くはずだ。",
+          "reading": "にもつはあしたとどくはずだ。",
+          "meaning": "Paketnya harusnya sampai besok."
+        }
+      },
+      {
+        "id": "n3-6",
+        "title": "〜について",
+        "pattern": "Kata benda + について",
+        "explanation": "Menyatakan topik pembicaraan. Artinya: tentang atau mengenai.",
+        "formal": {
+          "japanese": "日本の文化について調べています。",
+          "reading": "にほんのぶんかについてしらべています。",
+          "meaning": "Saya sedang meneliti tentang budaya Jepang."
+        },
+        "casual": {
+          "japanese": "日本の文化について調べてる。",
+          "reading": "にほんのぶんかについてしらべてる。",
+          "meaning": "Aku lagi cari tahu soal budaya Jepang."
+        }
       }
     ],
     "N2": [
@@ -533,6 +1610,54 @@
           "japanese": "台風が来るおそれがある。",
           "reading": "たいふうがくるおそれがある。",
           "meaning": "Ada risiko topan akan datang."
+        }
+      },
+      {
+        "id": "n2-4",
+        "title": "〜ものの",
+        "pattern": "Kalimat biasa + ものの",
+        "explanation": "Mengakui suatu fakta, tetapi hasilnya tidak sesuai harapan. Artinya: meskipun ... tetapi.",
+        "formal": {
+          "japanese": "大学を卒業したものの、まだ仕事が見つかりません。",
+          "reading": "だいがくをそつぎょうしたものの、まだしごとがみつかりません。",
+          "meaning": "Meskipun sudah lulus kuliah, saya belum menemukan pekerjaan."
+        },
+        "casual": {
+          "japanese": "大学を卒業したものの、まだ仕事が見つからない。",
+          "reading": "だいがくをそつぎょうしたものの、まだしごとがみつからない。",
+          "meaning": "Walau udah lulus kuliah, aku belum dapat kerja."
+        }
+      },
+      {
+        "id": "n2-5",
+        "title": "〜に限らず",
+        "pattern": "Kata benda + に限らず",
+        "explanation": "Menyatakan bahwa sesuatu berlaku tidak hanya untuk satu hal. Artinya: tidak terbatas pada.",
+        "formal": {
+          "japanese": "この店は週末に限らず、いつも混んでいます。",
+          "reading": "このみせはしゅうまつにかぎらず、いつもこんでいます。",
+          "meaning": "Toko ini selalu ramai, tidak hanya di akhir pekan."
+        },
+        "casual": {
+          "japanese": "この店は週末に限らず、いつも混んでる。",
+          "reading": "このみせはしゅうまつにかぎらず、いつもこんでる。",
+          "meaning": "Toko ini selalu rame, bukan cuma pas akhir pekan."
+        }
+      },
+      {
+        "id": "n2-6",
+        "title": "〜かねない",
+        "pattern": "Kata kerja (bentuk -masu tanpa ます) + かねない",
+        "explanation": "Menyatakan kemungkinan hasil yang buruk. Artinya: bisa-bisa ...",
+        "formal": {
+          "japanese": "そんな運転をしたら、事故を起こしかねません。",
+          "reading": "そんなうんてんをしたら、じこをおこしかねません。",
+          "meaning": "Kalau menyetir seperti itu, bisa-bisa terjadi kecelakaan."
+        },
+        "casual": {
+          "japanese": "そんな運転したら、事故を起こしかねない。",
+          "reading": "そんなうんてんしたら、じこをおこしかねない。",
+          "meaning": "Nyetir kayak gitu, bisa-bisa kecelakaan."
         }
       }
     ],
@@ -584,47 +1709,333 @@
           "reading": "とうきょうこうえんをかわきりに、ぜんこくツアーがはじまる。",
           "meaning": "Dimulai dari pertunjukan Tokyo, tur nasional dimulai."
         }
+      },
+      {
+        "id": "n1-4",
+        "title": "〜ともなると",
+        "pattern": "Kata benda + ともなると",
+        "explanation": "Menyatakan bahwa saat mencapai tingkat atau posisi tertentu, keadaannya ikut berubah sesuai tingkat itu.",
+        "formal": {
+          "japanese": "社長ともなると、毎日忙しいでしょう。",
+          "reading": "しゃちょうともなると、まいにちいそがしいでしょう。",
+          "meaning": "Kalau sudah menjadi direktur, pasti sibuk setiap hari."
+        },
+        "casual": {
+          "japanese": "社長ともなると、毎日忙しいだろう。",
+          "reading": "しゃちょうともなると、まいにちいそがしいだろう。",
+          "meaning": "Kalau udah jadi direktur, pasti sibuk tiap hari."
+        }
+      },
+      {
+        "id": "n1-5",
+        "title": "〜をものともせず",
+        "pattern": "Kata benda + をものともせず",
+        "explanation": "Menghadapi rintangan tanpa gentar. Artinya: tanpa memedulikan atau tidak gentar terhadap.",
+        "formal": {
+          "japanese": "彼はけがをものともせず、試合に出場しました。",
+          "reading": "かれはけがをものともせず、しあいにしゅつじょうしました。",
+          "meaning": "Tanpa memedulikan cederanya, dia tetap bertanding."
+        },
+        "casual": {
+          "japanese": "彼はけがをものともせず、試合に出た。",
+          "reading": "かれはけがをものともせず、しあいにでた。",
+          "meaning": "Dia nggak peduli cedera, tetap ikut tanding."
+        }
+      },
+      {
+        "id": "n1-6",
+        "title": "〜ずにはいられない",
+        "pattern": "Kata kerja bentuk ない (tanpa ない) + ずにはいられない (する → せずにはいられない)",
+        "explanation": "Menyatakan dorongan yang tidak bisa ditahan. Artinya: tidak bisa tidak ...",
+        "formal": {
+          "japanese": "この映画を見ると、泣かずにはいられません。",
+          "reading": "このえいがをみると、なかずにはいられません。",
+          "meaning": "Setiap menonton film ini, saya tidak bisa menahan tangis."
+        },
+        "casual": {
+          "japanese": "この映画を見ると、泣かずにはいられない。",
+          "reading": "このえいがをみると、なかずにはいられない。",
+          "meaning": "Tiap nonton film ini, aku pasti nangis."
+        }
       }
     ]
   },
   "kana": [
-    { "kana": "おかあさん", "romaji": "okaasan", "meaning": "Ibu", "type": "Hiragana" },
-    { "kana": "がっこう", "romaji": "gakkou", "alt": ["gakko"], "meaning": "Sekolah", "type": "Hiragana" },
-    { "kana": "さくら", "romaji": "sakura", "meaning": "Bunga sakura", "type": "Hiragana" },
-    { "kana": "ともだち", "romaji": "tomodachi", "meaning": "Teman", "type": "Hiragana" },
-    { "kana": "しんぶん", "romaji": "shinbun", "alt": ["shimbun"], "meaning": "Koran", "type": "Hiragana" },
-    { "kana": "でんしゃ", "romaji": "densha", "alt": ["densya"], "meaning": "Kereta listrik", "type": "Hiragana" },
-    { "kana": "ひこうき", "romaji": "hikouki", "alt": ["hikoki"], "meaning": "Pesawat terbang", "type": "Hiragana" },
-    { "kana": "たべもの", "romaji": "tabemono", "meaning": "Makanan", "type": "Hiragana" },
-    { "kana": "のみもの", "romaji": "nomimono", "meaning": "Minuman", "type": "Hiragana" },
-    { "kana": "あたらしい", "romaji": "atarashii", "alt": ["atarashi"], "meaning": "Baru", "type": "Hiragana" },
-    { "kana": "おいしい", "romaji": "oishii", "alt": ["oishi"], "meaning": "Enak, lezat", "type": "Hiragana" },
-    { "kana": "たのしい", "romaji": "tanoshii", "alt": ["tanoshi"], "meaning": "Menyenangkan", "type": "Hiragana" },
-    { "kana": "かわいい", "romaji": "kawaii", "alt": ["kawai"], "meaning": "Lucu, imut", "type": "Hiragana" },
-    { "kana": "やさしい", "romaji": "yasashii", "alt": ["yasashi"], "meaning": "Baik hati; mudah", "type": "Hiragana" },
-    { "kana": "つめたい", "romaji": "tsumetai", "meaning": "Dingin (saat disentuh)", "type": "Hiragana" },
-    { "kana": "おおきい", "romaji": "ookii", "alt": ["okii"], "meaning": "Besar", "type": "Hiragana" },
-    { "kana": "ちいさい", "romaji": "chiisai", "alt": ["chisai"], "meaning": "Kecil", "type": "Hiragana" },
-    { "kana": "せんせい", "romaji": "sensei", "meaning": "Guru", "type": "Hiragana" },
-    { "kana": "がくせい", "romaji": "gakusei", "meaning": "Pelajar, mahasiswa", "type": "Hiragana" },
-    { "kana": "にほんご", "romaji": "nihongo", "meaning": "Bahasa Jepang", "type": "Hiragana" },
-    { "kana": "りょうり", "romaji": "ryouri", "alt": ["ryori"], "meaning": "Masakan", "type": "Hiragana" },
-    { "kana": "おんがく", "romaji": "ongaku", "meaning": "Musik", "type": "Hiragana" },
-    { "kana": "えいが", "romaji": "eiga", "meaning": "Film", "type": "Hiragana" },
-    { "kana": "しごと", "romaji": "shigoto", "meaning": "Pekerjaan", "type": "Hiragana" },
-    { "kana": "あした", "romaji": "ashita", "meaning": "Besok", "type": "Hiragana" },
-    { "kana": "コーヒー", "romaji": "koohii", "alt": ["kohi", "koohi"], "meaning": "Kopi", "type": "Katakana" },
-    { "kana": "テレビ", "romaji": "terebi", "meaning": "Televisi", "type": "Katakana" },
-    { "kana": "カメラ", "romaji": "kamera", "meaning": "Kamera", "type": "Katakana" },
-    { "kana": "パン", "romaji": "pan", "meaning": "Roti", "type": "Katakana" },
-    { "kana": "バス", "romaji": "basu", "meaning": "Bus", "type": "Katakana" },
-    { "kana": "レストラン", "romaji": "resutoran", "meaning": "Restoran", "type": "Katakana" },
-    { "kana": "コンピューター", "romaji": "konpyuutaa", "alt": ["konpyuta", "konpyuutaa"], "meaning": "Komputer", "type": "Katakana" },
-    { "kana": "アイスクリーム", "romaji": "aisukuriimu", "alt": ["aisukurimu"], "meaning": "Es krim", "type": "Katakana" },
-    { "kana": "サッカー", "romaji": "sakkaa", "alt": ["sakka"], "meaning": "Sepak bola", "type": "Katakana" },
-    { "kana": "ニュース", "romaji": "nyuusu", "alt": ["nyusu"], "meaning": "Berita", "type": "Katakana" },
-    { "kana": "ピザ", "romaji": "piza", "meaning": "Piza", "type": "Katakana" },
-    { "kana": "ホテル", "romaji": "hoteru", "meaning": "Hotel", "type": "Katakana" }
+    {
+      "kana": "おかあさん",
+      "romaji": "okaasan",
+      "meaning": "Ibu",
+      "type": "Hiragana"
+    },
+    {
+      "kana": "がっこう",
+      "romaji": "gakkou",
+      "alt": [
+        "gakko"
+      ],
+      "meaning": "Sekolah",
+      "type": "Hiragana"
+    },
+    {
+      "kana": "さくら",
+      "romaji": "sakura",
+      "meaning": "Bunga sakura",
+      "type": "Hiragana"
+    },
+    {
+      "kana": "ともだち",
+      "romaji": "tomodachi",
+      "meaning": "Teman",
+      "type": "Hiragana"
+    },
+    {
+      "kana": "しんぶん",
+      "romaji": "shinbun",
+      "alt": [
+        "shimbun"
+      ],
+      "meaning": "Koran",
+      "type": "Hiragana"
+    },
+    {
+      "kana": "でんしゃ",
+      "romaji": "densha",
+      "alt": [
+        "densya"
+      ],
+      "meaning": "Kereta listrik",
+      "type": "Hiragana"
+    },
+    {
+      "kana": "ひこうき",
+      "romaji": "hikouki",
+      "alt": [
+        "hikoki"
+      ],
+      "meaning": "Pesawat terbang",
+      "type": "Hiragana"
+    },
+    {
+      "kana": "たべもの",
+      "romaji": "tabemono",
+      "meaning": "Makanan",
+      "type": "Hiragana"
+    },
+    {
+      "kana": "のみもの",
+      "romaji": "nomimono",
+      "meaning": "Minuman",
+      "type": "Hiragana"
+    },
+    {
+      "kana": "あたらしい",
+      "romaji": "atarashii",
+      "alt": [
+        "atarashi"
+      ],
+      "meaning": "Baru",
+      "type": "Hiragana"
+    },
+    {
+      "kana": "おいしい",
+      "romaji": "oishii",
+      "alt": [
+        "oishi"
+      ],
+      "meaning": "Enak, lezat",
+      "type": "Hiragana"
+    },
+    {
+      "kana": "たのしい",
+      "romaji": "tanoshii",
+      "alt": [
+        "tanoshi"
+      ],
+      "meaning": "Menyenangkan",
+      "type": "Hiragana"
+    },
+    {
+      "kana": "かわいい",
+      "romaji": "kawaii",
+      "alt": [
+        "kawai"
+      ],
+      "meaning": "Lucu, imut",
+      "type": "Hiragana"
+    },
+    {
+      "kana": "やさしい",
+      "romaji": "yasashii",
+      "alt": [
+        "yasashi"
+      ],
+      "meaning": "Baik hati; mudah",
+      "type": "Hiragana"
+    },
+    {
+      "kana": "つめたい",
+      "romaji": "tsumetai",
+      "meaning": "Dingin (saat disentuh)",
+      "type": "Hiragana"
+    },
+    {
+      "kana": "おおきい",
+      "romaji": "ookii",
+      "alt": [
+        "okii"
+      ],
+      "meaning": "Besar",
+      "type": "Hiragana"
+    },
+    {
+      "kana": "ちいさい",
+      "romaji": "chiisai",
+      "alt": [
+        "chisai"
+      ],
+      "meaning": "Kecil",
+      "type": "Hiragana"
+    },
+    {
+      "kana": "せんせい",
+      "romaji": "sensei",
+      "meaning": "Guru",
+      "type": "Hiragana"
+    },
+    {
+      "kana": "がくせい",
+      "romaji": "gakusei",
+      "meaning": "Pelajar, mahasiswa",
+      "type": "Hiragana"
+    },
+    {
+      "kana": "にほんご",
+      "romaji": "nihongo",
+      "meaning": "Bahasa Jepang",
+      "type": "Hiragana"
+    },
+    {
+      "kana": "りょうり",
+      "romaji": "ryouri",
+      "alt": [
+        "ryori"
+      ],
+      "meaning": "Masakan",
+      "type": "Hiragana"
+    },
+    {
+      "kana": "おんがく",
+      "romaji": "ongaku",
+      "meaning": "Musik",
+      "type": "Hiragana"
+    },
+    {
+      "kana": "えいが",
+      "romaji": "eiga",
+      "meaning": "Film",
+      "type": "Hiragana"
+    },
+    {
+      "kana": "しごと",
+      "romaji": "shigoto",
+      "meaning": "Pekerjaan",
+      "type": "Hiragana"
+    },
+    {
+      "kana": "あした",
+      "romaji": "ashita",
+      "meaning": "Besok",
+      "type": "Hiragana"
+    },
+    {
+      "kana": "コーヒー",
+      "romaji": "koohii",
+      "alt": [
+        "kohi",
+        "koohi"
+      ],
+      "meaning": "Kopi",
+      "type": "Katakana"
+    },
+    {
+      "kana": "テレビ",
+      "romaji": "terebi",
+      "meaning": "Televisi",
+      "type": "Katakana"
+    },
+    {
+      "kana": "カメラ",
+      "romaji": "kamera",
+      "meaning": "Kamera",
+      "type": "Katakana"
+    },
+    {
+      "kana": "パン",
+      "romaji": "pan",
+      "meaning": "Roti",
+      "type": "Katakana"
+    },
+    {
+      "kana": "バス",
+      "romaji": "basu",
+      "meaning": "Bus",
+      "type": "Katakana"
+    },
+    {
+      "kana": "レストラン",
+      "romaji": "resutoran",
+      "meaning": "Restoran",
+      "type": "Katakana"
+    },
+    {
+      "kana": "コンピューター",
+      "romaji": "konpyuutaa",
+      "alt": [
+        "konpyuta",
+        "konpyuutaa"
+      ],
+      "meaning": "Komputer",
+      "type": "Katakana"
+    },
+    {
+      "kana": "アイスクリーム",
+      "romaji": "aisukuriimu",
+      "alt": [
+        "aisukurimu"
+      ],
+      "meaning": "Es krim",
+      "type": "Katakana"
+    },
+    {
+      "kana": "サッカー",
+      "romaji": "sakkaa",
+      "alt": [
+        "sakka"
+      ],
+      "meaning": "Sepak bola",
+      "type": "Katakana"
+    },
+    {
+      "kana": "ニュース",
+      "romaji": "nyuusu",
+      "alt": [
+        "nyusu"
+      ],
+      "meaning": "Berita",
+      "type": "Katakana"
+    },
+    {
+      "kana": "ピザ",
+      "romaji": "piza",
+      "meaning": "Piza",
+      "type": "Katakana"
+    },
+    {
+      "kana": "ホテル",
+      "romaji": "hoteru",
+      "meaning": "Hotel",
+      "type": "Katakana"
+    }
   ],
   "days": [
     {
