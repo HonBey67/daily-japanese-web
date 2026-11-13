@@ -1,0 +1,279 @@
+{
+  "videos": {
+    "short": {
+      "label": "Shorts",
+      "description": "Kilat 1 menit",
+      "title": "Stop Waiting! Hold vs Wait (JLPT N5)",
+      "channel": "Kane & Shige's Kanji Dojo",
+      "embedUrl": "https://www.youtube.com/embed/xr7QIHOhVu8",
+      "watchUrl": "https://www.youtube.com/watch?v=xr7QIHOhVu8"
+    },
+    "comprehensive": {
+      "label": "Comprehensive",
+      "description": "Kelas lengkap",
+      "title": "Kanji Practice N4: Reading & Writing 177 Characters",
+      "channel": "Learn Japanese Channel",
+      "embedUrl": "https://www.youtube.com/embed/ayrOI5C8kWk",
+      "watchUrl": "https://www.youtube.com/watch?v=ayrOI5C8kWk"
+    }
+  },
+  "kanji": {
+    "N5": [
+      {
+        "kanji": "日",
+        "kunyomi": "ひ / か",
+        "onyomi": "ニチ / ジツ",
+        "meaning": "Hari, matahari",
+        "pattern_hint": "日 adalah gambar matahari: kotak dengan garis tengah yang melambangkan cahayanya."
+      },
+      {
+        "kanji": "月",
+        "kunyomi": "つき",
+        "onyomi": "ゲツ / ガツ",
+        "meaning": "Bulan",
+        "pattern_hint": "月 menggambarkan bulan sabit. Dua garis di dalamnya menunjukkan fase bulan."
+      },
+      {
+        "kanji": "人",
+        "kunyomi": "ひと",
+        "onyomi": "ジン / ニン",
+        "meaning": "Orang",
+        "pattern_hint": "人 seperti sepasang kaki orang yang sedang berjalan atau berdiri."
+      },
+      {
+        "kanji": "山",
+        "kunyomi": "やま",
+        "onyomi": "サン",
+        "meaning": "Gunung",
+        "pattern_hint": "山 adalah tiga puncak gunung, dengan puncak tengah yang paling tinggi."
+      },
+      {
+        "kanji": "川",
+        "kunyomi": "かわ",
+        "onyomi": "セン",
+        "meaning": "Sungai",
+        "pattern_hint": "川 adalah tiga garis aliran air yang mengalir dari atas ke bawah."
+      }
+    ],
+    "N4": [
+      {
+        "kanji": "男",
+        "kunyomi": "おとこ",
+        "onyomi": "ダン / ナン",
+        "meaning": "Laki-laki, pria",
+        "pattern_hint": "田 (sawah padi) + 力 (kekuatan) = pria yang bekerja di sawah dengan tenaga."
+      },
+      {
+        "kanji": "力",
+        "kunyomi": "ちから",
+        "onyomi": "リョク / リキ",
+        "meaning": "Kekuatan, tenaga",
+        "pattern_hint": "力 adalah otot atau lengan yang dibengkokkan, simbol dari tenaga."
+      },
+      {
+        "kanji": "明",
+        "kunyomi": "あか.るい / あき.らか",
+        "onyomi": "メイ / ミョウ",
+        "meaning": "Terang, jelas",
+        "pattern_hint": "日 (matahari) + 月 (bulan) = dua sumber cahaya yang membuat suasana terang."
+      },
+      {
+        "kanji": "林",
+        "kunyomi": "はやし",
+        "onyomi": "リン",
+        "meaning": "Hutan kecil, rimbunan pohon",
+        "pattern_hint": "木 (pohon) + 木 (pohon) = dua pohon berdampingan menjadi rimbunan."
+      },
+      {
+        "kanji": "森",
+        "kunyomi": "もり",
+        "onyomi": "シン",
+        "meaning": "Hutan lebat",
+        "pattern_hint": "木 + 木 + 木 = tiga pohon sekaligus, lebih lebat daripada 林."
+      }
+    ],
+    "N3": [
+      {
+        "kanji": "決",
+        "kunyomi": "き.める / き.まる",
+        "onyomi": "ケツ",
+        "meaning": "Memutuskan",
+        "pattern_hint": "氵 (air) + 夬 (memutus) = seperti air yang mengalir mantap, keputusan yang bulat."
+      },
+      {
+        "kanji": "運",
+        "kunyomi": "はこ.ぶ",
+        "onyomi": "ウン",
+        "meaning": "Membawa, mengangkut; keberuntungan",
+        "pattern_hint": "辶 (berjalan) + 軍 (pasukan) = bergerak membawa atau mengangkut pasukan."
+      },
+      {
+        "kanji": "想",
+        "kunyomi": "おも.う",
+        "onyomi": "ソウ",
+        "meaning": "Pikiran, bayangan",
+        "pattern_hint": "相 (木 + 目, melihat pohon) + 心 (hati) = apa yang dilihat dan dirasakan di hati."
+      },
+      {
+        "kanji": "静",
+        "kunyomi": "しず.か / しず.まる",
+        "onyomi": "セイ / ジョウ",
+        "meaning": "Tenang",
+        "pattern_hint": "青 (biru) + 争 (bertarung) = pertarungan yang mereda dan suasana menjadi tenang."
+      },
+      {
+        "kanji": "期",
+        "kunyomi": "—",
+        "onyomi": "キ / ゴ",
+        "meaning": "Periode, masa",
+        "pattern_hint": "其 (fondasi) + 月 (bulan) = penanda waktu yang membentuk sebuah periode."
+      }
+    ],
+    "N2": [
+      {
+        "kanji": "授",
+        "kunyomi": "さず.ける / さず.かる",
+        "onyomi": "ジュ",
+        "meaning": "Memberi, mengajarkan",
+        "pattern_hint": "扌 (tangan) + 受 (menerima) = tangan yang menyerahkan ilmu atau pemberian."
+      },
+      {
+        "kanji": "績",
+        "kunyomi": "つ.む",
+        "onyomi": "セキ",
+        "meaning": "Hasil, prestasi",
+        "pattern_hint": "糸 (benang) + 責 (tanggung jawab) = hasil tenunan dari usaha yang penuh tanggung jawab."
+      },
+      {
+        "kanji": "導",
+        "kunyomi": "みちび.く",
+        "onyomi": "ドウ",
+        "meaning": "Memimpin, menuntun",
+        "pattern_hint": "道 (jalan) + 寸 (tangan) = tangan yang menuntun seseorang di jalan."
+      },
+      {
+        "kanji": "適",
+        "kunyomi": "かな.う",
+        "onyomi": "テキ",
+        "meaning": "Cocok, sesuai",
+        "pattern_hint": "辶 (berjalan) + 啇 (sesuai) = berjalan di jalan yang tepat dan sesuai."
+      },
+      {
+        "kanji": "染",
+        "kunyomi": "そ.める / そ.まる / し.みる",
+        "onyomi": "セン",
+        "meaning": "Mewarnai, mencelup",
+        "pattern_hint": "氵 (air) + 九 + 木 (kayu) = air dan bahan kayu dalam proses pencelupan kain."
+      }
+    ],
+    "N1": [
+      {
+        "kanji": "慰",
+        "kunyomi": "なぐさ.める / なぐさ.む",
+        "onyomi": "イ",
+        "meaning": "Menghibur, menenangkan",
+        "pattern_hint": "尉 (menenangkan) + 心 (hati) = hati yang ditenangkan dan dihibur."
+      },
+      {
+        "kanji": "頂",
+        "kunyomi": "いただ.く / いただき",
+        "onyomi": "チョウ",
+        "meaning": "Puncak; menerima",
+        "pattern_hint": "頁 (kepala) + 丁 (paku) = bagian paling atas atau kepala yang menonjol."
+      },
+      {
+        "kanji": "蓄",
+        "kunyomi": "たくわ.える",
+        "onyomi": "チク",
+        "meaning": "Menyimpan, menabung",
+        "pattern_hint": "艹 (tanaman) + 畜 (ternak) = menyimpan hasil panen dan peternakan untuk nanti."
+      },
+      {
+        "kanji": "顧",
+        "kunyomi": "かえり.みる",
+        "onyomi": "コ",
+        "meaning": "Meninjau, menoleh ke belakang",
+        "pattern_hint": "雇 (orang yang dipekerjakan) + 頁 (kepala) = kepala yang menoleh untuk meninjau."
+      },
+      {
+        "kanji": "濯",
+        "kunyomi": "すす.ぐ",
+        "onyomi": "タク",
+        "meaning": "Mencuci, membilas",
+        "pattern_hint": "氵 (air) + 翟 (burung) = air yang membilas bersih seperti bulu burung."
+      }
+    ]
+  },
+  "days": [
+    {
+      "id": 1,
+      "date": "2026-11-13",
+      "quote": {
+        "kanji": "諦めたらそこで試合終了だよ",
+        "furigana": "諦(あきら)めたらそこで試合(しあい)終了(しゅうりょう)だよ",
+        "romaji": "Akirametara soko de shiai shuuryou da yo.",
+        "translation": "Kalau menyerah, pertandingan selesai di situ.",
+        "source": {
+          "anime": "Slam Dunk",
+          "character": "Anzai Sensei"
+        }
+      }
+    },
+    {
+      "id": 2,
+      "date": "2026-11-14",
+      "quote": {
+        "kanji": "俺は火影になるんだ",
+        "furigana": "俺(おれ)は火影(ほかげ)になるんだ",
+        "romaji": "Ore wa Hokage ni narunda.",
+        "translation": "Aku akan menjadi Hokage.",
+        "source": {
+          "anime": "Naruto",
+          "character": "Naruto Uzumaki"
+        }
+      }
+    },
+    {
+      "id": 3,
+      "date": "2026-11-15",
+      "quote": {
+        "kanji": "俺は海賊王になる男だ",
+        "furigana": "俺(おれ)は海賊王(かいぞくおう)になる男(おとこ)だ",
+        "romaji": "Ore wa Kaizokuou ni naru otoko da.",
+        "translation": "Aku adalah pria yang akan menjadi Raja Bajak Laut.",
+        "source": {
+          "anime": "One Piece",
+          "character": "Monkey D. Luffy"
+        }
+      }
+    },
+    {
+      "id": 4,
+      "date": "2026-11-16",
+      "quote": {
+        "kanji": "人間は何かを得るためには、何かを犠牲にしなければならない",
+        "furigana": "人間(にんげん)は何(なに)かを得(え)るためには、何(なに)かを犠牲(ぎせい)にしなければならない",
+        "romaji": "Ningen wa nanika o eru tame ni wa, nanika o gisei ni shinakereba naranai.",
+        "translation": "Untuk mendapatkan sesuatu, manusia harus mengorbankan sesuatu.",
+        "source": {
+          "anime": "Fullmetal Alchemist",
+          "character": "Edward Elric"
+        }
+      }
+    },
+    {
+      "id": 5,
+      "date": "2026-11-17",
+      "quote": {
+        "kanji": "この世界は残酷だ。そして美しい",
+        "furigana": "この世界(せかい)は残酷(ざんこく)だ。そして美(うつく)しい",
+        "romaji": "Kono sekai wa zankoku da. Soshite utsukushii.",
+        "translation": "Dunia ini kejam. Namun juga indah.",
+        "source": {
+          "anime": "Attack on Titan",
+          "character": "Mikasa Ackerman"
+        }
+      }
+    }
+  ]
+}

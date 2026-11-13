@@ -1,0 +1,705 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="theme-color" content="#f7f5f1">
+  <meta name="description" content="Belajar kanji JLPT N5 sampai N1 dan quote anime motivasi, diperbarui setiap hari.">
+  <title>Daily Japanese — Kanji & Quote Anime</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Noto+Sans+JP:wght@400;500;700&family=Noto+Serif+JP:wght@500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #f7f5f1;
+      --bg-soft: #efebe4;
+      --surface: #ffffff;
+      --text: #201e1a;
+      --muted: #726c63;
+      --line: #e7e2da;
+      --accent: #b8433b;
+      --accent-soft: #f8e9e6;
+      --radius: 22px;
+      --shadow: 0 1px 2px rgba(40, 32, 24, .04), 0 14px 34px rgba(40, 32, 24, .05);
+    }
+
+    * { box-sizing: border-box; }
+
+    html {
+      -webkit-text-size-adjust: 100%;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      min-height: 100dvh;
+      color: var(--text);
+      font-family: "Inter", "Noto Sans JP", system-ui, -apple-system, sans-serif;
+      line-height: 1.6;
+      background:
+        radial-gradient(circle at 8% 0%, rgba(184, 67, 59, .07), transparent 42%),
+        radial-gradient(circle at 100% 20%, rgba(185, 138, 46, .05), transparent 38%),
+        var(--bg);
+      -webkit-font-smoothing: antialiased;
+    }
+
+    a { color: inherit; }
+
+    button { font-family: inherit; }
+
+    .shell {
+      width: min(100% - 32px, 620px);
+      margin: 0 auto;
+      padding: 28px 0 calc(44px + env(safe-area-inset-bottom));
+      display: flex;
+      flex-direction: column;
+      gap: 18px;
+    }
+
+    .site-header {
+      display: flex;
+      align-items: flex-end;
+      justify-content: space-between;
+      gap: 16px;
+      padding: 0 4px;
+    }
+
+    .brand {
+      margin: 0 0 6px;
+      font-size: .68rem;
+      font-weight: 700;
+      letter-spacing: .2em;
+      text-transform: uppercase;
+      color: var(--accent);
+    }
+
+    .site-header h1 {
+      margin: 0;
+      font-family: "Noto Serif JP", serif;
+      font-size: clamp(1.35rem, 5vw, 1.8rem);
+      font-weight: 600;
+      line-height: 1.25;
+      letter-spacing: -.01em;
+    }
+
+    .site-header time {
+      max-width: 42%;
+      font-size: .72rem;
+      line-height: 1.45;
+      text-align: right;
+      color: var(--muted);
+    }
+
+    .state {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 12px;
+      padding: 48px 22px;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: var(--surface);
+      color: var(--muted);
+      font-size: .85rem;
+      text-align: center;
+      box-shadow: var(--shadow);
+    }
+
+    .state[hidden],
+    .content[hidden] { display: none; }
+
+    .state p { margin: 0; }
+
+    .retry {
+      border: 0;
+      border-radius: 999px;
+      padding: 9px 18px;
+      background: var(--accent);
+      color: #fff;
+      font-size: .78rem;
+      font-weight: 600;
+      cursor: pointer;
+    }
+
+    .content {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    .content > * {
+      animation: rise .55s ease both;
+    }
+
+    .content > *:nth-child(2) { animation-delay: .04s; }
+    .content > *:nth-child(3) { animation-delay: .08s; }
+    .content > *:nth-child(4) { animation-delay: .12s; }
+
+    .panel {
+      padding: 18px;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: var(--surface);
+      box-shadow: var(--shadow);
+    }
+
+    .panel-head,
+    .quote-head {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 12px;
+      margin-bottom: 14px;
+    }
+
+    .eyebrow {
+      margin: 0 0 4px;
+      font-size: .64rem;
+      font-weight: 700;
+      letter-spacing: .16em;
+      text-transform: uppercase;
+      color: var(--muted);
+    }
+
+    .panel h2 {
+      margin: 0;
+      font-size: 1rem;
+      font-weight: 600;
+      line-height: 1.35;
+      letter-spacing: -.01em;
+    }
+
+    .video-desc,
+    .level-tag {
+      flex: 0 0 auto;
+      padding: 5px 10px;
+      border-radius: 999px;
+      background: var(--accent-soft);
+      color: var(--accent);
+      font-size: .66rem;
+      font-weight: 700;
+      white-space: nowrap;
+    }
+
+    .segmented {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 4px;
+      margin-bottom: 14px;
+      padding: 4px;
+      border-radius: 999px;
+      background: var(--bg-soft);
+    }
+
+    .seg-btn {
+      border: 0;
+      border-radius: 999px;
+      padding: 9px 12px;
+      background: transparent;
+      color: var(--muted);
+      font-size: .78rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: background .2s ease, color .2s ease, box-shadow .2s ease;
+    }
+
+    .seg-btn[aria-pressed="true"] {
+      background: var(--surface);
+      color: var(--text);
+      box-shadow: 0 1px 5px rgba(40, 32, 24, .1);
+    }
+
+    .video-frame {
+      position: relative;
+      width: 100%;
+      overflow: hidden;
+      border-radius: 16px;
+      background: #0d0c0b;
+      transition: max-width .25s ease;
+    }
+
+    .video-frame.is-short {
+      max-width: 320px;
+      margin-inline: auto;
+      aspect-ratio: 9 / 16;
+    }
+
+    .video-frame.is-wide {
+      aspect-ratio: 16 / 9;
+    }
+
+    .player {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      border: 0;
+      opacity: 1;
+      transition: opacity .3s ease;
+    }
+
+    .player.is-loading { opacity: 0; }
+
+    .video-loading {
+      position: absolute;
+      inset: 0;
+      z-index: 2;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      background: #11100f;
+      color: #bdb7ae;
+      font-size: .76rem;
+    }
+
+    .video-loading[hidden] { display: none; }
+
+    .spinner {
+      width: 18px;
+      height: 18px;
+      border: 2px solid rgba(114, 108, 99, .2);
+      border-top-color: var(--accent);
+      border-radius: 50%;
+      animation: spin .8s linear infinite;
+    }
+
+    .spinner--light {
+      border-color: rgba(255, 255, 255, .18);
+      border-top-color: #fff;
+    }
+
+    .video-meta {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 12px;
+      margin-top: 12px;
+    }
+
+    .video-title {
+      margin: 0;
+      font-size: .8rem;
+      font-weight: 600;
+      line-height: 1.45;
+    }
+
+    .video-channel {
+      margin: 2px 0 0;
+      font-size: .7rem;
+      color: var(--muted);
+    }
+
+    .watch-link {
+      flex: 0 0 auto;
+      padding: 6px 11px;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      color: var(--accent);
+      font-size: .68rem;
+      font-weight: 600;
+      text-decoration: none;
+      transition: border-color .2s ease;
+    }
+
+    .watch-link:hover { border-color: var(--accent); }
+
+    .level-tabs {
+      display: flex;
+      gap: 8px;
+      margin-bottom: 14px;
+      padding-bottom: 4px;
+      overflow-x: auto;
+      scrollbar-width: none;
+    }
+
+    .level-tabs::-webkit-scrollbar { display: none; }
+
+    .level-btn {
+      flex: 0 0 auto;
+      padding: 7px 16px;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      background: var(--surface);
+      color: var(--muted);
+      font-size: .76rem;
+      font-weight: 700;
+      cursor: pointer;
+      transition: background .2s ease, border-color .2s ease, color .2s ease;
+    }
+
+    .level-btn[aria-pressed="true"] {
+      border-color: var(--accent);
+      background: var(--accent);
+      color: #fff;
+    }
+
+    .kanji-list {
+      display: grid;
+      gap: 10px;
+    }
+
+    .kanji-card {
+      padding: 15px 16px;
+      border: 1px solid var(--line);
+      border-radius: 16px;
+      background: var(--surface);
+      transition: border-color .2s ease, background .2s ease;
+    }
+
+    .kanji-card.is-focus {
+      border-color: var(--accent);
+      background: linear-gradient(180deg, var(--accent-soft), var(--surface) 72%);
+    }
+
+    .kanji-head {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+
+    .kanji-char {
+      flex: 0 0 62px;
+      font-family: "Noto Serif JP", serif;
+      font-size: 2.55rem;
+      font-weight: 600;
+      line-height: 1;
+      text-align: center;
+    }
+
+    .kanji-info {
+      flex: 1;
+      min-width: 0;
+    }
+
+    .kanji-title-row {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .kanji-meaning {
+      font-size: .88rem;
+      font-weight: 600;
+    }
+
+    .focus-badge {
+      padding: 3px 7px;
+      border-radius: 999px;
+      background: var(--accent);
+      color: #fff;
+      font-size: .56rem;
+      font-weight: 700;
+      letter-spacing: .06em;
+      text-transform: uppercase;
+      white-space: nowrap;
+    }
+
+    .readings {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 8px 14px;
+      margin-top: 12px;
+      padding-top: 12px;
+      border-top: 1px dashed var(--line);
+    }
+
+    .reading-label {
+      display: block;
+      font-size: .58rem;
+      font-weight: 700;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+      color: var(--muted);
+    }
+
+    .reading-value {
+      display: block;
+      margin-top: 2px;
+      font-size: .84rem;
+    }
+
+    .pattern { margin-top: 8px; }
+
+    .pattern summary {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 10px;
+      padding: 7px 0;
+      list-style: none;
+      color: var(--accent);
+      font-size: .71rem;
+      font-weight: 600;
+      cursor: pointer;
+    }
+
+    .pattern summary::-webkit-details-marker { display: none; }
+
+    .chevron {
+      width: 7px;
+      height: 7px;
+      margin-right: 3px;
+      border-right: 1.5px solid currentColor;
+      border-bottom: 1.5px solid currentColor;
+      transform: rotate(45deg);
+      transition: transform .2s ease;
+    }
+
+    .pattern[open] .chevron { transform: rotate(-135deg); }
+
+    .pattern-text {
+      margin: 0;
+      padding: 5px 0 2px;
+      color: var(--muted);
+      font-size: .8rem;
+      line-height: 1.7;
+    }
+
+    .quote-panel {
+      background:
+        radial-gradient(circle at 100% 0%, var(--accent-soft), transparent 58%),
+        var(--surface);
+    }
+
+    .badge {
+      flex: 0 0 auto;
+      padding: 5px 10px;
+      border-radius: 999px;
+      background: var(--accent);
+      color: #fff;
+      font-size: .6rem;
+      font-weight: 700;
+      letter-spacing: .06em;
+      text-transform: uppercase;
+      white-space: nowrap;
+    }
+
+    .quote-body {
+      margin: 16px 0 0;
+      padding: 0;
+    }
+
+    .quote-kanji {
+      margin: 0;
+      font-family: "Noto Serif JP", serif;
+      font-size: clamp(1.15rem, 4.6vw, 1.55rem);
+      font-weight: 600;
+      line-height: 1.8;
+      letter-spacing: .01em;
+    }
+
+    .quote-furigana {
+      margin: 8px 0 0;
+      color: var(--muted);
+      font-size: .78rem;
+      line-height: 1.7;
+    }
+
+    .quote-romaji {
+      margin: 8px 0 0;
+      color: var(--accent);
+      font-size: .85rem;
+      font-style: italic;
+      line-height: 1.6;
+    }
+
+    .quote-translation {
+      margin: 12px 0 0;
+      padding-top: 12px;
+      border-top: 1px solid var(--line);
+      font-size: .92rem;
+      line-height: 1.7;
+    }
+
+    .quote-translation::before {
+      content: "Arti";
+      display: block;
+      margin-bottom: 4px;
+      color: var(--muted);
+      font-size: .58rem;
+      font-weight: 700;
+      font-style: normal;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+    }
+
+    .quote-source {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      margin-top: 16px;
+      padding-top: 12px;
+      border-top: 1px solid var(--line);
+      font-size: .72rem;
+    }
+
+    .quote-source #quoteCharacter { font-weight: 600; }
+
+    .quote-anime { color: var(--muted); text-align: right; }
+
+    .quote-panel.is-updating .quote-body {
+      animation: quoteIn .45s ease;
+    }
+
+    .site-footer {
+      padding-top: 2px;
+      color: var(--muted);
+      font-size: .66rem;
+      text-align: center;
+    }
+
+    :focus-visible {
+      outline: 2px solid var(--accent);
+      outline-offset: 2px;
+    }
+
+    @keyframes spin { to { transform: rotate(360deg); } }
+
+    @keyframes rise {
+      from { opacity: 0; transform: translateY(10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes quoteIn {
+      from { opacity: .35; transform: translateY(4px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @media (min-width: 560px) {
+      .shell { padding-top: 44px; }
+      .panel { padding: 24px; }
+      .video-frame.is-short { max-width: 350px; }
+    }
+
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #12110f;
+        --bg-soft: #211e1a;
+        --surface: #1b1916;
+        --text: #f2eee7;
+        --muted: #a49c91;
+        --line: #2e2a24;
+        --accent: #e07a70;
+        --accent-soft: #2c1e1b;
+        --shadow: 0 1px 2px rgba(0, 0, 0, .2), 0 14px 34px rgba(0, 0, 0, .22);
+      }
+
+      .video-frame { background: #000; }
+
+      .level-btn[aria-pressed="true"],
+      .badge,
+      .focus-badge,
+      .retry { color: #1b1916; }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      .content > *,
+      .quote-panel.is-updating .quote-body { animation: none; }
+      .video-frame,
+      .player,
+      .seg-btn,
+      .level-btn { transition: none; }
+    }
+  </style>
+</head>
+<body>
+  <main class="shell" id="app">
+    <header class="site-header">
+      <div>
+        <p class="brand">Daily Japanese</p>
+        <h1>Pelajaran kecil,<br>setiap hari.</h1>
+      </div>
+      <time id="today" datetime=""></time>
+    </header>
+
+    <div class="state" id="state" role="status" aria-live="polite">
+      <span class="spinner" aria-hidden="true"></span>
+      <p id="stateText">Memuat data harian…</p>
+      <button class="retry" id="retry" type="button" hidden>Coba lagi</button>
+    </div>
+
+    <div class="content" id="content" hidden>
+      <section class="panel video-panel" aria-labelledby="videoHeading">
+        <div class="panel-head">
+          <div>
+            <p class="eyebrow">Video hari ini</p>
+            <h2 id="videoHeading">Pilih mode belajar</h2>
+          </div>
+          <span class="video-desc" id="videoDesc">—</span>
+        </div>
+
+        <div class="segmented" id="videoModes" role="group" aria-label="Mode video"></div>
+
+        <div class="video-frame is-short" id="videoFrame">
+          <iframe
+            class="player is-loading"
+            id="video"
+            title="Video pembelajaran"
+            src="about:blank"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerpolicy="strict-origin-when-cross-origin"
+            allowfullscreen
+          ></iframe>
+          <div class="video-loading" id="videoLoading">
+            <span class="spinner spinner--light" aria-hidden="true"></span>
+            <span>Memuat video…</span>
+          </div>
+        </div>
+
+        <div class="video-meta">
+          <div>
+            <p class="video-title" id="videoTitle">—</p>
+            <p class="video-channel" id="videoChannel">—</p>
+          </div>
+          <a class="watch-link" id="videoWatch" href="#" target="_blank" rel="noopener noreferrer">YouTube ↗</a>
+        </div>
+      </section>
+
+      <section class="panel kanji-panel" aria-labelledby="kanjiHeading">
+        <div class="panel-head">
+          <div>
+            <p class="eyebrow">Materi kanji</p>
+            <h2><span id="kanjiCount">5</span> <span id="kanjiHeading">Kanji pilihan</span></h2>
+          </div>
+          <span class="level-tag" id="levelLabel">N5</span>
+        </div>
+
+        <div class="level-tabs" id="levelTabs" role="group" aria-label="Filter level JLPT"></div>
+        <div class="kanji-list" id="kanjiList" aria-live="polite"></div>
+      </section>
+
+      <section class="panel quote-panel" id="quotePanel" aria-labelledby="quoteHeading">
+        <div class="quote-head">
+          <div>
+            <p class="eyebrow">Quote anime</p>
+            <h2 id="quoteHeading">Motivasi hari ini</h2>
+          </div>
+          <span class="badge" id="quoteBadge">Anime</span>
+        </div>
+
+        <blockquote class="quote-body">
+          <p class="quote-kanji" id="quoteKanji"></p>
+          <p class="quote-furigana" id="quoteFurigana"></p>
+          <p class="quote-romaji" id="quoteRomaji"></p>
+          <p class="quote-translation" id="quoteTranslation"></p>
+        </blockquote>
+
+        <footer class="quote-source">
+          <span id="quoteCharacter">—</span>
+          <span class="quote-anime" id="quoteAnime">—</span>
+        </footer>
+      </section>
+
+      <p class="site-footer">Konten berganti otomatis setiap 24 jam · dibuat untuk belajar mandiri</p>
+    </div>
+  </main>
+
+  <noscript>Website ini membutuhkan JavaScript untuk memuat materi harian.</noscript>
+  <script src="app.js"></script>
+</body>
+</html>
