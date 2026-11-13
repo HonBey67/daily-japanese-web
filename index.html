@@ -4,8 +4,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
   <meta name="theme-color" content="#f7f5f1">
-  <meta name="description" content="Belajar kanji JLPT N5 sampai N1 dan quote anime motivasi, diperbarui setiap hari.">
-  <title>Daily Japanese — Kanji & Quote Anime</title>
+  <meta name="description" content="Belajar kanji dengan flashcard, kuis kana harian, bunpou, video, dan quote anime motivasi.">
+  <title>Daily Japanese — Flashcard, Kuis Kana & Bunpou</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Noto+Sans+JP:wght@400;500;700&family=Noto+Serif+JP:wght@500;600;700&display=swap" rel="stylesheet">
@@ -19,6 +19,10 @@
       --line: #e7e2da;
       --accent: #b8433b;
       --accent-soft: #f8e9e6;
+      --success: #2f7d5b;
+      --success-soft: #e9f4ee;
+      --danger: #b8433b;
+      --danger-soft: #f8e9e6;
       --radius: 22px;
       --shadow: 0 1px 2px rgba(40, 32, 24, .04), 0 14px 34px rgba(40, 32, 24, .05);
     }
@@ -45,7 +49,9 @@
 
     a { color: inherit; }
 
-    button { font-family: inherit; }
+    button, input { font-family: inherit; }
+
+    [hidden] { display: none !important; }
 
     .shell {
       width: min(100% - 32px, 620px);
@@ -105,9 +111,6 @@
       box-shadow: var(--shadow);
     }
 
-    .state[hidden],
-    .content[hidden] { display: none; }
-
     .state p { margin: 0; }
 
     .retry {
@@ -127,13 +130,11 @@
       gap: 16px;
     }
 
-    .content > * {
-      animation: rise .55s ease both;
-    }
-
+    .content > * { animation: rise .55s ease both; }
     .content > *:nth-child(2) { animation-delay: .04s; }
     .content > *:nth-child(3) { animation-delay: .08s; }
     .content > *:nth-child(4) { animation-delay: .12s; }
+    .content > *:nth-child(5) { animation-delay: .16s; }
 
     .panel {
       padding: 18px;
@@ -181,6 +182,13 @@
       white-space: nowrap;
     }
 
+    .hint-text {
+      margin: -4px 0 12px;
+      color: var(--muted);
+      font-size: .74rem;
+      line-height: 1.55;
+    }
+
     .segmented {
       display: grid;
       grid-template-columns: 1fr 1fr;
@@ -224,9 +232,7 @@
       aspect-ratio: 9 / 16;
     }
 
-    .video-frame.is-wide {
-      aspect-ratio: 16 / 9;
-    }
+    .video-frame.is-wide { aspect-ratio: 16 / 9; }
 
     .player {
       position: absolute;
@@ -253,8 +259,6 @@
       color: #bdb7ae;
       font-size: .76rem;
     }
-
-    .video-loading[hidden] { display: none; }
 
     .spinner {
       width: 18px;
@@ -291,6 +295,13 @@
       color: var(--muted);
     }
 
+    .video-links {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+      gap: 6px;
+    }
+
     .watch-link {
       flex: 0 0 auto;
       padding: 6px 11px;
@@ -308,7 +319,7 @@
     .level-tabs {
       display: flex;
       gap: 8px;
-      margin-bottom: 14px;
+      margin-bottom: 12px;
       padding-bottom: 4px;
       overflow-x: auto;
       scrollbar-width: none;
@@ -337,125 +348,449 @@
 
     .kanji-list {
       display: grid;
+      gap: 12px;
+    }
+
+    .flashcard {
+      position: relative;
+      display: block;
+      width: 100%;
+      height: 390px;
+      padding: 0;
+      border: 0;
+      background: transparent;
+      color: var(--text);
+      font: inherit;
+      text-align: left;
+      perspective: 1200px;
+      cursor: pointer;
+    }
+
+    .flashcard-inner {
+      position: relative;
+      display: block;
+      width: 100%;
+      height: 100%;
+      transform-style: preserve-3d;
+      transition: transform .65s cubic-bezier(.2, .8, .2, 1);
+    }
+
+    .flashcard.is-flipped .flashcard-inner { transform: rotateY(180deg); }
+
+    .flashcard-face {
+      position: absolute;
+      inset: 0;
+      display: flex;
+      flex-direction: column;
+      padding: 18px;
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      background: var(--surface);
+      box-shadow: var(--shadow);
+      overflow: hidden;
+      backface-visibility: hidden;
+      -webkit-backface-visibility: hidden;
+    }
+
+    .flashcard-front {
+      align-items: center;
+      justify-content: center;
+      gap: 14px;
+      text-align: center;
+      background: linear-gradient(180deg, var(--surface), var(--bg-soft));
+    }
+
+    .flashcard.is-focus .flashcard-face { border-color: var(--accent); }
+
+    .flashcard.is-focus .flashcard-front {
+      background: linear-gradient(180deg, var(--accent-soft), var(--surface) 78%);
+    }
+
+    .flashcard-badge {
+      position: absolute;
+      top: 13px;
+      left: 13px;
+      padding: 3px 8px;
+      border-radius: 999px;
+      background: var(--accent);
+      color: #fff;
+      font-size: .55rem;
+      font-weight: 700;
+      letter-spacing: .06em;
+      text-transform: uppercase;
+    }
+
+    .flashcard-index {
+      position: absolute;
+      top: 14px;
+      right: 15px;
+      color: var(--muted);
+      font-size: .6rem;
+      font-weight: 700;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+    }
+
+    .flashcard-kanji {
+      font-family: "Noto Serif JP", serif;
+      font-size: 4.6rem;
+      font-weight: 600;
+      line-height: 1;
+    }
+
+    .flashcard-hint {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      color: var(--muted);
+      font-size: .7rem;
+    }
+
+    .flashcard-hint::before {
+      content: "";
+      width: 7px;
+      height: 7px;
+      border-right: 1.5px solid currentColor;
+      border-top: 1.5px solid currentColor;
+      transform: rotate(45deg);
+    }
+
+    .flashcard-back {
+      transform: rotateY(180deg);
+      overflow-y: auto;
+      scrollbar-width: thin;
+    }
+
+    .flashcard-back-head {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      padding-bottom: 10px;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .flashcard-back-info {
+      display: flex;
+      flex-direction: column;
+      min-width: 0;
+    }
+
+    .flashcard-back-kanji {
+      font-family: "Noto Serif JP", serif;
+      font-size: 2rem;
+      font-weight: 600;
+      line-height: 1;
+    }
+
+    .flashcard-back-meaning {
+      font-size: .85rem;
+      font-weight: 600;
+      line-height: 1.4;
+    }
+
+    .flashcard-back-level {
+      display: block;
+      margin-top: 2px;
+      color: var(--muted);
+      font-size: .6rem;
+      font-weight: 700;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+    }
+
+    .flashcard-reading-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 8px;
+      padding: 10px 0;
+      border-bottom: 1px dashed var(--line);
+    }
+
+    .flashcard-reading-label {
+      display: block;
+      color: var(--muted);
+      font-size: .56rem;
+      font-weight: 700;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+    }
+
+    .flashcard-reading-value {
+      display: block;
+      margin-top: 1px;
+      font-size: .8rem;
+    }
+
+    .flashcard-example,
+    .flashcard-pattern {
+      display: flex;
+      flex-direction: column;
+      gap: 2px;
+      margin-top: 10px;
+    }
+
+    .flashcard-pattern {
+      padding-top: 10px;
+      border-top: 1px dashed var(--line);
+    }
+
+    .example-label {
+      margin-bottom: 2px;
+      color: var(--accent);
+      font-size: .56rem;
+      font-weight: 700;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+    }
+
+    .example-jp {
+      margin: 0;
+      font-family: "Noto Sans JP", sans-serif;
+      font-size: .86rem;
+      font-weight: 500;
+      line-height: 1.65;
+    }
+
+    .example-reading {
+      margin: 0;
+      color: var(--muted);
+      font-size: .7rem;
+      line-height: 1.55;
+    }
+
+    .example-meaning {
+      margin: 0;
+      font-size: .76rem;
+      line-height: 1.55;
+    }
+
+    .flashcard-pattern .pattern-text {
+      margin: 0;
+      color: var(--muted);
+      font-size: .7rem;
+      line-height: 1.55;
+    }
+
+    .grammar-list {
+      display: grid;
+      gap: 12px;
+    }
+
+    .grammar-card {
+      padding: 15px;
+      border: 1px solid var(--line);
+      border-radius: 16px;
+      background: var(--surface);
+    }
+
+    .grammar-head {
+      display: flex;
+      align-items: flex-start;
+      gap: 11px;
+    }
+
+    .grammar-number {
+      flex: 0 0 auto;
+      padding-top: 2px;
+      color: var(--accent);
+      font-size: .62rem;
+      font-weight: 700;
+      letter-spacing: .08em;
+    }
+
+    .grammar-body {
+      min-width: 0;
+    }
+
+    .grammar-title {
+      margin: 0;
+      font-size: .94rem;
+      font-weight: 600;
+      line-height: 1.4;
+    }
+
+    .grammar-pattern {
+      display: inline-block;
+      margin-top: 5px;
+      padding: 4px 9px;
+      border-radius: 8px;
+      background: var(--bg-soft);
+      font-family: "Noto Sans JP", monospace;
+      font-size: .7rem;
+      line-height: 1.5;
+    }
+
+    .grammar-explanation {
+      margin: 10px 0 0;
+      color: var(--muted);
+      font-size: .78rem;
+      line-height: 1.65;
+    }
+
+    .grammar-examples {
+      display: grid;
+      gap: 8px;
+      margin-top: 11px;
+    }
+
+    .example-block {
+      padding: 10px 12px;
+      border-radius: 11px;
+      background: var(--bg-soft);
+    }
+
+    .example-block--formal { border-left: 3px solid var(--accent); }
+    .example-block--casual { border-left: 3px solid var(--muted); }
+
+    .example-tag {
+      display: block;
+      margin-bottom: 3px;
+      color: var(--accent);
+      font-size: .54rem;
+      font-weight: 700;
+      letter-spacing: .11em;
+      text-transform: uppercase;
+    }
+
+    .example-tag--casual { color: var(--muted); }
+
+    .quiz-list {
+      display: grid;
       gap: 10px;
     }
 
-    .kanji-card {
-      padding: 15px 16px;
+    .quiz-item {
+      padding: 13px 14px;
       border: 1px solid var(--line);
-      border-radius: 16px;
+      border-radius: 14px;
       background: var(--surface);
       transition: border-color .2s ease, background .2s ease;
     }
 
-    .kanji-card.is-focus {
-      border-color: var(--accent);
-      background: linear-gradient(180deg, var(--accent-soft), var(--surface) 72%);
+    .quiz-item.is-correct {
+      border-color: var(--success);
+      background: var(--success-soft);
     }
 
-    .kanji-head {
-      display: flex;
-      align-items: center;
-      gap: 14px;
+    .quiz-item.is-wrong {
+      border-color: var(--danger);
+      background: var(--danger-soft);
     }
 
-    .kanji-char {
-      flex: 0 0 62px;
-      font-family: "Noto Serif JP", serif;
-      font-size: 2.55rem;
-      font-weight: 600;
-      line-height: 1;
-      text-align: center;
-    }
-
-    .kanji-info {
-      flex: 1;
-      min-width: 0;
-    }
-
-    .kanji-title-row {
+    .quiz-question {
       display: flex;
       flex-wrap: wrap;
       align-items: center;
-      gap: 8px;
+      gap: 9px;
     }
 
-    .kanji-meaning {
-      font-size: .88rem;
+    .quiz-number {
+      color: var(--muted);
+      font-size: .6rem;
+      font-weight: 700;
+      letter-spacing: .08em;
+    }
+
+    .quiz-kana {
+      font-family: "Noto Serif JP", serif;
+      font-size: 1.5rem;
       font-weight: 600;
+      line-height: 1.25;
     }
 
-    .focus-badge {
+    .quiz-type {
       padding: 3px 7px;
       border-radius: 999px;
-      background: var(--accent);
-      color: #fff;
-      font-size: .56rem;
+      background: var(--accent-soft);
+      color: var(--accent);
+      font-size: .55rem;
       font-weight: 700;
-      letter-spacing: .06em;
+      letter-spacing: .07em;
       text-transform: uppercase;
-      white-space: nowrap;
     }
 
-    .readings {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 8px 14px;
-      margin-top: 12px;
-      padding-top: 12px;
-      border-top: 1px dashed var(--line);
+    .quiz-form {
+      display: flex;
+      gap: 8px;
+      margin-top: 9px;
     }
 
-    .reading-label {
-      display: block;
-      font-size: .58rem;
-      font-weight: 700;
-      letter-spacing: .1em;
-      text-transform: uppercase;
-      color: var(--muted);
-    }
-
-    .reading-value {
-      display: block;
-      margin-top: 2px;
+    .quiz-input {
+      flex: 1;
+      min-width: 0;
+      padding: 9px 12px;
+      border: 1px solid var(--line);
+      border-radius: 10px;
+      background: var(--bg);
+      color: var(--text);
       font-size: .84rem;
     }
 
-    .pattern { margin-top: 8px; }
+    .quiz-input:focus {
+      border-color: var(--accent);
+      outline: none;
+      box-shadow: 0 0 0 3px var(--accent-soft);
+    }
 
-    .pattern summary {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 10px;
-      padding: 7px 0;
-      list-style: none;
-      color: var(--accent);
-      font-size: .71rem;
-      font-weight: 600;
+    .quiz-input:disabled { opacity: .7; }
+
+    .quiz-submit {
+      flex: 0 0 auto;
+      border: 0;
+      border-radius: 10px;
+      padding: 0 16px;
+      background: var(--accent);
+      color: #fff;
+      font-size: .74rem;
+      font-weight: 700;
       cursor: pointer;
     }
 
-    .pattern summary::-webkit-details-marker { display: none; }
+    .quiz-submit:disabled { opacity: .55; cursor: default; }
 
-    .chevron {
-      width: 7px;
-      height: 7px;
-      margin-right: 3px;
-      border-right: 1.5px solid currentColor;
-      border-bottom: 1.5px solid currentColor;
-      transform: rotate(45deg);
-      transition: transform .2s ease;
+    .quiz-feedback {
+      min-height: 1.1em;
+      margin: 6px 0 0;
+      font-size: .72rem;
+      font-weight: 600;
     }
 
-    .pattern[open] .chevron { transform: rotate(-135deg); }
+    .quiz-feedback.is-correct { color: var(--success); }
+    .quiz-feedback.is-wrong { color: var(--danger); }
 
-    .pattern-text {
+    .quiz-footer {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      margin-top: 13px;
+      padding-top: 13px;
+      border-top: 1px solid var(--line);
+    }
+
+    .quiz-message {
       margin: 0;
-      padding: 5px 0 2px;
       color: var(--muted);
-      font-size: .8rem;
-      line-height: 1.7;
+      font-size: .76rem;
+      line-height: 1.5;
+    }
+
+    .ghost-btn {
+      flex: 0 0 auto;
+      padding: 8px 12px;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      background: transparent;
+      color: var(--text);
+      font-size: .7rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: border-color .2s ease, color .2s ease;
+    }
+
+    .ghost-btn:hover {
+      border-color: var(--accent);
+      color: var(--accent);
     }
 
     .quote-panel {
@@ -541,9 +876,7 @@
 
     .quote-anime { color: var(--muted); text-align: right; }
 
-    .quote-panel.is-updating .quote-body {
-      animation: quoteIn .45s ease;
-    }
+    .quote-panel.is-updating .quote-body { animation: quoteIn .45s ease; }
 
     .site-footer {
       padding-top: 2px;
@@ -573,6 +906,7 @@
       .shell { padding-top: 44px; }
       .panel { padding: 24px; }
       .video-frame.is-short { max-width: 350px; }
+      .flashcard { height: 370px; }
     }
 
     @media (prefers-color-scheme: dark) {
@@ -585,6 +919,10 @@
         --line: #2e2a24;
         --accent: #e07a70;
         --accent-soft: #2c1e1b;
+        --success: #6fbf95;
+        --success-soft: #1b2a22;
+        --danger: #e07a70;
+        --danger-soft: #2c1e1b;
         --shadow: 0 1px 2px rgba(0, 0, 0, .2), 0 14px 34px rgba(0, 0, 0, .22);
       }
 
@@ -593,13 +931,16 @@
       .level-btn[aria-pressed="true"],
       .badge,
       .focus-badge,
-      .retry { color: #1b1916; }
+      .flashcard-badge,
+      .retry,
+      .quiz-submit { color: #1b1916; }
     }
 
     @media (prefers-reduced-motion: reduce) {
       html { scroll-behavior: auto; }
       .content > *,
       .quote-panel.is-updating .quote-body { animation: none; }
+      .flashcard-inner,
       .video-frame,
       .player,
       .seg-btn,
@@ -627,7 +968,7 @@
       <section class="panel video-panel" aria-labelledby="videoHeading">
         <div class="panel-head">
           <div>
-            <p class="eyebrow">Video hari ini</p>
+            <p class="eyebrow">Video pembelajaran</p>
             <h2 id="videoHeading">Pilih mode belajar</h2>
           </div>
           <span class="video-desc" id="videoDesc">—</span>
@@ -656,21 +997,54 @@
             <p class="video-title" id="videoTitle">—</p>
             <p class="video-channel" id="videoChannel">—</p>
           </div>
-          <a class="watch-link" id="videoWatch" href="#" target="_blank" rel="noopener noreferrer">YouTube ↗</a>
+          <div class="video-links">
+            <a class="watch-link" id="videoWatch" href="#" target="_blank" rel="noopener noreferrer">YouTube ↗</a>
+            <a class="watch-link" id="videoPlaylist" href="#" target="_blank" rel="noopener noreferrer" hidden>Playlist ↗</a>
+          </div>
         </div>
       </section>
 
       <section class="panel kanji-panel" aria-labelledby="kanjiHeading">
         <div class="panel-head">
           <div>
-            <p class="eyebrow">Materi kanji</p>
-            <h2><span id="kanjiCount">5</span> <span id="kanjiHeading">Kanji pilihan</span></h2>
+            <p class="eyebrow">Kanji flashcard</p>
+            <h2 id="kanjiHeading"><span id="kanjiCount">5</span> kartu interaktif</h2>
           </div>
           <span class="level-tag" id="levelLabel">N5</span>
         </div>
 
         <div class="level-tabs" id="levelTabs" role="group" aria-label="Filter level JLPT"></div>
+        <p class="hint-text">Ketuk kartu untuk membalik dan melihat cara baca, arti, serta contoh kalimat.</p>
         <div class="kanji-list" id="kanjiList" aria-live="polite"></div>
+      </section>
+
+      <section class="panel grammar-panel" aria-labelledby="grammarHeading">
+        <div class="panel-head">
+          <div>
+            <p class="eyebrow">Daily bunpou</p>
+            <h2 id="grammarHeading">2 tata bahasa hari ini</h2>
+          </div>
+          <span class="level-tag" id="grammarLevel">N5</span>
+        </div>
+        <div class="grammar-list" id="grammarList" aria-live="polite"></div>
+      </section>
+
+      <section class="panel quiz-panel" aria-labelledby="quizHeading">
+        <div class="panel-head">
+          <div>
+            <p class="eyebrow">Daily kana quiz</p>
+            <h2 id="quizHeading">5 soal hari ini</h2>
+          </div>
+          <span class="level-tag" id="quizScore">0 / 5</span>
+        </div>
+
+        <p class="hint-text">Ketik romaji dari kata kana di bawah, lalu tekan Enter atau tombol Cek.</p>
+        <div class="quiz-list" id="quizList" aria-live="polite"></div>
+
+        <div class="quiz-footer">
+          <p class="quiz-message" id="quizMessage">Belum ada jawaban.</p>
+          <button class="ghost-btn" id="quizReset" type="button">Ulangi kuis</button>
+        </div>
       </section>
 
       <section class="panel quote-panel" id="quotePanel" aria-labelledby="quoteHeading">

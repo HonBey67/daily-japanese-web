@@ -5,16 +5,22 @@
       "description": "Kilat 1 menit",
       "title": "Stop Waiting! Hold vs Wait (JLPT N5)",
       "channel": "Kane & Shige's Kanji Dojo",
+      "duration": "0:09",
+      "level": "N5",
       "embedUrl": "https://www.youtube.com/embed/xr7QIHOhVu8",
       "watchUrl": "https://www.youtube.com/watch?v=xr7QIHOhVu8"
     },
     "comprehensive": {
       "label": "Comprehensive",
-      "description": "Kelas lengkap",
-      "title": "Kanji Practice N4: Reading & Writing 177 Characters",
+      "description": "Kelas lengkap < 40 menit",
+      "title": "How to Write and Read All Hiragana | 30 Minutes",
       "channel": "Learn Japanese Channel",
-      "embedUrl": "https://www.youtube.com/embed/ayrOI5C8kWk",
-      "watchUrl": "https://www.youtube.com/watch?v=ayrOI5C8kWk"
+      "duration": "29:45",
+      "level": "N5",
+      "embedUrl": "https://www.youtube.com/embed/z4qh8BVrb3w",
+      "watchUrl": "https://www.youtube.com/watch?v=z4qh8BVrb3w",
+      "playlistUrl": "https://www.youtube.com/playlist?list=PLA_RcUI8km1ME3ewzc4pcJ-cA-cw0-nKa",
+      "playlistLabel": "Playlist Kanji N5"
     }
   },
   "kanji": {
@@ -24,35 +30,60 @@
         "kunyomi": "ひ / か",
         "onyomi": "ニチ / ジツ",
         "meaning": "Hari, matahari",
-        "pattern_hint": "日 adalah gambar matahari: kotak dengan garis tengah yang melambangkan cahayanya."
+        "pattern_hint": "日 adalah gambar matahari: kotak dengan garis tengah yang melambangkan cahayanya.",
+        "example": {
+          "japanese": "毎日、日本語を勉強します。",
+          "reading": "まいにち、にほんごをべんきょうします。",
+          "meaning": "Setiap hari saya belajar bahasa Jepang."
+        }
       },
       {
         "kanji": "月",
         "kunyomi": "つき",
         "onyomi": "ゲツ / ガツ",
         "meaning": "Bulan",
-        "pattern_hint": "月 menggambarkan bulan sabit. Dua garis di dalamnya menunjukkan fase bulan."
+        "pattern_hint": "月 menggambarkan bulan sabit. Dua garis di dalamnya menunjukkan fase bulan.",
+        "example": {
+          "japanese": "来月、日本へ行きます。",
+          "reading": "らいげつ、にほんへいきます。",
+          "meaning": "Bulan depan saya akan pergi ke Jepang."
+        }
       },
       {
         "kanji": "人",
         "kunyomi": "ひと",
         "onyomi": "ジン / ニン",
         "meaning": "Orang",
-        "pattern_hint": "人 seperti sepasang kaki orang yang sedang berjalan atau berdiri."
+        "pattern_hint": "人 seperti sepasang kaki orang yang sedang berjalan atau berdiri.",
+        "example": {
+          "japanese": "あの人は私の先生です。",
+          "reading": "あのひとはわたしのせんせいです。",
+          "meaning": "Orang itu adalah guru saya."
+        }
       },
       {
         "kanji": "山",
         "kunyomi": "やま",
         "onyomi": "サン",
         "meaning": "Gunung",
-        "pattern_hint": "山 adalah tiga puncak gunung, dengan puncak tengah yang paling tinggi."
+        "pattern_hint": "山 adalah tiga puncak gunung, dengan puncak tengah yang paling tinggi.",
+        "example": {
+          "japanese": "富士山はとても高いです。",
+          "reading": "ふじさんはとてもたかいです。",
+          "meaning": "Gunung Fuji sangat tinggi."
+        }
       },
       {
         "kanji": "川",
         "kunyomi": "かわ",
         "onyomi": "セン",
         "meaning": "Sungai",
-        "pattern_hint": "川 adalah tiga garis aliran air yang mengalir dari atas ke bawah."
+        "pattern_hint": "川 adalah tiga garis aliran air yang mengalir dari atas ke bawah.",
+        "example": {
+          "japanese": "この川はとてもきれいです。",
+          "reading": "このかわはとてもきれいです。",
+          "meaning": "Sungai ini sangat indah dan bersih."
+        }
       }
     ],
     "N4": [
@@ -61,35 +92,60 @@
         "kunyomi": "おとこ",
         "onyomi": "ダン / ナン",
         "meaning": "Laki-laki, pria",
-        "pattern_hint": "田 (sawah padi) + 力 (kekuatan) = pria yang bekerja di sawah dengan tenaga."
+        "pattern_hint": "田 (sawah padi) + 力 (kekuatan) = pria yang bekerja di sawah dengan tenaga.",
+        "example": {
+          "japanese": "あの男の人は誰ですか。",
+          "reading": "あのおとこのひとはだれですか。",
+          "meaning": "Laki-laki itu siapa?"
+        }
       },
       {
         "kanji": "力",
         "kunyomi": "ちから",
         "onyomi": "リョク / リキ",
         "meaning": "Kekuatan, tenaga",
-        "pattern_hint": "力 adalah otot atau lengan yang dibengkokkan, simbol dari tenaga."
+        "pattern_hint": "力 adalah otot atau lengan yang dibengkokkan, simbol dari tenaga.",
+        "example": {
+          "japanese": "毎日運動して力を付けます。",
+          "reading": "まいにちうんどうしてちからをつけます。",
+          "meaning": "Saya berolahraga setiap hari untuk membangun kekuatan."
+        }
       },
       {
         "kanji": "明",
         "kunyomi": "あか.るい / あき.らか",
         "onyomi": "メイ / ミョウ",
         "meaning": "Terang, jelas",
-        "pattern_hint": "日 (matahari) + 月 (bulan) = dua sumber cahaya yang membuat suasana terang."
+        "pattern_hint": "日 (matahari) + 月 (bulan) = dua sumber cahaya yang membuat suasana terang.",
+        "example": {
+          "japanese": "明日は晴れると思います。",
+          "reading": "あしたははれるとおもいます。",
+          "meaning": "Saya pikir besok akan cerah."
+        }
       },
       {
         "kanji": "林",
         "kunyomi": "はやし",
         "onyomi": "リン",
         "meaning": "Hutan kecil, rimbunan pohon",
-        "pattern_hint": "木 (pohon) + 木 (pohon) = dua pohon berdampingan menjadi rimbunan."
+        "pattern_hint": "木 (pohon) + 木 (pohon) = dua pohon berdampingan menjadi rimbunan.",
+        "example": {
+          "japanese": "家の近くに小さな林があります。",
+          "reading": "いえのちかくにちいさなはやしがあります。",
+          "meaning": "Di dekat rumah ada hutan kecil."
+        }
       },
       {
         "kanji": "森",
         "kunyomi": "もり",
         "onyomi": "シン",
         "meaning": "Hutan lebat",
-        "pattern_hint": "木 + 木 + 木 = tiga pohon sekaligus, lebih lebat daripada 林."
+        "pattern_hint": "木 + 木 + 木 = tiga pohon sekaligus, lebih lebat daripada 林.",
+        "example": {
+          "japanese": "森の中で鳥が鳴いています。",
+          "reading": "もりのなかでとりがなっています。",
+          "meaning": "Burung berkicau di dalam hutan."
+        }
       }
     ],
     "N3": [
@@ -98,35 +154,60 @@
         "kunyomi": "き.める / き.まる",
         "onyomi": "ケツ",
         "meaning": "Memutuskan",
-        "pattern_hint": "氵 (air) + 夬 (memutus) = seperti air yang mengalir mantap, keputusan yang bulat."
+        "pattern_hint": "氵 (air) + 夬 (memutus) = seperti air yang mengalir mantap, keputusan yang bulat.",
+        "example": {
+          "japanese": "今日中に決めなければなりません。",
+          "reading": "きょうじゅうにきめなければなりません。",
+          "meaning": "Saya harus memutuskan sebelum hari ini berakhir."
+        }
       },
       {
         "kanji": "運",
         "kunyomi": "はこ.ぶ",
         "onyomi": "ウン",
         "meaning": "Membawa, mengangkut; keberuntungan",
-        "pattern_hint": "辶 (berjalan) + 軍 (pasukan) = bergerak membawa atau mengangkut pasukan."
+        "pattern_hint": "辶 (berjalan) + 軍 (pasukan) = bergerak membawa atau mengangkut pasukan.",
+        "example": {
+          "japanese": "荷物を二階まで運びました。",
+          "reading": "にもつをにかいまではこびました。",
+          "meaning": "Saya membawa barang bawaan sampai lantai dua."
+        }
       },
       {
         "kanji": "想",
         "kunyomi": "おも.う",
         "onyomi": "ソウ",
         "meaning": "Pikiran, bayangan",
-        "pattern_hint": "相 (木 + 目, melihat pohon) + 心 (hati) = apa yang dilihat dan dirasakan di hati."
+        "pattern_hint": "相 (木 + 目, melihat pohon) + 心 (hati) = apa yang dilihat dan dirasakan di hati.",
+        "example": {
+          "japanese": "彼の気持ちを想像してみてください。",
+          "reading": "かれのきもちをそうぞうしてみてください。",
+          "meaning": "Coba bayangkan perasaannya."
+        }
       },
       {
         "kanji": "静",
         "kunyomi": "しず.か / しず.まる",
         "onyomi": "セイ / ジョウ",
         "meaning": "Tenang",
-        "pattern_hint": "青 (biru) + 争 (bertarung) = pertarungan yang mereda dan suasana menjadi tenang."
+        "pattern_hint": "青 (biru) + 争 (bertarung) = pertarungan yang mereda dan suasana menjadi tenang.",
+        "example": {
+          "japanese": "図書館では静かにしてください。",
+          "reading": "としょかんではしずかにしてください。",
+          "meaning": "Tolong tenang di perpustakaan."
+        }
       },
       {
         "kanji": "期",
         "kunyomi": "—",
         "onyomi": "キ / ゴ",
         "meaning": "Periode, masa",
-        "pattern_hint": "其 (fondasi) + 月 (bulan) = penanda waktu yang membentuk sebuah periode."
+        "pattern_hint": "其 (fondasi) + 月 (bulan) = penanda waktu yang membentuk sebuah periode.",
+        "example": {
+          "japanese": "来期の計画を立てましょう。",
+          "reading": "らいきのけいかくをたてましょう。",
+          "meaning": "Mari susun rencana untuk periode berikutnya."
+        }
       }
     ],
     "N2": [
@@ -135,35 +216,60 @@
         "kunyomi": "さず.ける / さず.かる",
         "onyomi": "ジュ",
         "meaning": "Memberi, mengajarkan",
-        "pattern_hint": "扌 (tangan) + 受 (menerima) = tangan yang menyerahkan ilmu atau pemberian."
+        "pattern_hint": "扌 (tangan) + 受 (menerima) = tangan yang menyerahkan ilmu atau pemberian.",
+        "example": {
+          "japanese": "彼は学生たちに知識を授けました。",
+          "reading": "かれはがくせいたちにちしきをさずけました。",
+          "meaning": "Dia memberikan pengetahuan kepada para siswa."
+        }
       },
       {
         "kanji": "績",
         "kunyomi": "つ.む",
         "onyomi": "セキ",
         "meaning": "Hasil, prestasi",
-        "pattern_hint": "糸 (benang) + 責 (tanggung jawab) = hasil tenunan dari usaha yang penuh tanggung jawab."
+        "pattern_hint": "糸 (benang) + 責 (tanggung jawab) = hasil tenunan dari usaha yang penuh tanggung jawab.",
+        "example": {
+          "japanese": "彼女は仕事で良い成績を収めました。",
+          "reading": "かのじょはしごとでよいせいせきをおさめました。",
+          "meaning": "Dia meraih hasil kerja yang baik."
+        }
       },
       {
         "kanji": "導",
         "kunyomi": "みちび.く",
         "onyomi": "ドウ",
         "meaning": "Memimpin, menuntun",
-        "pattern_hint": "道 (jalan) + 寸 (tangan) = tangan yang menuntun seseorang di jalan."
+        "pattern_hint": "道 (jalan) + 寸 (tangan) = tangan yang menuntun seseorang di jalan.",
+        "example": {
+          "japanese": "先生は私たちを正しい道へ導いてくれました。",
+          "reading": "せんせいはわたしたちをただしいみちへみちびいてくれました。",
+          "meaning": "Guru membimbing kami ke jalan yang benar."
+        }
       },
       {
         "kanji": "適",
         "kunyomi": "かな.う",
         "onyomi": "テキ",
         "meaning": "Cocok, sesuai",
-        "pattern_hint": "辶 (berjalan) + 啇 (sesuai) = berjalan di jalan yang tepat dan sesuai."
+        "pattern_hint": "辶 (berjalan) + 啇 (sesuai) = berjalan di jalan yang tepat dan sesuai.",
+        "example": {
+          "japanese": "この仕事は彼に適しています。",
+          "reading": "このしごとはかれにてきしています。",
+          "meaning": "Pekerjaan ini cocok untuknya."
+        }
       },
       {
         "kanji": "染",
         "kunyomi": "そ.める / そ.まる / し.みる",
         "onyomi": "セン",
         "meaning": "Mewarnai, mencelup",
-        "pattern_hint": "氵 (air) + 九 + 木 (kayu) = air dan bahan kayu dalam proses pencelupan kain."
+        "pattern_hint": "氵 (air) + 九 + 木 (kayu) = air dan bahan kayu dalam proses pencelupan kain.",
+        "example": {
+          "japanese": "この布は自然の染料で染めました。",
+          "reading": "このぬのはしぜんのせんりょうでそめました。",
+          "meaning": "Kain ini diwarnai dengan pewarna alami."
+        }
       }
     ],
     "N1": [
@@ -172,38 +278,354 @@
         "kunyomi": "なぐさ.める / なぐさ.む",
         "onyomi": "イ",
         "meaning": "Menghibur, menenangkan",
-        "pattern_hint": "尉 (menenangkan) + 心 (hati) = hati yang ditenangkan dan dihibur."
+        "pattern_hint": "尉 (menenangkan) + 心 (hati) = hati yang ditenangkan dan dihibur.",
+        "example": {
+          "japanese": "落ち込んでいる友人を慰めました。",
+          "reading": "おちこんでいるゆうじんをなぐさめました。",
+          "meaning": "Saya menghibur teman yang sedang sedih."
+        }
       },
       {
         "kanji": "頂",
         "kunyomi": "いただ.く / いただき",
         "onyomi": "チョウ",
         "meaning": "Puncak; menerima",
-        "pattern_hint": "頁 (kepala) + 丁 (paku) = bagian paling atas atau kepala yang menonjol."
+        "pattern_hint": "頁 (kepala) + 丁 (paku) = bagian paling atas atau kepala yang menonjol.",
+        "example": {
+          "japanese": "山の頂から街が見えます。",
+          "reading": "やまのいただきからまちがみえます。",
+          "meaning": "Dari puncak gunung terlihat kota."
+        }
       },
       {
         "kanji": "蓄",
         "kunyomi": "たくわ.える",
         "onyomi": "チク",
         "meaning": "Menyimpan, menabung",
-        "pattern_hint": "艹 (tanaman) + 畜 (ternak) = menyimpan hasil panen dan peternakan untuk nanti."
+        "pattern_hint": "艹 (tanaman) + 畜 (ternak) = menyimpan hasil panen dan peternakan untuk nanti.",
+        "example": {
+          "japanese": "毎月少しずつお金を蓄えています。",
+          "reading": "まいつきすこしずつおかねをたくわえています。",
+          "meaning": "Setiap bulan saya menyisihkan sedikit uang."
+        }
       },
       {
         "kanji": "顧",
         "kunyomi": "かえり.みる",
         "onyomi": "コ",
         "meaning": "Meninjau, menoleh ke belakang",
-        "pattern_hint": "雇 (orang yang dipekerjakan) + 頁 (kepala) = kepala yang menoleh untuk meninjau."
+        "pattern_hint": "雇 (orang yang dipekerjakan) + 頁 (kepala) = kepala yang menoleh untuk meninjau.",
+        "example": {
+          "japanese": "自分の過去を顧みる時間が必要です。",
+          "reading": "じぶんのかこをかえりみるじかんがひつようです。",
+          "meaning": "Kita perlu waktu untuk meninjau masa lalu sendiri."
+        }
       },
       {
         "kanji": "濯",
         "kunyomi": "すす.ぐ",
         "onyomi": "タク",
         "meaning": "Mencuci, membilas",
-        "pattern_hint": "氵 (air) + 翟 (burung) = air yang membilas bersih seperti bulu burung."
+        "pattern_hint": "氵 (air) + 翟 (burung) = air yang membilas bersih seperti bulu burung.",
+        "example": {
+          "japanese": "汚れたシャツを水で濯ぎました。",
+          "reading": "よごれたシャツをみずですすぎました。",
+          "meaning": "Saya membilas kemeja kotor dengan air."
+        }
       }
     ]
   },
+  "grammar": {
+    "N5": [
+      {
+        "id": "n5-1",
+        "title": "〜は〜です",
+        "pattern": "A は B です",
+        "explanation": "Menjelaskan bahwa A adalah B. Partikel は menandai topik, sedangkan です memberi kesan sopan.",
+        "formal": {
+          "japanese": "私は学生です。",
+          "reading": "わたしはがくせいです。",
+          "meaning": "Saya adalah pelajar."
+        },
+        "casual": {
+          "japanese": "私は学生だ。",
+          "reading": "わたしはがくせいだ。",
+          "meaning": "Aku pelajar."
+        }
+      },
+      {
+        "id": "n5-2",
+        "title": "〜をください",
+        "pattern": "Kata benda + をください",
+        "explanation": "Meminta sesuatu dengan sopan. Artinya: tolong berikan kepada saya.",
+        "formal": {
+          "japanese": "水をください。",
+          "reading": "みずをください。",
+          "meaning": "Tolong beri saya air."
+        },
+        "casual": {
+          "japanese": "水ちょうだい。",
+          "reading": "みずちょうだい。",
+          "meaning": "Kasih saya air."
+        }
+      },
+      {
+        "id": "n5-3",
+        "title": "〜たいです",
+        "pattern": "Kata kerja (bentuk -masu tanpa ます) + たいです",
+        "explanation": "Menyatakan keinginan untuk melakukan sesuatu dari sudut pandang pembicara.",
+        "formal": {
+          "japanese": "日本へ行きたいです。",
+          "reading": "にほんへいきたいです。",
+          "meaning": "Saya ingin pergi ke Jepang."
+        },
+        "casual": {
+          "japanese": "日本へ行きたい。",
+          "reading": "にほんへいきたい。",
+          "meaning": "Aku ingin pergi ke Jepang."
+        }
+      }
+    ],
+    "N4": [
+      {
+        "id": "n4-1",
+        "title": "〜てください",
+        "pattern": "Kata kerja bentuk て + ください",
+        "explanation": "Meminta seseorang melakukan sesuatu dengan sopan.",
+        "formal": {
+          "japanese": "ここに名前を書いてください。",
+          "reading": "ここになまえをかいてください。",
+          "meaning": "Tolong tulis nama di sini."
+        },
+        "casual": {
+          "japanese": "ここに名前を書いて。",
+          "reading": "ここになまえをかいて。",
+          "meaning": "Tulis nama di sini."
+        }
+      },
+      {
+        "id": "n4-2",
+        "title": "〜ている",
+        "pattern": "Kata kerja bentuk て + いる",
+        "explanation": "Menyatakan tindakan yang sedang berlangsung atau keadaan yang berlanjut.",
+        "formal": {
+          "japanese": "今、本を読んでいます。",
+          "reading": "いま、ほんをよんでいます。",
+          "meaning": "Sekarang saya sedang membaca buku."
+        },
+        "casual": {
+          "japanese": "今、本を読んでいる。",
+          "reading": "いま、ほんをよんでいる。",
+          "meaning": "Sekarang aku sedang membaca buku."
+        }
+      },
+      {
+        "id": "n4-3",
+        "title": "〜なければならない",
+        "pattern": "Kata kerja bentuk ない (tanpa い) + ければならない",
+        "explanation": "Menyatakan keharusan: harus melakukan sesuatu karena aturan atau keadaan.",
+        "formal": {
+          "japanese": "毎日勉強しなければなりません。",
+          "reading": "まいにちべんきょうしなければなりません。",
+          "meaning": "Saya harus belajar setiap hari."
+        },
+        "casual": {
+          "japanese": "毎日勉強しなければならない。",
+          "reading": "まいにちべんきょうしなければならない。",
+          "meaning": "Aku harus belajar setiap hari."
+        }
+      }
+    ],
+    "N3": [
+      {
+        "id": "n3-1",
+        "title": "〜ようにする",
+        "pattern": "Kata kerja bentuk kamus/ない + ようにする",
+        "explanation": "Menyatakan usaha untuk membiasakan diri atau berhati-hati melakukan sesuatu.",
+        "formal": {
+          "japanese": "毎日少しずつ復習するようにしています。",
+          "reading": "まいにちすこしずつふくしゅうするようにしています。",
+          "meaning": "Saya berusaha mengulang pelajaran sedikit setiap hari."
+        },
+        "casual": {
+          "japanese": "毎日少しずつ復習するようにしてる。",
+          "reading": "まいにちすこしずつふくしゅうするようにしてる。",
+          "meaning": "Aku berusaha mengulang pelajaran sedikit tiap hari."
+        }
+      },
+      {
+        "id": "n3-2",
+        "title": "〜ことがある",
+        "pattern": "Kata kerja bentuk lampau (ta) + ことがある",
+        "explanation": "Menyatakan pengalaman pernah melakukan sesuatu di masa lalu.",
+        "formal": {
+          "japanese": "京都へ行ったことがあります。",
+          "reading": "きょうとへいったことがあります。",
+          "meaning": "Saya pernah pergi ke Kyoto."
+        },
+        "casual": {
+          "japanese": "京都へ行ったことがある。",
+          "reading": "きょうとへいったことがある。",
+          "meaning": "Aku pernah pergi ke Kyoto."
+        }
+      },
+      {
+        "id": "n3-3",
+        "title": "〜ながら",
+        "pattern": "Kata kerja (bentuk -masu tanpa ます) + ながら",
+        "explanation": "Menyatakan dua tindakan yang dilakukan bersamaan oleh satu orang.",
+        "formal": {
+          "japanese": "音楽を聞きながら勉強します。",
+          "reading": "おんがくをききながらべんきょうします。",
+          "meaning": "Saya belajar sambil mendengarkan musik."
+        },
+        "casual": {
+          "japanese": "音楽を聞きながら勉強する。",
+          "reading": "おんがくをききながらべんきょうする。",
+          "meaning": "Aku belajar sambil mendengarkan musik."
+        }
+      }
+    ],
+    "N2": [
+      {
+        "id": "n2-1",
+        "title": "〜わけではない",
+        "pattern": "Kalimat biasa + わけではない",
+        "explanation": "Menyangkal sebagian anggapan. Artinya: bukan berarti bahwa.",
+        "formal": {
+          "japanese": "日本語が嫌いなわけではありません。",
+          "reading": "にほんごがきらいなわけではありません。",
+          "meaning": "Bukan berarti saya membenci bahasa Jepang."
+        },
+        "casual": {
+          "japanese": "日本語が嫌いなわけじゃない。",
+          "reading": "にほんごがきらいなわけじゃない。",
+          "meaning": "Bukan berarti aku membenci bahasa Jepang."
+        }
+      },
+      {
+        "id": "n2-2",
+        "title": "〜に違いない",
+        "pattern": "Kalimat biasa + に違いない",
+        "explanation": "Menyatakan keyakinan yang kuat berdasarkan bukti atau penalaran. Artinya: pasti.",
+        "formal": {
+          "japanese": "彼はきっと合格するに違いありません。",
+          "reading": "かれはきっとごうかくするにちがいありません。",
+          "meaning": "Dia pasti akan lulus."
+        },
+        "casual": {
+          "japanese": "彼はきっと合格するに違いない。",
+          "reading": "かれはきっとごうかくするにちがいない。",
+          "meaning": "Dia pasti akan lulus."
+        }
+      },
+      {
+        "id": "n2-3",
+        "title": "〜おそれがある",
+        "pattern": "Kata benda / kata kerja bentuk kamus + おそれがある",
+        "explanation": "Menyatakan kemungkinan terjadinya hal buruk. Artinya: ada kekhawatiran atau risiko.",
+        "formal": {
+          "japanese": "台風が来るおそれがあります。",
+          "reading": "たいふうがくるおそれがあります。",
+          "meaning": "Ada kemungkinan topan akan datang."
+        },
+        "casual": {
+          "japanese": "台風が来るおそれがある。",
+          "reading": "たいふうがくるおそれがある。",
+          "meaning": "Ada risiko topan akan datang."
+        }
+      }
+    ],
+    "N1": [
+      {
+        "id": "n1-1",
+        "title": "〜ざるを得ない",
+        "pattern": "Kata kerja bentuk ない (tanpa い) + ざるを得ない (する → せざるを得ない)",
+        "explanation": "Menyatakan keharusan yang tidak dapat dihindari. Artinya: mau tidak mau harus.",
+        "formal": {
+          "japanese": "状況を考えると、計画を変更せざるを得ません。",
+          "reading": "じょうきょうをかんがえると、けいかくをへんこうせざるをえません。",
+          "meaning": "Melihat situasinya, mau tidak mau saya harus mengubah rencana."
+        },
+        "casual": {
+          "japanese": "状況を考えると、計画を変更せざるを得ない。",
+          "reading": "じょうきょうをかんがえると、けいかくをへんこうせざるをえない。",
+          "meaning": "Melihat situasinya, mau tidak mau aku harus mengubah rencana."
+        }
+      },
+      {
+        "id": "n1-2",
+        "title": "〜に至るまで",
+        "pattern": "Kata benda + に至るまで",
+        "explanation": "Menyatakan cakupan yang sangat luas atau ekstrem. Artinya: sampai-sampai atau hingga.",
+        "formal": {
+          "japanese": "細かい部分に至るまで確認いたしました。",
+          "reading": "こまかいぶぶんにいたるまでかくにんいたしました。",
+          "meaning": "Saya telah memeriksa sampai bagian terkecil."
+        },
+        "casual": {
+          "japanese": "細かい部分に至るまで確認した。",
+          "reading": "こまかいぶぶんにいたるまでかくにんした。",
+          "meaning": "Aku sudah memeriksa sampai detail terkecil."
+        }
+      },
+      {
+        "id": "n1-3",
+        "title": "〜を皮切りに",
+        "pattern": "Kata benda + を皮切りに",
+        "explanation": "Menyatakan titik awal dari rangkaian kegiatan yang kemudian berkembang. Artinya: dimulai dari.",
+        "formal": {
+          "japanese": "東京公演を皮切りに、全国ツアーが始まります。",
+          "reading": "とうきょうこうえんをかわきりに、ぜんこくツアーがはじまります。",
+          "meaning": "Dimulai dari pertunjukan di Tokyo, tur nasional akan dimulai."
+        },
+        "casual": {
+          "japanese": "東京公演を皮切りに、全国ツアーが始まる。",
+          "reading": "とうきょうこうえんをかわきりに、ぜんこくツアーがはじまる。",
+          "meaning": "Dimulai dari pertunjukan Tokyo, tur nasional dimulai."
+        }
+      }
+    ]
+  },
+  "kana": [
+    { "kana": "おかあさん", "romaji": "okaasan", "type": "Hiragana" },
+    { "kana": "がっこう", "romaji": "gakkou", "alt": ["gakko"], "type": "Hiragana" },
+    { "kana": "さくら", "romaji": "sakura", "type": "Hiragana" },
+    { "kana": "ともだち", "romaji": "tomodachi", "type": "Hiragana" },
+    { "kana": "しんぶん", "romaji": "shinbun", "alt": ["shimbun"], "type": "Hiragana" },
+    { "kana": "でんしゃ", "romaji": "densha", "alt": ["densya"], "type": "Hiragana" },
+    { "kana": "ひこうき", "romaji": "hikouki", "alt": ["hikoki"], "type": "Hiragana" },
+    { "kana": "たべもの", "romaji": "tabemono", "type": "Hiragana" },
+    { "kana": "のみもの", "romaji": "nomimono", "type": "Hiragana" },
+    { "kana": "あたらしい", "romaji": "atarashii", "alt": ["atarashi"], "type": "Hiragana" },
+    { "kana": "おいしい", "romaji": "oishii", "alt": ["oishi"], "type": "Hiragana" },
+    { "kana": "たのしい", "romaji": "tanoshii", "alt": ["tanoshi"], "type": "Hiragana" },
+    { "kana": "かわいい", "romaji": "kawaii", "alt": ["kawai"], "type": "Hiragana" },
+    { "kana": "やさしい", "romaji": "yasashii", "alt": ["yasashi"], "type": "Hiragana" },
+    { "kana": "つめたい", "romaji": "tsumetai", "type": "Hiragana" },
+    { "kana": "おおきい", "romaji": "ookii", "alt": ["okii"], "type": "Hiragana" },
+    { "kana": "ちいさい", "romaji": "chiisai", "alt": ["chisai"], "type": "Hiragana" },
+    { "kana": "せんせい", "romaji": "sensei", "type": "Hiragana" },
+    { "kana": "がくせい", "romaji": "gakusei", "type": "Hiragana" },
+    { "kana": "にほんご", "romaji": "nihongo", "type": "Hiragana" },
+    { "kana": "りょうり", "romaji": "ryouri", "alt": ["ryori"], "type": "Hiragana" },
+    { "kana": "おんがく", "romaji": "ongaku", "type": "Hiragana" },
+    { "kana": "えいが", "romaji": "eiga", "type": "Hiragana" },
+    { "kana": "しごと", "romaji": "shigoto", "type": "Hiragana" },
+    { "kana": "あした", "romaji": "ashita", "type": "Hiragana" },
+    { "kana": "コーヒー", "romaji": "koohii", "alt": ["kohi", "koohi"], "type": "Katakana" },
+    { "kana": "テレビ", "romaji": "terebi", "type": "Katakana" },
+    { "kana": "カメラ", "romaji": "kamera", "type": "Katakana" },
+    { "kana": "パン", "romaji": "pan", "type": "Katakana" },
+    { "kana": "バス", "romaji": "basu", "type": "Katakana" },
+    { "kana": "レストラン", "romaji": "resutoran", "type": "Katakana" },
+    { "kana": "コンピューター", "romaji": "konpyuutaa", "alt": ["konpyuta", "konpyuutaa"], "type": "Katakana" },
+    { "kana": "アイスクリーム", "romaji": "aisukuriimu", "alt": ["aisukurimu"], "type": "Katakana" },
+    { "kana": "サッカー", "romaji": "sakkaa", "alt": ["sakka"], "type": "Katakana" },
+    { "kana": "ニュース", "romaji": "nyuusu", "alt": ["nyusu"], "type": "Katakana" },
+    { "kana": "ピザ", "romaji": "piza", "type": "Katakana" },
+    { "kana": "ホテル", "romaji": "hoteru", "type": "Katakana" }
+  ],
   "days": [
     {
       "id": 1,
