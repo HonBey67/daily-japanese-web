@@ -1,0 +1,147 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 240 240" role="img" aria-labelledby="capriTitle">
+  <title id="capriTitle">Capri, maskot merak cyberpunk edgerunner Daily Japanese</title>
+  <style>
+    .gl { opacity: 0; animation: gl 5s steps(1) infinite; }
+    .scan { animation: scan 3.2s linear infinite; }
+    @keyframes gl {
+      0%, 88%, 100% { opacity: 0; transform: translate(0, 0); }
+      89% { opacity: .85; transform: translate(-4px, 0); }
+      92% { opacity: .85; transform: translate(3px, 1px); }
+      95% { opacity: 0; transform: translate(0, 0); }
+    }
+    @keyframes scan {
+      0% { transform: translateY(0); opacity: 0; }
+      15%, 85% { opacity: .7; }
+      100% { transform: translateY(18px); opacity: 0; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      .gl, .scan { animation: none; }
+    }
+  </style>
+  <defs>
+    <radialGradient id="eyespot" cx="50%" cy="50%" r="50%">
+      <stop offset="0" stop-color="#ffee32"/>
+      <stop offset=".4" stop-color="#ff2e88"/>
+      <stop offset="1" stop-color="#7b2cbf"/>
+    </radialGradient>
+    <linearGradient id="feather" x1="0" y1="1" x2="0" y2="0">
+      <stop offset="0" stop-color="#05d5b2" stop-opacity=".1"/>
+      <stop offset=".55" stop-color="#00e676" stop-opacity=".8"/>
+      <stop offset="1" stop-color="#00ff9d"/>
+    </linearGradient>
+    <linearGradient id="featherAlt" x1="0" y1="1" x2="0" y2="0">
+      <stop offset="0" stop-color="#7b2cbf" stop-opacity=".1"/>
+      <stop offset=".55" stop-color="#00b4d8" stop-opacity=".8"/>
+      <stop offset="1" stop-color="#05d5b2"/>
+    </linearGradient>
+    <linearGradient id="jacket" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#14363f"/>
+      <stop offset="1" stop-color="#0a0f12"/>
+    </linearGradient>
+    <linearGradient id="headG" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#19a7c4"/>
+      <stop offset="1" stop-color="#0b4f6c"/>
+    </linearGradient>
+    <linearGradient id="crest" x1="0" y1="1" x2="0" y2="0">
+      <stop offset="0" stop-color="#05d5b2"/>
+      <stop offset="1" stop-color="#00ff9d"/>
+    </linearGradient>
+    <filter id="glow" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="2.2" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <g id="plume">
+      <polygon points="0,0 -13,-58 0,-106 13,-58" fill="url(#feather)" stroke="#00ff9d" stroke-opacity=".6" stroke-width="1"/>
+      <path d="M0 -8 L0 -80" stroke="#c7f9cc" stroke-opacity=".45" stroke-width="1"/>
+      <polygon points="0,-104 -9,-92 0,-80 9,-92" fill="url(#eyespot)"/>
+      <polygon points="0,-97 -4,-92 0,-87 4,-92" fill="#00ff9d"/>
+    </g>
+    <g id="plumeAlt">
+      <polygon points="0,0 -13,-58 0,-106 13,-58" fill="url(#featherAlt)" stroke="#00b4d8" stroke-opacity=".7" stroke-width="1"/>
+      <path d="M0 -8 L0 -80" stroke="#e0f7fa" stroke-opacity=".4" stroke-width="1"/>
+      <polygon points="0,-104 -9,-92 0,-80 9,-92" fill="url(#eyespot)"/>
+      <polygon points="0,-97 -4,-92 0,-87 4,-92" fill="#00b4d8"/>
+    </g>
+  </defs>
+
+  <!-- Angular HUD frame -->
+  <polygon points="120,24 194,54 224,128 194,202 120,232 46,202 16,128 46,54" fill="none" stroke="#00ff9d" stroke-opacity=".25" stroke-width="1.5" stroke-dasharray="4 8"/>
+  <polygon points="120,36 212,128 120,220 28,128" fill="none" stroke="#ff2e88" stroke-opacity=".3" stroke-width="1"/>
+
+  <!-- Tail fan: sharp kite feathers -->
+  <g filter="url(#glow)" transform="translate(120 160)">
+    <use xlink:href="#plumeAlt" href="#plumeAlt" transform="rotate(-72)"/>
+    <use xlink:href="#plume" href="#plume" transform="rotate(-48)"/>
+    <use xlink:href="#plumeAlt" href="#plumeAlt" transform="rotate(-24)"/>
+    <use xlink:href="#plume" href="#plume" transform="rotate(0)"/>
+    <use xlink:href="#plumeAlt" href="#plumeAlt" transform="rotate(24)"/>
+    <use xlink:href="#plume" href="#plume" transform="rotate(48)"/>
+    <use xlink:href="#plumeAlt" href="#plumeAlt" transform="rotate(72)"/>
+  </g>
+
+  <!-- Shoulder plates -->
+  <polygon points="86,152 62,168 58,198 76,206 82,184" fill="#7b2cbf" stroke="#00b4d8" stroke-width="1.5" stroke-linejoin="miter"/>
+  <polygon points="154,152 178,168 182,198 164,206 158,184" fill="#7b2cbf" stroke="#00b4d8" stroke-width="1.5" stroke-linejoin="miter"/>
+
+  <!-- Jacket -->
+  <polygon points="86,148 154,148 170,194 150,216 90,216 70,194" fill="url(#jacket)" stroke="#00ff9d" stroke-width="2" stroke-linejoin="miter"/>
+  <polygon points="120,150 154,148 170,194 150,216 120,216" fill="#000" opacity=".25"/>
+  <path d="M80 172 L144 210" stroke="#ff2e88" stroke-width="5" opacity=".9"/>
+  <path d="M104 164 h12 l6 8 h14" fill="none" stroke="#00ff9d" stroke-width="1.6" stroke-linecap="square" filter="url(#glow)"/>
+  <polygon points="120,182 128,190 120,198 112,190" fill="#00ff9d" filter="url(#glow)"/>
+
+  <!-- Feet -->
+  <path d="M108 216 v9 M98 225 h16 M132 216 v9 M126 225 h16" stroke="#ffee32" stroke-width="3" stroke-linecap="square"/>
+
+  <!-- Crest: mohawk spikes -->
+  <g filter="url(#glow)">
+    <polygon points="100,96 88,56 118,88" fill="url(#crest)"/>
+    <polygon points="140,96 152,56 122,88" fill="url(#crest)"/>
+    <polygon points="113,92 120,36 127,92" fill="url(#crest)"/>
+  </g>
+  <polygon points="120,24 126,32 120,40 114,32" fill="url(#eyespot)"/>
+  <polygon points="88,46 93,54 88,62 83,54" fill="#ff2e88"/>
+  <polygon points="152,46 157,54 152,62 147,54" fill="#ff2e88"/>
+
+  <!-- Left ear plate -->
+  <polygon points="84,100 74,104 76,122 86,120" fill="#0b3d63" stroke="#00ff9d" stroke-width="1.5" stroke-linejoin="miter"/>
+  <rect x="77" y="108" width="5" height="3" fill="#ff2e88"/>
+
+  <!-- Head: faceted helmet with cel shading -->
+  <polygon points="120,78 150,92 154,122 138,142 120,150 102,142 86,122 90,92" fill="url(#headG)" stroke="#00ff9d" stroke-width="2" stroke-linejoin="miter"/>
+  <polygon points="120,78 150,92 154,122 138,142 120,150" fill="#000" opacity=".28"/>
+
+  <!-- Visor -->
+  <polygon points="86,104 154,104 158,116 148,128 92,128 82,116" fill="#0a0f12" stroke="#00ff9d" stroke-width="2" stroke-linejoin="miter"/>
+  <g filter="url(#glow)">
+    <polygon points="94,112 116,110 112,122 96,121" fill="#00ff9d"/>
+    <polygon points="146,112 124,110 128,122 144,121" fill="#00ff9d"/>
+  </g>
+  <polygon points="102,113 108,112.5 107,118 103,118" fill="#ffffff"/>
+  <polygon points="138,113 132,112.5 133,118 137,118" fill="#ffffff"/>
+  <path d="M90 126 H150" stroke="#ff2e88" stroke-width="1.5"/>
+  <rect class="scan" x="88" y="106" width="64" height="2" fill="#e0f7fa" opacity="0"/>
+
+  <!-- Cheek marks and beak -->
+  <path d="M98 134 l7 -2 M142 134 l-7 -2" stroke="#ff2e88" stroke-width="2" stroke-linecap="square"/>
+  <polygon points="112,131 128,131 120,147" fill="#ffee32" stroke="#0a0f12" stroke-width="1" stroke-linejoin="miter"/>
+
+  <!-- High collar -->
+  <polygon points="82,152 90,136 108,154" fill="#ff2e88"/>
+  <polygon points="158,152 150,136 132,154" fill="#ff2e88"/>
+
+  <!-- Antenna -->
+  <path d="M154 108 L168 96 L174 96" fill="none" stroke="#00b4d8" stroke-width="2" stroke-linecap="square"/>
+  <polygon points="177,91 182,96 177,101 172,96" fill="#ff2e88" filter="url(#glow)"/>
+
+  <!-- Glitch layer: magenta/cyan offset slices flash periodically -->
+  <g class="gl">
+    <polygon points="94,112 116,110 112,122 96,121" fill="#ff2e88"/>
+    <polygon points="146,112 124,110 128,122 144,121" fill="#00b4d8"/>
+    <polygon points="88,96 152,96 154,104 86,104" fill="#00b4d8" opacity=".6"/>
+    <rect x="86" y="130" width="68" height="3" fill="#ff2e88" opacity=".7"/>
+  </g>
+</svg>

@@ -31,6 +31,16 @@ const els = {
   quizList: document.getElementById("quizList"),
   quizMessage: document.getElementById("quizMessage"),
   quizReset: document.getElementById("quizReset"),
+  quizPercent: document.getElementById("quizPercent"),
+  quizMeter: document.getElementById("quizMeter"),
+  quizMeterFill: document.getElementById("quizMeterFill"),
+  quizSteps: document.getElementById("quizSteps"),
+  capri: document.getElementById("capri"),
+  capriBubble: document.getElementById("capriBubble"),
+  capriText: document.getElementById("capriText"),
+  capriMood: document.getElementById("capriMood"),
+  capriToggle: document.getElementById("capriToggle"),
+  capriClose: document.getElementById("capriClose"),
   quotePanel: document.getElementById("quotePanel"),
   quoteBadge: document.getElementById("quoteBadge"),
   quoteKanji: document.getElementById("quoteKanji"),
@@ -52,6 +62,75 @@ const state = {
 };
 
 let midnightTimer = null;
+
+/* ---------- Capri, the floating mascot ---------- */
+
+const CAPRI_ASSET = "assets/capri.svg";
+const CAPRI_HIDE_MS = 9000;
+
+const CAPRI_MOODS = {
+  idle: "CAPRI://ONLINE",
+  happy: "CAPRI://すごい!",
+  oops: "CAPRI://大丈夫",
+  think: "CAPRI://TIPS",
+};
+
+const CAPRI_TIPS = [
+  "おはよう! Hari ini ada 5 kanji baru. Ketuk kartunya untuk melihat cara baca dan contoh kalimat.",
+  "一歩ずつ (ippo zutsu): selangkah demi selangkah. Belajar 10 menit tiap hari lebih kuat daripada maraton sebulan sekali.",
+  "継続は力なり (keizoku wa chikara nari): ketekunan adalah kekuatan. Datang lagi besok, ya!",
+  "Tips Capri: pakai です/ます untuk orang yang baru dikenal, bentuk kasual untuk teman dekat.",
+  "Ucapkan contoh kalimatnya dengan suara keras. Otak lebih cepat ingat kalau mulut ikut bekerja.",
+  "Perhatikan radikal kanji. Banyak kanji tersusun dari bagian kecil yang sudah kamu kenal.",
+  "Salah itu data, bukan kegagalan. Catat kana yang keliru, lalu ulangi kuis besok.",
+  "がんばって! Selesaikan 5 soal kuis hari ini untuk mengisi SYNC_RATE sampai 100%.",
+];
+
+const CAPRI_CORRECT = [
+  "正解 (seikai)! Jawabanmu benar, sinyal tersinkron.",
+  "すごい! Kana-mu makin lancar.",
+  "いいね (ii ne)! Lanjut ke soal berikutnya.",
+];
+
+const pickFrom = (list) => list[Math.floor(Math.random() * list.length)];
+
+let capriTimer = null;
+let capriTipIndex = 0;
+
+const closeCapri = () => {
+  if (capriTimer) window.clearTimeout(capriTimer);
+  capriTimer = null;
+  els.capriBubble.hidden = true;
+  els.capriToggle.setAttribute("aria-expanded", "false");
+  els.capriToggle.setAttribute("aria-label", "Tampilkan pesan dari Capri");
+};
+
+const capriSay = (text, mood = "idle", autoHide = true) => {
+  els.capriText.textContent = text;
+  els.capriMood.textContent = CAPRI_MOODS[mood] || CAPRI_MOODS.idle;
+
+  // Restart the mood animation even when the mood repeats.
+  els.capri.dataset.mood = "idle";
+  void els.capri.offsetWidth;
+  els.capri.dataset.mood = mood;
+
+  els.capriBubble.hidden = false;
+  els.capriToggle.setAttribute("aria-expanded", "true");
+  els.capriToggle.setAttribute("aria-label", "Sembunyikan pesan Capri");
+
+  if (capriTimer) window.clearTimeout(capriTimer);
+  capriTimer = autoHide ? window.setTimeout(closeCapri, CAPRI_HIDE_MS) : null;
+};
+
+const capriNextTip = () => {
+  capriTipIndex = (capriTipIndex + 1) % CAPRI_TIPS.length;
+  capriSay(CAPRI_TIPS[capriTipIndex], "think");
+};
+
+const capriGreet = () => {
+  capriTipIndex = dayOfYear(new Date()) % CAPRI_TIPS.length;
+  capriSay(CAPRI_TIPS[capriTipIndex], "idle", true);
+};
 
 const dateFormatter = new Intl.DateTimeFormat("id-ID", {
   weekday: "long",
@@ -329,8 +408,8 @@ const createFlashcard = (item, index, focusIndex) => {
 
   const readings = createEl("span", "flashcard-reading-grid");
   readings.append(
-    createReadingCell("Kun'yomi", item.kunyomi),
-    createReadingCell("On'yomi", item.onyomi)
+    createReadingCell("Kun'yomi · ひらがな", item.kunyomi),
+    createReadingCell("On'yomi · カタカナ", item.onyomi)
   );
 
   const example = item.example || {};
@@ -348,7 +427,11 @@ const createFlashcard = (item, index, focusIndex) => {
     createEl("span", "pattern-text", item.pattern_hint || "—")
   );
 
-  back.append(head, readings, exampleBlock, pattern);
+  // The back face clips to the HUD shape; scrolling happens in an inner layer
+  // so the neon frame stays fixed while long examples scroll.
+  const scroll = createEl("span", "flashcard-scroll");
+  scroll.append(head, readings, exampleBlock, pattern);
+  back.append(scroll);
   inner.append(front, back);
   button.append(inner);
 
@@ -361,6 +444,12 @@ const createFlashcard = (item, index, focusIndex) => {
         ? `Kembali ke sisi depan kanji ${item.kanji || ""}.`
         : `Kanji ${item.kanji || ""}, ${item.meaning || ""}. Ketuk untuk membalik kartu.`
     );
+    if (flipped) {
+      capriSay(
+        `${item.kanji || "—"} = ${item.meaning || "—"}. Kun'yomi: ${item.kunyomi || "—"} · On'yomi: ${item.onyomi || "—"}. Coba baca contoh kalimatnya!`,
+        "think"
+      );
+    }
   });
 
   return button;
@@ -385,14 +474,30 @@ const renderKanji = () => {
   });
 };
 
-const createExampleBlock = (label, data, variant) => {
+const createCapriBadge = () => {
+  const img = document.createElement("img");
+  img.className = "capri-badge";
+  img.src = CAPRI_ASSET;
+  img.alt = "";
+  img.width = 26;
+  img.height = 26;
+  img.decoding = "async";
+  return img;
+};
+
+const createExampleBlock = (label, sub, data, variant) => {
   const block = createEl("div", `example-block example-block--${variant}`);
+  const tag = createEl(
+    "span",
+    variant === "casual" ? "example-tag example-tag--casual" : "example-tag"
+  );
+  tag.append(
+    createCapriBadge(),
+    createEl("span", "", label),
+    createEl("span", "example-tag-sub", sub)
+  );
   block.append(
-    createEl(
-      "span",
-      variant === "casual" ? "example-tag example-tag--casual" : "example-tag",
-      label
-    ),
+    tag,
     createEl("p", "example-jp", data?.japanese || "—"),
     createEl("p", "example-reading", data?.reading || "—"),
     createEl("p", "example-meaning", data?.meaning || "—")
@@ -413,33 +518,57 @@ const renderGrammar = () => {
   }
 
   daily.forEach((item, index) => {
-    const card = createEl("article", "grammar-card");
-    const head = createEl("div", "grammar-head");
-    const body = createEl("div", "grammar-body");
+    const card = createEl("article", "grammar-card hud");
+    const details = createEl("details", "grammar-details");
+    details.open = index === 0;
 
+    const summary = createEl("summary", "grammar-summary");
+    const body = createEl("span", "grammar-body");
     body.append(
-      createEl("h3", "grammar-title", item.title || "—"),
+      createEl("span", "grammar-title", item.title || "—"),
       createEl("code", "grammar-pattern", item.pattern || "—")
     );
-
-    head.append(
+    summary.append(
       createEl("span", "grammar-number", String(index + 1).padStart(2, "0")),
-      body
+      body,
+      createEl("span", "grammar-chevron")
     );
+    summary.querySelector(".grammar-chevron").setAttribute("aria-hidden", "true");
 
     const examples = createEl("div", "grammar-examples");
     examples.append(
-      createExampleBlock("Sopan", item.formal, "formal"),
-      createExampleBlock("Kasual", item.casual, "casual")
+      createExampleBlock("Sopan", "です/ます", item.formal, "formal"),
+      createExampleBlock("Kasual", "普通形", item.casual, "casual")
     );
 
-    card.append(
-      head,
+    const content = createEl("div", "grammar-content");
+    content.append(
       createEl("p", "grammar-explanation", item.explanation || "—"),
       examples
     );
+
+    details.append(summary, content);
+    card.append(details);
     els.grammarList.append(card);
   });
+};
+
+const renderQuizMeter = (correct, total) => {
+  const percent = total ? Math.round((correct / total) * 100) : 0;
+  els.quizMeterFill.style.width = `${percent}%`;
+  els.quizPercent.textContent = `${percent}%`;
+  els.quizMeter.setAttribute("aria-valuemax", String(total));
+  els.quizMeter.setAttribute("aria-valuenow", String(correct));
+  els.quizMeter.setAttribute("aria-valuetext", `${correct} dari ${total} benar`);
+
+  els.quizSteps.replaceChildren(
+    ...state.quizResults.map((result, index) => {
+      const step = createEl("li", "hud-step", String(index + 1).padStart(2, "0"));
+      if (result === true) step.classList.add("is-correct");
+      if (result === false) step.classList.add("is-wrong");
+      return step;
+    })
+  );
 };
 
 const updateQuizScore = () => {
@@ -448,6 +577,7 @@ const updateQuizScore = () => {
   const correct = state.quizResults.filter((value) => value === true).length;
 
   els.quizScore.textContent = `${correct} / ${total}`;
+  renderQuizMeter(correct, total);
 
   if (!total) {
     els.quizMessage.textContent = "Data kuis belum tersedia.";
@@ -473,6 +603,32 @@ const updateQuizScore = () => {
   els.quizMessage.textContent = "Belum ada jawaban.";
 };
 
+// Result block shown after an answer: status, romaji, and the Indonesian meaning.
+const renderQuizFeedback = (feedback, item, correct) => {
+  feedback.classList.remove("is-correct", "is-wrong");
+  feedback.classList.add(correct ? "is-correct" : "is-wrong");
+
+  const status = createEl(
+    "span",
+    "quiz-result-status",
+    correct ? "BENAR ✓" : "SALAH ✗"
+  );
+
+  const romaji = createEl("span", "quiz-result-row");
+  romaji.append(
+    createEl("span", "quiz-result-label", "Romaji"),
+    createEl("span", "quiz-result-value quiz-result-romaji", item.romaji || "—")
+  );
+
+  const meaning = createEl("span", "quiz-result-row");
+  meaning.append(
+    createEl("span", "quiz-result-label", "Arti"),
+    createEl("span", "quiz-result-value quiz-result-meaning", item.meaning || "—")
+  );
+
+  feedback.replaceChildren(status, romaji, meaning);
+};
+
 const renderQuiz = () => {
   const now = new Date();
   const dateKey = toISODate(now);
@@ -492,7 +648,7 @@ const renderQuiz = () => {
   }
 
   questions.forEach((item, index) => {
-    const itemEl = createEl("div", "quiz-item");
+    const itemEl = createEl("div", "quiz-item hud");
     const question = createEl("div", "quiz-question");
     question.append(
       createEl("span", "quiz-number", String(index + 1).padStart(2, "0")),
@@ -510,10 +666,11 @@ const renderQuiz = () => {
     input.spellcheck = false;
     input.setAttribute("aria-label", `Jawaban romaji untuk ${item.kana || "kana"}`);
 
-    const submit = createEl("button", "quiz-submit", "Cek");
+    const submit = createEl("button", "quiz-submit", "SUBMIT_DATA [ENTER]");
     submit.type = "submit";
+    submit.setAttribute("aria-label", `Kirim jawaban untuk ${item.kana || "kana"}`);
 
-    const feedback = createEl("p", "quiz-feedback");
+    const feedback = createEl("div", "quiz-feedback");
     feedback.setAttribute("aria-live", "polite");
 
     form.append(input, submit);
@@ -524,10 +681,7 @@ const renderQuiz = () => {
       input.disabled = true;
       submit.disabled = true;
       itemEl.classList.add(savedResult ? "is-correct" : "is-wrong");
-      feedback.classList.add(savedResult ? "is-correct" : "is-wrong");
-      feedback.textContent = savedResult
-        ? "Benar!"
-        : `Salah. Jawaban: ${item.romaji}`;
+      renderQuizFeedback(feedback, item, savedResult);
     }
 
     form.addEventListener("submit", (event) => {
@@ -551,20 +705,33 @@ const renderQuiz = () => {
       input.disabled = true;
       submit.disabled = true;
       itemEl.classList.remove("is-correct", "is-wrong");
-      feedback.classList.remove("is-correct", "is-wrong");
-
-      if (correct) {
-        itemEl.classList.add("is-correct");
-        feedback.classList.add("is-correct");
-        feedback.textContent = "Benar!";
-      } else {
-        itemEl.classList.add("is-wrong");
-        feedback.classList.add("is-wrong");
-        feedback.textContent = `Salah. Jawaban: ${item.romaji}`;
-      }
+      itemEl.classList.add(correct ? "is-correct" : "is-wrong");
+      renderQuizFeedback(feedback, item, correct);
 
       saveQuizProgress(dateKey);
       updateQuizScore();
+
+      const total = state.quizQuestions.length;
+      const answeredCount = state.quizResults.filter((v) => v !== null).length;
+      if (answeredCount === total) {
+        const score = state.quizResults.filter((v) => v === true).length;
+        capriSay(
+          score === total
+            ? `パーフェクト! ${score}/${total} benar. SYNC_RATE 100%, kamu luar biasa!`
+            : `Kuis selesai: ${score}/${total} benar. Kana yang salah kita ulangi besok, がんばって!`,
+          score === total ? "happy" : "think"
+        );
+      } else if (correct) {
+        capriSay(
+          `${pickFrom(CAPRI_CORRECT)} ${item.kana} = ${item.romaji} = "${item.meaning || "—"}".`,
+          "happy"
+        );
+      } else {
+        capriSay(
+          `大丈夫 (daijoubu)! ${item.kana} dibaca "${item.romaji}", artinya "${item.meaning || "—"}". Ucapkan pelan-pelan.`,
+          "oops"
+        );
+      }
     });
 
     itemEl.append(question, form, feedback);
@@ -672,6 +839,7 @@ const buildLevelTabs = (levels) => {
       syncLevelTabs();
       renderKanji();
       renderGrammar();
+      capriSay(`Level ${level} aktif! Kanji dan bunpou sudah diperbarui untukmu.`, "happy");
     });
     els.levelTabs.append(button);
   });
@@ -730,6 +898,7 @@ const init = async () => {
     els.state.hidden = true;
     els.content.hidden = false;
     scheduleMidnightRefresh();
+    capriGreet();
   } catch (error) {
     console.error("Gagal memuat data harian:", error);
     showErrorState();
@@ -746,6 +915,18 @@ const bindEvents = () => {
       return;
     }
     renderQuiz();
+    capriSay("Kuis direset. Ayo coba lagi dari soal pertama!", "idle");
+  });
+
+  els.capriToggle.addEventListener("click", () => {
+    if (els.capriBubble.hidden) capriNextTip();
+    else closeCapri();
+  });
+
+  els.capriClose.addEventListener("click", closeCapri);
+
+  document.addEventListener("keydown", (event) => {
+    if (event.key === "Escape" && !els.capriBubble.hidden) closeCapri();
   });
 
   els.video.addEventListener("load", () => {

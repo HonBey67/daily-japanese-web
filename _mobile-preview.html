@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html><body style="margin:0;background:#000">
+<iframe id="f" src="index.html" style="width:390px;height:5000px;border:0;display:block"></iframe>
+<script>
+  // Report horizontal overflow inside the 390px viewport and flip a card for inspection.
+  const f = document.getElementById("f");
+  f.addEventListener("load", () => setTimeout(() => {
+    const d = f.contentDocument;
+    const vw = d.documentElement.clientWidth;
+    const wide = [...d.querySelectorAll("body *")]
+      .filter((el) => el.getBoundingClientRect().right > vw + 1)
+      .slice(0, 8)
+      .map((el) => el.tagName + "." + el.className + " " + Math.round(el.getBoundingClientRect().right));
+    document.title = "vw=" + vw + " sw=" + d.documentElement.scrollWidth + " | " + wide.join(" ; ");
+    const card = d.querySelector(".flashcard");
+    if (card) card.click();
+  }, 1500));
+</script>
+</body></html>
