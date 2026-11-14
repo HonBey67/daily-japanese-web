@@ -1,0 +1,2516 @@
+[
+ {
+  "kanji": "会",
+  "meanings": [
+   "Meeting",
+   "Meet",
+   "Party",
+   "Association",
+   "Interview",
+   "Join"
+  ],
+  "kun": [
+   "あう",
+   "あわせる",
+   "あつまる"
+  ],
+  "on": [
+   "かい",
+   "え"
+  ],
+  "freq": 4
+ },
+ {
+  "kanji": "同",
+  "meanings": [
+   "Same",
+   "Agree",
+   "Equal"
+  ],
+  "kun": [
+   "おなじ"
+  ],
+  "on": [
+   "どう"
+  ],
+  "freq": 15
+ },
+ {
+  "kanji": "事",
+  "meanings": [
+   "Matter",
+   "Thing",
+   "Fact",
+   "Business",
+   "Reason",
+   "Possibly"
+  ],
+  "kun": [
+   "こと",
+   "つかう",
+   "つかえる"
+  ],
+  "on": [
+   "じ",
+   "ず"
+  ],
+  "freq": 18
+ },
+ {
+  "kanji": "自",
+  "meanings": [
+   "Oneself"
+  ],
+  "kun": [
+   "みずから",
+   "おのずから",
+   "おのずと"
+  ],
+  "on": [
+   "じ",
+   "し"
+  ],
+  "freq": 19
+ },
+ {
+  "kanji": "社",
+  "meanings": [
+   "Company",
+   "Firm",
+   "Office",
+   "Association",
+   "Shrine"
+  ],
+  "kun": [
+   "やしろ"
+  ],
+  "on": [
+   "しゃ"
+  ],
+  "freq": 21
+ },
+ {
+  "kanji": "発",
+  "meanings": [
+   "Departure",
+   "Discharge",
+   "Publish",
+   "Emit",
+   "Start From",
+   "Disclose",
+   "Counter For Gunshots"
+  ],
+  "kun": [
+   "たつ",
+   "あばく",
+   "おこる"
+  ],
+  "on": [
+   "はつ",
+   "ほつ"
+  ],
+  "freq": 32
+ },
+ {
+  "kanji": "者",
+  "meanings": [
+   "Someone",
+   "Person"
+  ],
+  "kun": [
+   "もの"
+  ],
+  "on": [
+   "しゃ"
+  ],
+  "freq": 38
+ },
+ {
+  "kanji": "地",
+  "meanings": [
+   "Ground",
+   "Earth"
+  ],
+  "kun": [],
+  "on": [
+   "ち",
+   "じ"
+  ],
+  "freq": 40
+ },
+ {
+  "kanji": "業",
+  "meanings": [
+   "Business",
+   "Vocation",
+   "Arts",
+   "Performance"
+  ],
+  "kun": [
+   "わざ"
+  ],
+  "on": [
+   "ぎょう",
+   "ごう"
+  ],
+  "freq": 43
+ },
+ {
+  "kanji": "方",
+  "meanings": [
+   "Direction",
+   "Person",
+   "Alternative"
+  ],
+  "kun": [
+   "かた",
+   "がた"
+  ],
+  "on": [
+   "ほう"
+  ],
+  "freq": 46
+ },
+ {
+  "kanji": "新",
+  "meanings": [
+   "New"
+  ],
+  "kun": [
+   "あたらしい",
+   "あらた",
+   "あら"
+  ],
+  "on": [
+   "しん"
+  ],
+  "freq": 51
+ },
+ {
+  "kanji": "場",
+  "meanings": [
+   "Location",
+   "Place"
+  ],
+  "kun": [
+   "ば"
+  ],
+  "on": [
+   "じょう",
+   "ちょう"
+  ],
+  "freq": 52
+ },
+ {
+  "kanji": "員",
+  "meanings": [
+   "Employee",
+   "Member",
+   "Number",
+   "The One In Charge"
+  ],
+  "kun": [],
+  "on": [
+   "いん"
+  ],
+  "freq": 54
+ },
+ {
+  "kanji": "立",
+  "meanings": [
+   "Stand Up",
+   "Rise",
+   "Set Up",
+   "Erect"
+  ],
+  "kun": [
+   "たつ",
+   "たち",
+   "たてる"
+  ],
+  "on": [
+   "りつ",
+   "りゅう",
+   "りっとる"
+  ],
+  "freq": 58
+ },
+ {
+  "kanji": "開",
+  "meanings": [
+   "Open",
+   "Unfold",
+   "Unseal"
+  ],
+  "kun": [
+   "ひらく",
+   "ひらき",
+   "びらき"
+  ],
+  "on": [
+   "かい"
+  ],
+  "freq": 59
+ },
+ {
+  "kanji": "手",
+  "meanings": [
+   "Hand"
+  ],
+  "kun": [
+   "て",
+   "た"
+  ],
+  "on": [
+   "しゅ",
+   "ず"
+  ],
+  "freq": 60
+ },
+ {
+  "kanji": "問",
+  "meanings": [
+   "Question",
+   "Ask",
+   "Problem"
+  ],
+  "kun": [
+   "とう",
+   "とい",
+   "とん"
+  ],
+  "on": [
+   "もん"
+  ],
+  "freq": 64
+ },
+ {
+  "kanji": "代",
+  "meanings": [
+   "Substitute",
+   "Change",
+   "Convert",
+   "Replace",
+   "Period",
+   "Age",
+   "Counter For Decades Of Ages, Eras, Etc.",
+   "Generation",
+   "Charge",
+   "Rate",
+   "Fee"
+  ],
+  "kun": [
+   "かわる",
+   "かわり",
+   "がわり"
+  ],
+  "on": [
+   "だい",
+   "たい"
+  ],
+  "freq": 66
+ },
+ {
+  "kanji": "動",
+  "meanings": [
+   "Move",
+   "Motion",
+   "Change",
+   "Confusion",
+   "Shift",
+   "Shake"
+  ],
+  "kun": [
+   "うごく",
+   "うごかす"
+  ],
+  "on": [
+   "どう"
+  ],
+  "freq": 73
+ },
+ {
+  "kanji": "京",
+  "meanings": [
+   "Capital",
+   "10**16"
+  ],
+  "kun": [
+   "みやこ"
+  ],
+  "on": [
+   "きょう",
+   "けい",
+   "きん"
+  ],
+  "freq": 74
+ },
+ {
+  "kanji": "目",
+  "meanings": [
+   "Eye",
+   "Class",
+   "Look",
+   "Insight",
+   "Experience",
+   "Care",
+   "Favor"
+  ],
+  "kun": [
+   "め",
+   "ま"
+  ],
+  "on": [
+   "もく",
+   "ぼく"
+  ],
+  "freq": 76
+ },
+ {
+  "kanji": "通",
+  "meanings": [
+   "Traffic",
+   "Pass Through",
+   "Avenue",
+   "Commute",
+   "Counter For Letters, Notes, Documents, Etc."
+  ],
+  "kun": [
+   "とおる",
+   "とおり",
+   "どおり"
+  ],
+  "on": [
+   "つう",
+   "つ"
+  ],
+  "freq": 80
+ },
+ {
+  "kanji": "言",
+  "meanings": [
+   "Say",
+   "Word"
+  ],
+  "kun": [
+   "いう",
+   "こと"
+  ],
+  "on": [
+   "げん",
+   "ごん"
+  ],
+  "freq": 83
+ },
+ {
+  "kanji": "理",
+  "meanings": [
+   "Logic",
+   "Arrangement",
+   "Reason",
+   "Justice",
+   "Truth"
+  ],
+  "kun": [
+   "ことわり"
+  ],
+  "on": [
+   "り"
+  ],
+  "freq": 86
+ },
+ {
+  "kanji": "体",
+  "meanings": [
+   "Body",
+   "Substance",
+   "Object",
+   "Reality",
+   "Counter For Images"
+  ],
+  "kun": [
+   "からだ",
+   "かたち"
+  ],
+  "on": [
+   "たい",
+   "てい"
+  ],
+  "freq": 88
+ },
+ {
+  "kanji": "田",
+  "meanings": [
+   "Rice Field",
+   "Rice Paddy"
+  ],
+  "kun": [
+   "た"
+  ],
+  "on": [
+   "でん"
+  ],
+  "freq": 90
+ },
+ {
+  "kanji": "主",
+  "meanings": [
+   "Lord",
+   "Chief",
+   "Master",
+   "Main Thing",
+   "Principal"
+  ],
+  "kun": [
+   "ぬし",
+   "おも",
+   "あるじ"
+  ],
+  "on": [
+   "しゅ",
+   "す",
+   "しゅう"
+  ],
+  "freq": 95
+ },
+ {
+  "kanji": "題",
+  "meanings": [
+   "Topic",
+   "Subject"
+  ],
+  "kun": [],
+  "on": [
+   "だい"
+  ],
+  "freq": 96
+ },
+ {
+  "kanji": "意",
+  "meanings": [
+   "Idea",
+   "Mind",
+   "Heart",
+   "Taste",
+   "Thought",
+   "Desire",
+   "Care",
+   "Liking"
+  ],
+  "kun": [],
+  "on": [
+   "い"
+  ],
+  "freq": 99
+ },
+ {
+  "kanji": "不",
+  "meanings": [
+   "Negative",
+   "Non-",
+   "Bad",
+   "Ugly",
+   "Clumsy"
+  ],
+  "kun": [],
+  "on": [
+   "ふ",
+   "ぶ"
+  ],
+  "freq": 101
+ },
+ {
+  "kanji": "作",
+  "meanings": [
+   "Make",
+   "Production",
+   "Prepare",
+   "Build"
+  ],
+  "kun": [
+   "つくる",
+   "つくり",
+   "づくり"
+  ],
+  "on": [
+   "さく",
+   "さ"
+  ],
+  "freq": 103
+ },
+ {
+  "kanji": "用",
+  "meanings": [
+   "Utilize",
+   "Business",
+   "Service",
+   "Use",
+   "Employ"
+  ],
+  "kun": [
+   "もちいる"
+  ],
+  "on": [
+   "よう"
+  ],
+  "freq": 107
+ },
+ {
+  "kanji": "度",
+  "meanings": [
+   "Degrees",
+   "Occurrence",
+   "Time",
+   "Counter For Occurrences",
+   "Consider",
+   "Attitude"
+  ],
+  "kun": [
+   "たび",
+   "たい"
+  ],
+  "on": [
+   "ど",
+   "と",
+   "たく"
+  ],
+  "freq": 110
+ },
+ {
+  "kanji": "強",
+  "meanings": [
+   "Strong"
+  ],
+  "kun": [
+   "つよい",
+   "つよまる",
+   "つよめる"
+  ],
+  "on": [
+   "きょう",
+   "ごう"
+  ],
+  "freq": 112
+ },
+ {
+  "kanji": "公",
+  "meanings": [
+   "Public",
+   "Prince",
+   "Official",
+   "Governmental"
+  ],
+  "kun": [
+   "おおやけ"
+  ],
+  "on": [
+   "こう",
+   "く"
+  ],
+  "freq": 118
+ },
+ {
+  "kanji": "持",
+  "meanings": [
+   "Hold",
+   "Have"
+  ],
+  "kun": [
+   "もつ",
+   "もち",
+   "もてる"
+  ],
+  "on": [
+   "じ"
+  ],
+  "freq": 119
+ },
+ {
+  "kanji": "野",
+  "meanings": [
+   "Plains",
+   "Field",
+   "Rustic",
+   "Civilian Life"
+  ],
+  "kun": [
+   "の"
+  ],
+  "on": [
+   "や",
+   "しょ"
+  ],
+  "freq": 120
+ },
+ {
+  "kanji": "以",
+  "meanings": [
+   "By Means Of",
+   "Because",
+   "In View Of",
+   "Compared With"
+  ],
+  "kun": [
+   "もって"
+  ],
+  "on": [
+   "い"
+  ],
+  "freq": 126
+ },
+ {
+  "kanji": "思",
+  "meanings": [
+   "Think"
+  ],
+  "kun": [
+   "おもう",
+   "おもえらく",
+   "おぼす"
+  ],
+  "on": [
+   "し"
+  ],
+  "freq": 132
+ },
+ {
+  "kanji": "家",
+  "meanings": [
+   "House",
+   "Home",
+   "Family",
+   "Professional",
+   "Expert",
+   "Performer"
+  ],
+  "kun": [
+   "いえ",
+   "や",
+   "うち"
+  ],
+  "on": [
+   "か",
+   "け"
+  ],
+  "freq": 133
+ },
+ {
+  "kanji": "世",
+  "meanings": [
+   "Generation",
+   "World",
+   "Society",
+   "Public"
+  ],
+  "kun": [
+   "よ"
+  ],
+  "on": [
+   "せい",
+   "せ",
+   "そう"
+  ],
+  "freq": 135
+ },
+ {
+  "kanji": "多",
+  "meanings": [
+   "Many",
+   "Frequent",
+   "Much"
+  ],
+  "kun": [
+   "おおい",
+   "まさに",
+   "まさる"
+  ],
+  "on": [
+   "た"
+  ],
+  "freq": 139
+ },
+ {
+  "kanji": "正",
+  "meanings": [
+   "Correct",
+   "Justice",
+   "Righteous",
+   "10**40"
+  ],
+  "kun": [
+   "ただしい",
+   "ただす",
+   "まさ"
+  ],
+  "on": [
+   "せい",
+   "しょう"
+  ],
+  "freq": 143
+ },
+ {
+  "kanji": "安",
+  "meanings": [
+   "Relax",
+   "Cheap",
+   "Low",
+   "Quiet",
+   "Rested",
+   "Contented",
+   "Peaceful"
+  ],
+  "kun": [
+   "やすい",
+   "やすまる",
+   "やす"
+  ],
+  "on": [
+   "あん"
+  ],
+  "freq": 144
+ },
+ {
+  "kanji": "院",
+  "meanings": [
+   "Inst.",
+   "Institution",
+   "Temple",
+   "Mansion",
+   "School"
+  ],
+  "kun": [],
+  "on": [
+   "いん"
+  ],
+  "freq": 150
+ },
+ {
+  "kanji": "心",
+  "meanings": [
+   "Heart",
+   "Mind",
+   "Spirit",
+   "Heart Radical (no. 61)"
+  ],
+  "kun": [
+   "こころ",
+   "ごころ"
+  ],
+  "on": [
+   "しん"
+  ],
+  "freq": 157
+ },
+ {
+  "kanji": "界",
+  "meanings": [
+   "World",
+   "Boundary"
+  ],
+  "kun": [],
+  "on": [
+   "かい"
+  ],
+  "freq": 158
+ },
+ {
+  "kanji": "教",
+  "meanings": [
+   "Teach",
+   "Faith",
+   "Doctrine"
+  ],
+  "kun": [
+   "おしえる",
+   "おそわる"
+  ],
+  "on": [
+   "きょう"
+  ],
+  "freq": 166
+ },
+ {
+  "kanji": "文",
+  "meanings": [
+   "Sentence",
+   "Literature",
+   "Style",
+   "Art",
+   "Decoration",
+   "Figures",
+   "Plan",
+   "Literary Radical (no. 67)"
+  ],
+  "kun": [
+   "ふみ",
+   "あや"
+  ],
+  "on": [
+   "ぶん",
+   "もん"
+  ],
+  "freq": 190
+ },
+ {
+  "kanji": "元",
+  "meanings": [
+   "Beginning",
+   "Former Time",
+   "Origin"
+  ],
+  "kun": [
+   "もと"
+  ],
+  "on": [
+   "げん",
+   "がん"
+  ],
+  "freq": 192
+ },
+ {
+  "kanji": "重",
+  "meanings": [
+   "Heavy",
+   "Important",
+   "Esteem",
+   "Respect",
+   "Heap Up",
+   "Pile Up",
+   "Nest Of Boxes",
+   "-fold"
+  ],
+  "kun": [
+   "え",
+   "おもい",
+   "おもり"
+  ],
+  "on": [
+   "じゅう",
+   "ちょう"
+  ],
+  "freq": 193
+ },
+ {
+  "kanji": "近",
+  "meanings": [
+   "Near",
+   "Early",
+   "Akin",
+   "Tantamount"
+  ],
+  "kun": [
+   "ちかい"
+  ],
+  "on": [
+   "きん",
+   "こん"
+  ],
+  "freq": 194
+ },
+ {
+  "kanji": "考",
+  "meanings": [
+   "Consider",
+   "Think Over"
+  ],
+  "kun": [
+   "かんがえる",
+   "かんがえ"
+  ],
+  "on": [
+   "こう"
+  ],
+  "freq": 196
+ },
+ {
+  "kanji": "画",
+  "meanings": [
+   "Brush-stroke",
+   "Picture"
+  ],
+  "kun": [
+   "えがく",
+   "かくする",
+   "かぎる"
+  ],
+  "on": [
+   "が",
+   "かく",
+   "え"
+  ],
+  "freq": 199
+ },
+ {
+  "kanji": "海",
+  "meanings": [
+   "Sea",
+   "Ocean"
+  ],
+  "kun": [
+   "うみ"
+  ],
+  "on": [
+   "かい"
+  ],
+  "freq": 200
+ },
+ {
+  "kanji": "売",
+  "meanings": [
+   "Sell"
+  ],
+  "kun": [
+   "うる",
+   "うれる"
+  ],
+  "on": [
+   "ばい"
+  ],
+  "freq": 202
+ },
+ {
+  "kanji": "知",
+  "meanings": [
+   "Know",
+   "Wisdom"
+  ],
+  "kun": [
+   "しる",
+   "しらせる"
+  ],
+  "on": [
+   "ち"
+  ],
+  "freq": 205
+ },
+ {
+  "kanji": "道",
+  "meanings": [
+   "Road-way",
+   "Street",
+   "District",
+   "Journey",
+   "Course",
+   "Moral",
+   "Teachings"
+  ],
+  "kun": [
+   "みち",
+   "いう"
+  ],
+  "on": [
+   "どう",
+   "とう"
+  ],
+  "freq": 207
+ },
+ {
+  "kanji": "集",
+  "meanings": [
+   "Gather",
+   "Meet",
+   "Congregate",
+   "Swarm",
+   "Flock"
+  ],
+  "kun": [
+   "あつまる",
+   "あつめる",
+   "つどう"
+  ],
+  "on": [
+   "しゅう"
+  ],
+  "freq": 210
+ },
+ {
+  "kanji": "別",
+  "meanings": [
+   "Separate",
+   "Branch Off",
+   "Diverge",
+   "Fork",
+   "Another",
+   "Extra",
+   "Specially"
+  ],
+  "kun": [
+   "わかれる",
+   "わける"
+  ],
+  "on": [
+   "べつ"
+  ],
+  "freq": 214
+ },
+ {
+  "kanji": "物",
+  "meanings": [
+   "Thing",
+   "Object",
+   "Matter"
+  ],
+  "kun": [
+   "もの"
+  ],
+  "on": [
+   "ぶつ",
+   "もつ"
+  ],
+  "freq": 215
+ },
+ {
+  "kanji": "使",
+  "meanings": [
+   "Use",
+   "Send On A Mission",
+   "Order",
+   "Messenger",
+   "Envoy",
+   "Ambassador",
+   "Cause"
+  ],
+  "kun": [
+   "つかう",
+   "つかい",
+   "づかい"
+  ],
+  "on": [
+   "し"
+  ],
+  "freq": 219
+ },
+ {
+  "kanji": "品",
+  "meanings": [
+   "Goods",
+   "Refinement",
+   "Dignity",
+   "Article",
+   "Counter For Meal Courses"
+  ],
+  "kun": [
+   "しな"
+  ],
+  "on": [
+   "ひん",
+   "ほん"
+  ],
+  "freq": 225
+ },
+ {
+  "kanji": "計",
+  "meanings": [
+   "Plot",
+   "Plan",
+   "Scheme",
+   "Measure"
+  ],
+  "kun": [
+   "はかる",
+   "はからう"
+  ],
+  "on": [
+   "けい"
+  ],
+  "freq": 228
+ },
+ {
+  "kanji": "死",
+  "meanings": [
+   "Death",
+   "Die"
+  ],
+  "kun": [
+   "しぬ",
+   "しに"
+  ],
+  "on": [
+   "し"
+  ],
+  "freq": 229
+ },
+ {
+  "kanji": "特",
+  "meanings": [
+   "Special"
+  ],
+  "kun": [],
+  "on": [
+   "とく"
+  ],
+  "freq": 234
+ },
+ {
+  "kanji": "私",
+  "meanings": [
+   "Private",
+   "I",
+   "Me"
+  ],
+  "kun": [
+   "わたくし",
+   "わたし"
+  ],
+  "on": [
+   "し"
+  ],
+  "freq": 242
+ },
+ {
+  "kanji": "始",
+  "meanings": [
+   "Commence",
+   "Begin"
+  ],
+  "kun": [
+   "はじめる",
+   "はじまる"
+  ],
+  "on": [
+   "し"
+  ],
+  "freq": 244
+ },
+ {
+  "kanji": "終",
+  "meanings": [
+   "End",
+   "Finish"
+  ],
+  "kun": [
+   "おわる",
+   "おえる",
+   "つい"
+  ],
+  "on": [
+   "しゅう"
+  ],
+  "freq": 256
+ },
+ {
+  "kanji": "台",
+  "meanings": [
+   "Pedestal",
+   "A Stand",
+   "Counter For Machines And Vehicles"
+  ],
+  "kun": [
+   "うてな",
+   "われ",
+   "つかさ"
+  ],
+  "on": [
+   "だい",
+   "たい"
+  ],
+  "freq": 262
+ },
+ {
+  "kanji": "広",
+  "meanings": [
+   "Wide",
+   "Broad",
+   "Spacious"
+  ],
+  "kun": [
+   "ひろい",
+   "ひろまる",
+   "ひろめる"
+  ],
+  "on": [
+   "こう"
+  ],
+  "freq": 263
+ },
+ {
+  "kanji": "住",
+  "meanings": [
+   "Dwell",
+   "Reside",
+   "Live",
+   "Inhabit"
+  ],
+  "kun": [
+   "すむ",
+   "すまう",
+   "ずまい"
+  ],
+  "on": [
+   "じゅう",
+   "ぢゅう",
+   "ちゅう"
+  ],
+  "freq": 270
+ },
+ {
+  "kanji": "真",
+  "meanings": [
+   "True",
+   "Reality",
+   "Buddhist Sect"
+  ],
+  "kun": [
+   "ま",
+   "まこと"
+  ],
+  "on": [
+   "しん"
+  ],
+  "freq": 279
+ },
+ {
+  "kanji": "有",
+  "meanings": [
+   "Possess",
+   "Have",
+   "Exist",
+   "Happen",
+   "Occur",
+   "Approx"
+  ],
+  "kun": [
+   "ある"
+  ],
+  "on": [
+   "ゆう",
+   "う"
+  ],
+  "freq": 282
+ },
+ {
+  "kanji": "口",
+  "meanings": [
+   "Mouth"
+  ],
+  "kun": [
+   "くち"
+  ],
+  "on": [
+   "こう",
+   "く"
+  ],
+  "freq": 284
+ },
+ {
+  "kanji": "少",
+  "meanings": [
+   "Few",
+   "Little"
+  ],
+  "kun": [
+   "すくない",
+   "すこし"
+  ],
+  "on": [
+   "しょう"
+  ],
+  "freq": 287
+ },
+ {
+  "kanji": "町",
+  "meanings": [
+   "Town",
+   "Village",
+   "Block",
+   "Street"
+  ],
+  "kun": [
+   "まち"
+  ],
+  "on": [
+   "ちょう"
+  ],
+  "freq": 292
+ },
+ {
+  "kanji": "工",
+  "meanings": [
+   "Craft",
+   "Construction",
+   "Katakana E Radical (no. 48)"
+  ],
+  "kun": [],
+  "on": [
+   "こう",
+   "く",
+   "ぐ"
+  ],
+  "freq": 299
+ },
+ {
+  "kanji": "建",
+  "meanings": [
+   "Build"
+  ],
+  "kun": [
+   "たてる",
+   "たて",
+   "だて"
+  ],
+  "on": [
+   "けん",
+   "こん"
+  ],
+  "freq": 300
+ },
+ {
+  "kanji": "空",
+  "meanings": [
+   "Empty",
+   "Sky",
+   "Void",
+   "Vacant",
+   "Vacuum"
+  ],
+  "kun": [
+   "そら",
+   "あく",
+   "あき"
+  ],
+  "on": [
+   "くう"
+  ],
+  "freq": 304
+ },
+ {
+  "kanji": "急",
+  "meanings": [
+   "Hurry",
+   "Emergency",
+   "Sudden",
+   "Steep"
+  ],
+  "kun": [
+   "いそぐ",
+   "いそぎ",
+   "せく"
+  ],
+  "on": [
+   "きゅう"
+  ],
+  "freq": 309
+ },
+ {
+  "kanji": "止",
+  "meanings": [
+   "Stop",
+   "Halt"
+  ],
+  "kun": [
+   "とまる",
+   "どまり",
+   "とめる"
+  ],
+  "on": [
+   "し"
+  ],
+  "freq": 310
+ },
+ {
+  "kanji": "送",
+  "meanings": [
+   "Escort",
+   "Send"
+  ],
+  "kun": [
+   "おくる"
+  ],
+  "on": [
+   "そう"
+  ],
+  "freq": 311
+ },
+ {
+  "kanji": "切",
+  "meanings": [
+   "Cut",
+   "Cutoff",
+   "Be Sharp"
+  ],
+  "kun": [
+   "きる",
+   "きり",
+   "ぎり"
+  ],
+  "on": [
+   "せつ",
+   "さい"
+  ],
+  "freq": 324
+ },
+ {
+  "kanji": "転",
+  "meanings": [
+   "Revolve",
+   "Turn Around",
+   "Change"
+  ],
+  "kun": [
+   "ころがる",
+   "ころげる",
+   "ころがす"
+  ],
+  "on": [
+   "てん"
+  ],
+  "freq": 327
+ },
+ {
+  "kanji": "研",
+  "meanings": [
+   "Polish",
+   "Study Of",
+   "Sharpen"
+  ],
+  "kun": [
+   "とぐ"
+  ],
+  "on": [
+   "けん"
+  ],
+  "freq": 336
+ },
+ {
+  "kanji": "足",
+  "meanings": [
+   "Leg",
+   "Foot",
+   "Be Sufficient",
+   "Counter For Pairs Of Footwear"
+  ],
+  "kun": [
+   "あし",
+   "たりる",
+   "たる"
+  ],
+  "on": [
+   "そく"
+  ],
+  "freq": 343
+ },
+ {
+  "kanji": "究",
+  "meanings": [
+   "Research",
+   "Study"
+  ],
+  "kun": [
+   "きわめる"
+  ],
+  "on": [
+   "きゅう",
+   "く"
+  ],
+  "freq": 368
+ },
+ {
+  "kanji": "楽",
+  "meanings": [
+   "Music",
+   "Comfort",
+   "Ease"
+  ],
+  "kun": [
+   "たのしい",
+   "たのしむ",
+   "このむ"
+  ],
+  "on": [
+   "がく",
+   "らく",
+   "ごう"
+  ],
+  "freq": 373
+ },
+ {
+  "kanji": "起",
+  "meanings": [
+   "Rouse",
+   "Wake Up",
+   "Get Up"
+  ],
+  "kun": [
+   "おきる",
+   "おこる",
+   "おこす"
+  ],
+  "on": [
+   "き"
+  ],
+  "freq": 374
+ },
+ {
+  "kanji": "着",
+  "meanings": [
+   "Don",
+   "Arrive",
+   "Wear",
+   "Counter For Suits Of Clothing"
+  ],
+  "kun": [
+   "きる",
+   "ぎ",
+   "きせる"
+  ],
+  "on": [
+   "ちゃく",
+   "じゃく"
+  ],
+  "freq": 376
+ },
+ {
+  "kanji": "店",
+  "meanings": [
+   "Store",
+   "Shop"
+  ],
+  "kun": [
+   "みせ",
+   "たな"
+  ],
+  "on": [
+   "てん"
+  ],
+  "freq": 378
+ },
+ {
+  "kanji": "病",
+  "meanings": [
+   "Ill",
+   "Sick"
+  ],
+  "kun": [
+   "やむ",
+   "やみ",
+   "やまい"
+  ],
+  "on": [
+   "びょう",
+   "へい"
+  ],
+  "freq": 384
+ },
+ {
+  "kanji": "質",
+  "meanings": [
+   "Substance",
+   "Quality",
+   "Matter",
+   "Temperament"
+  ],
+  "kun": [
+   "たち",
+   "ただす",
+   "もと"
+  ],
+  "on": [
+   "しつ",
+   "しち",
+   "ち"
+  ],
+  "freq": 389
+ },
+ {
+  "kanji": "待",
+  "meanings": [
+   "Wait",
+   "Depend On"
+  ],
+  "kun": [
+   "まつ",
+   "まち"
+  ],
+  "on": [
+   "たい"
+  ],
+  "freq": 391
+ },
+ {
+  "kanji": "試",
+  "meanings": [
+   "Test",
+   "Try",
+   "Attempt",
+   "Experiment",
+   "Ordeal"
+  ],
+  "kun": [
+   "こころみる",
+   "ためす"
+  ],
+  "on": [
+   "し"
+  ],
+  "freq": 392
+ },
+ {
+  "kanji": "族",
+  "meanings": [
+   "Tribe",
+   "Family"
+  ],
+  "kun": [],
+  "on": [
+   "ぞく"
+  ],
+  "freq": 393
+ },
+ {
+  "kanji": "銀",
+  "meanings": [
+   "Silver"
+  ],
+  "kun": [
+   "しろがね"
+  ],
+  "on": [
+   "ぎん"
+  ],
+  "freq": 395
+ },
+ {
+  "kanji": "早",
+  "meanings": [
+   "Early",
+   "Fast"
+  ],
+  "kun": [
+   "はやい",
+   "はや",
+   "はやまる"
+  ],
+  "on": [
+   "そう",
+   "さっ"
+  ],
+  "freq": 402
+ },
+ {
+  "kanji": "映",
+  "meanings": [
+   "Reflect",
+   "Reflection",
+   "Projection"
+  ],
+  "kun": [
+   "うつる",
+   "うつす",
+   "はえる"
+  ],
+  "on": [
+   "えい"
+  ],
+  "freq": 404
+ },
+ {
+  "kanji": "親",
+  "meanings": [
+   "Parent",
+   "Intimacy",
+   "Relative",
+   "Familiarity",
+   "Dealer (cards)"
+  ],
+  "kun": [
+   "おや",
+   "したしい",
+   "したしむ"
+  ],
+  "on": [
+   "しん"
+  ],
+  "freq": 406
+ },
+ {
+  "kanji": "験",
+  "meanings": [
+   "Verification",
+   "Effect",
+   "Testing"
+  ],
+  "kun": [
+   "あかし",
+   "しるし",
+   "ためす"
+  ],
+  "on": [
+   "けん",
+   "げん"
+  ],
+  "freq": 410
+ },
+ {
+  "kanji": "英",
+  "meanings": [
+   "England",
+   "English",
+   "Hero",
+   "Outstanding",
+   "Calyx"
+  ],
+  "kun": [
+   "はなぶさ"
+  ],
+  "on": [
+   "えい"
+  ],
+  "freq": 430
+ },
+ {
+  "kanji": "医",
+  "meanings": [
+   "Doctor",
+   "Medicine"
+  ],
+  "kun": [
+   "いやす",
+   "いする",
+   "くすし"
+  ],
+  "on": [
+   "い"
+  ],
+  "freq": 437
+ },
+ {
+  "kanji": "仕",
+  "meanings": [
+   "Attend",
+   "Doing",
+   "Official",
+   "Serve"
+  ],
+  "kun": [
+   "つかえる"
+  ],
+  "on": [
+   "し",
+   "じ"
+  ],
+  "freq": 439
+ },
+ {
+  "kanji": "去",
+  "meanings": [
+   "Gone",
+   "Past",
+   "Quit",
+   "Leave",
+   "Elapse",
+   "Eliminate",
+   "Divorce"
+  ],
+  "kun": [
+   "さる"
+  ],
+  "on": [
+   "きょ",
+   "こ"
+  ],
+  "freq": 440
+ },
+ {
+  "kanji": "味",
+  "meanings": [
+   "Flavor",
+   "Taste"
+  ],
+  "kun": [
+   "あじ",
+   "あじわう"
+  ],
+  "on": [
+   "み"
+  ],
+  "freq": 442
+ },
+ {
+  "kanji": "写",
+  "meanings": [
+   "Copy",
+   "Be Photographed",
+   "Describe"
+  ],
+  "kun": [
+   "うつす",
+   "うつる",
+   "うつ"
+  ],
+  "on": [
+   "しゃ",
+   "じゃ"
+  ],
+  "freq": 453
+ },
+ {
+  "kanji": "字",
+  "meanings": [
+   "Character",
+   "Letter",
+   "Word",
+   "Section Of Village"
+  ],
+  "kun": [
+   "あざ",
+   "あざな",
+   "な"
+  ],
+  "on": [
+   "じ"
+  ],
+  "freq": 485
+ },
+ {
+  "kanji": "答",
+  "meanings": [
+   "Solution",
+   "Answer"
+  ],
+  "kun": [
+   "こたえる",
+   "こたえ"
+  ],
+  "on": [
+   "とう"
+  ],
+  "freq": 486
+ },
+ {
+  "kanji": "音",
+  "meanings": [
+   "Sound",
+   "Noise"
+  ],
+  "kun": [
+   "おと",
+   "ね"
+  ],
+  "on": [
+   "おん",
+   "いん",
+   "のん"
+  ],
+  "freq": 491
+ },
+ {
+  "kanji": "注",
+  "meanings": [
+   "Pour",
+   "Irrigate",
+   "Shed (tears)",
+   "Flow Into",
+   "Concentrate On",
+   "Notes",
+   "Comment",
+   "Annotate"
+  ],
+  "kun": [
+   "そそぐ",
+   "さす",
+   "つぐ"
+  ],
+  "on": [
+   "ちゅう"
+  ],
+  "freq": 497
+ },
+ {
+  "kanji": "帰",
+  "meanings": [
+   "Homecoming",
+   "Arrive At",
+   "Lead To",
+   "Result In"
+  ],
+  "kun": [
+   "かえる",
+   "かえす",
+   "おくる"
+  ],
+  "on": [
+   "き"
+  ],
+  "freq": 504
+ },
+ {
+  "kanji": "古",
+  "meanings": [
+   "Old"
+  ],
+  "kun": [
+   "ふるい",
+   "ふる",
+   "ふるす"
+  ],
+  "on": [
+   "こ"
+  ],
+  "freq": 509
+ },
+ {
+  "kanji": "歌",
+  "meanings": [
+   "Song",
+   "Sing"
+  ],
+  "kun": [
+   "うた",
+   "うたう"
+  ],
+  "on": [
+   "か"
+  ],
+  "freq": 519
+ },
+ {
+  "kanji": "買",
+  "meanings": [
+   "Buy"
+  ],
+  "kun": [
+   "かう"
+  ],
+  "on": [
+   "ばい"
+  ],
+  "freq": 520
+ },
+ {
+  "kanji": "悪",
+  "meanings": [
+   "Bad",
+   "Vice",
+   "Rascal",
+   "False",
+   "Evil",
+   "Wrong"
+  ],
+  "kun": [
+   "わるい",
+   "わる",
+   "あし"
+  ],
+  "on": [
+   "あく",
+   "お"
+  ],
+  "freq": 530
+ },
+ {
+  "kanji": "図",
+  "meanings": [
+   "Map",
+   "Drawing",
+   "Plan",
+   "Extraordinary",
+   "Audacious"
+  ],
+  "kun": [
+   "え",
+   "はかる"
+  ],
+  "on": [
+   "ず",
+   "と"
+  ],
+  "freq": 539
+ },
+ {
+  "kanji": "週",
+  "meanings": [
+   "Week"
+  ],
+  "kun": [],
+  "on": [
+   "しゅう"
+  ],
+  "freq": 540
+ },
+ {
+  "kanji": "室",
+  "meanings": [
+   "Room",
+   "Apartment",
+   "Chamber",
+   "Greenhouse",
+   "Cellar"
+  ],
+  "kun": [
+   "むろ"
+  ],
+  "on": [
+   "しつ"
+  ],
+  "freq": 550
+ },
+ {
+  "kanji": "風",
+  "meanings": [
+   "Wind",
+   "Air",
+   "Style",
+   "Manner"
+  ],
+  "kun": [
+   "かぜ",
+   "かざ"
+  ],
+  "on": [
+   "ふう",
+   "ふ"
+  ],
+  "freq": 558
+ },
+ {
+  "kanji": "紙",
+  "meanings": [
+   "Paper"
+  ],
+  "kun": [
+   "かみ"
+  ],
+  "on": [
+   "し"
+  ],
+  "freq": 559
+ },
+ {
+  "kanji": "黒",
+  "meanings": [
+   "Black"
+  ],
+  "kun": [
+   "くろ",
+   "くろずむ",
+   "くろい"
+  ],
+  "on": [
+   "こく"
+  ],
+  "freq": 573
+ },
+ {
+  "kanji": "花",
+  "meanings": [
+   "Flower"
+  ],
+  "kun": [
+   "はな"
+  ],
+  "on": [
+   "か",
+   "け"
+  ],
+  "freq": 578
+ },
+ {
+  "kanji": "赤",
+  "meanings": [
+   "Red"
+  ],
+  "kun": [
+   "あか",
+   "あかい",
+   "あからむ"
+  ],
+  "on": [
+   "せき",
+   "しゃく"
+  ],
+  "freq": 584
+ },
+ {
+  "kanji": "青",
+  "meanings": [
+   "Blue",
+   "Green"
+  ],
+  "kun": [
+   "あお",
+   "あおい"
+  ],
+  "on": [
+   "せい",
+   "しょう"
+  ],
+  "freq": 589
+ },
+ {
+  "kanji": "館",
+  "meanings": [
+   "Building",
+   "Mansion",
+   "Large Building",
+   "Palace"
+  ],
+  "kun": [
+   "やかた",
+   "たて"
+  ],
+  "on": [
+   "かん"
+  ],
+  "freq": 613
+ },
+ {
+  "kanji": "屋",
+  "meanings": [
+   "Roof",
+   "House",
+   "Shop",
+   "Dealer",
+   "Seller"
+  ],
+  "kun": [
+   "や"
+  ],
+  "on": [
+   "おく"
+  ],
+  "freq": 616
+ },
+ {
+  "kanji": "色",
+  "meanings": [
+   "Color"
+  ],
+  "kun": [
+   "いろ"
+  ],
+  "on": [
+   "しょく",
+   "しき"
+  ],
+  "freq": 621
+ },
+ {
+  "kanji": "習",
+  "meanings": [
+   "Learn"
+  ],
+  "kun": [
+   "ならう",
+   "ならい"
+  ],
+  "on": [
+   "しゅう",
+   "じゅ"
+  ],
+  "freq": 706
+ },
+ {
+  "kanji": "駅",
+  "meanings": [
+   "Station"
+  ],
+  "kun": [],
+  "on": [
+   "えき"
+  ],
+  "freq": 724
+ },
+ {
+  "kanji": "洋",
+  "meanings": [
+   "Ocean",
+   "Sea",
+   "Foreign",
+   "Western Style"
+  ],
+  "kun": [],
+  "on": [
+   "よう"
+  ],
+  "freq": 763
+ },
+ {
+  "kanji": "旅",
+  "meanings": [
+   "Trip",
+   "Travel"
+  ],
+  "kun": [
+   "たび"
+  ],
+  "on": [
+   "りょ"
+  ],
+  "freq": 783
+ },
+ {
+  "kanji": "服",
+  "meanings": [
+   "Clothing",
+   "Admit",
+   "Obey",
+   "Discharge"
+  ],
+  "kun": [],
+  "on": [
+   "ふく"
+  ],
+  "freq": 873
+ },
+ {
+  "kanji": "夕",
+  "meanings": [
+   "Evening"
+  ],
+  "kun": [
+   "ゆう"
+  ],
+  "on": [
+   "せき"
+  ],
+  "freq": 924
+ },
+ {
+  "kanji": "借",
+  "meanings": [
+   "Borrow",
+   "Rent"
+  ],
+  "kun": [
+   "かりる"
+  ],
+  "on": [
+   "しゃく"
+  ],
+  "freq": 932
+ },
+ {
+  "kanji": "曜",
+  "meanings": [
+   "Weekday"
+  ],
+  "kun": [],
+  "on": [
+   "よう"
+  ],
+  "freq": 940
+ },
+ {
+  "kanji": "飲",
+  "meanings": [
+   "Drink",
+   "Smoke",
+   "Take"
+  ],
+  "kun": [
+   "のむ",
+   "のみ"
+  ],
+  "on": [
+   "いん",
+   "おん"
+  ],
+  "freq": 969
+ },
+ {
+  "kanji": "肉",
+  "meanings": [
+   "Meat"
+  ],
+  "kun": [
+   "しし"
+  ],
+  "on": [
+   "にく"
+  ],
+  "freq": 986
+ },
+ {
+  "kanji": "貸",
+  "meanings": [
+   "Lend"
+  ],
+  "kun": [
+   "かす",
+   "かし"
+  ],
+  "on": [
+   "たい"
+  ],
+  "freq": 995
+ },
+ {
+  "kanji": "堂",
+  "meanings": [
+   "Public Chamber",
+   "Hall"
+  ],
+  "kun": [],
+  "on": [
+   "どう"
+  ],
+  "freq": 1010
+ },
+ {
+  "kanji": "鳥",
+  "meanings": [
+   "Bird",
+   "Chicken"
+  ],
+  "kun": [
+   "とり"
+  ],
+  "on": [
+   "ちょう"
+  ],
+  "freq": 1043
+ },
+ {
+  "kanji": "飯",
+  "meanings": [
+   "Meal",
+   "Boiled Rice"
+  ],
+  "kun": [
+   "めし"
+  ],
+  "on": [
+   "はん"
+  ],
+  "freq": 1046
+ },
+ {
+  "kanji": "勉",
+  "meanings": [
+   "Exertion",
+   "Endeavour",
+   "Encourage",
+   "Strive",
+   "Make Effort",
+   "Diligent"
+  ],
+  "kun": [
+   "つとめる"
+  ],
+  "on": [
+   "べん"
+  ],
+  "freq": 1066
+ },
+ {
+  "kanji": "昼",
+  "meanings": [
+   "Daytime",
+   "Noon"
+  ],
+  "kun": [
+   "ひる"
+  ],
+  "on": [
+   "ちゅう"
+  ],
+  "freq": 1115
+ },
+ {
+  "kanji": "茶",
+  "meanings": [
+   "Tea"
+  ],
+  "kun": [],
+  "on": [
+   "ちゃ",
+   "さ"
+  ],
+  "freq": 1116
+ },
+ {
+  "kanji": "牛",
+  "meanings": [
+   "Cow"
+  ],
+  "kun": [
+   "うし"
+  ],
+  "on": [
+   "ぎゅう"
+  ],
+  "freq": 1202
+ },
+ {
+  "kanji": "魚",
+  "meanings": [
+   "Fish"
+  ],
+  "kun": [
+   "うお",
+   "さかな",
+   "ざかな"
+  ],
+  "on": [
+   "ぎょ"
+  ],
+  "freq": 1208
+ },
+ {
+  "kanji": "兄",
+  "meanings": [
+   "Elder Brother",
+   "Big Brother"
+  ],
+  "kun": [
+   "あに"
+  ],
+  "on": [
+   "けい",
+   "きょう"
+  ],
+  "freq": 1219
+ },
+ {
+  "kanji": "犬",
+  "meanings": [
+   "Dog"
+  ],
+  "kun": [
+   "いぬ"
+  ],
+  "on": [
+   "けん"
+  ],
+  "freq": 1326
+ },
+ {
+  "kanji": "妹",
+  "meanings": [
+   "Younger Sister"
+  ],
+  "kun": [
+   "いもうと"
+  ],
+  "on": [
+   "まい"
+  ],
+  "freq": 1446
+ },
+ {
+  "kanji": "姉",
+  "meanings": [
+   "Elder Sister"
+  ],
+  "kun": [
+   "あね",
+   "はは"
+  ],
+  "on": [
+   "し"
+  ],
+  "freq": 1473
+ },
+ {
+  "kanji": "漢",
+  "meanings": [
+   "Sino-",
+   "China"
+  ],
+  "kun": [],
+  "on": [
+   "かん"
+  ],
+  "freq": 1487
+ }
+]
